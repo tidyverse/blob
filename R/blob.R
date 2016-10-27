@@ -22,7 +22,9 @@ blob <- function(...) {
 #' @export
 #' @rdname blob
 new_blob <- function(x) {
-  check_blob(x)
+  if (!is_raw_list(x)) {
+    stop("`x` must be a list of raw vectors", call. = FALSE)
+  }
   structure(x, class = "blob")
 }
 
