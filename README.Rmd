@@ -21,6 +21,8 @@ library(blob)
 
 The goal of blob is to provide a simple S3 class to represent a vector of binary objects, aka blobs. The `blob` class is a lightweight wrapper around a list of raw vectors, suitable for inclusion in a data frame.
 
+In most cases you will not need to use this package explicitly: it will be used transparently by packages that need to load BLOB columns from databases or binary file formats.
+
 ## Installation
 
 You can install blob from github with:

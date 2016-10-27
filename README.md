@@ -1,11 +1,13 @@
 
-[![Travis-CI Build Status](https://travis-ci.org/hadley/blob.svg?branch=master)](https://travis-ci.org/hadley/blob) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/blob)](https://cran.r-project.org/package=blob)
+[![Travis-CI Build Status](https://travis-ci.org/hadley/blob.svg?branch=master)](https://travis-ci.org/hadley/blob) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/blob)](https://cran.r-project.org/package=blob) [![Coverage Status](https://img.shields.io/codecov/c/github/hadley/blob/master.svg)](https://codecov.io/github/hadley/blob?branch=master)
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 blob
 ====
 
 The goal of blob is to provide a simple S3 class to represent a vector of binary objects, aka blobs. The `blob` class is a lightweight wrapper around a list of raw vectors, suitable for inclusion in a data frame.
+
+In most cases you will not need to use this package explicitly: it will be used transparently by packages that need to load BLOB columns from databases or binary file formats.
 
 Installation
 ------------
