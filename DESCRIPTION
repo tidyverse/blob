@@ -15,5 +15,7 @@ Encoding: UTF-8
 LazyData: true
 URL: https://github.com/hadley/blob
 BugReports: https://github.com/hadley/blob/issues
-Suggests: testthat
+Suggests: 
+    testthat,
+    covr
 RoxygenNote: 5.0.1.9000
