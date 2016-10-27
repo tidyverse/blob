@@ -1,5 +1,5 @@
 
-[![Travis-CI Build Status](https://travis-ci.org/hadley/blob.svg?branch=master)](https://travis-ci.org/hadley/blob)
+[![Travis-CI Build Status](https://travis-ci.org/hadley/blob.svg?branch=master)](https://travis-ci.org/hadley/blob) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/blob)](https://cran.r-project.org/package=blob)
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 blob
