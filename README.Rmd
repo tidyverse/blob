@@ -1,0 +1,41 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+library(blob)
+```
+
+# blob
+
+The goal of blob is to provide a simple S3 class to represent a vector of binary objects, aka blobs. The `blob` class is a lightweight wrapper around a list of raw vectors, suitable for inclusion in a data frame.
+
+## Installation
+
+You can install blob from github with:
+
+```{r gh-installation, eval = FALSE}
+# install.packages("devtools")
+devtools::install_github("hadley/blob")
+```
+
+## Example
+
+To create a blob, use `blob()`, `new_blob()` or `as.blob()`:
+
+```{r example}
+x1 <- charToRaw("Good morning")
+x2 <- as.raw(c(0x48, 0x65, 0x6c, 0x6c, 0x6f))
+
+new_blob(list(x1, x2))
+blob(x1, x2)
+
+as.blob(c("Good morning", "Good evening"))
+```
