@@ -14,9 +14,14 @@
 
 #' @export
 `[[<-.blob` <- function(x, i, ..., value) {
-  if (!is.raw(value)) {
-    stop("RHS must be raw vector", call. = FALSE)
+  if (!is.raw(value) && !is.null(value)) {
+    stop("RHS must be raw vector or NULL", call. = FALSE)
   }
 
-  NextMethod()
+  if (is.null(value)) {
+    x[i] <- list(NULL)
+    x
+  } else {
+    NextMethod()
+  }
 }
