@@ -11,3 +11,4 @@ is_raw_list <- function(x) {
   TRUE
 }
 
+`%||%` <- function(x, y) if (is.null(x)) y else x
