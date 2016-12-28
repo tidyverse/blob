@@ -31,7 +31,7 @@ obj_sum.blob <- function(x) {
 #' @importFrom tibble is_vector_s3
 is_vector_s3.blob <- function(x) TRUE
 
-blob_size <- function(x, digits = 3, trim = TRUE) {
+blob_size <- function(x, digits = 3, trim = TRUE, ...) {
   x <- vapply(x, length, integer(1))
 
   power <- min(floor(log(abs(x), 1000)), 4)
@@ -42,7 +42,7 @@ blob_size <- function(x, digits = 3, trim = TRUE) {
     x <- x / (1024 ^ power)
   }
 
-  x1 <- signif(x, digits = digits)
+  x1 <- signif(x, digits = digits %||% 3)
   x2 <- format(x1, big.mark = ",", scientific = FALSE, trim = trim)
   paste0(x2, " ", unit)
 }
