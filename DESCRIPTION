@@ -5,17 +5,18 @@ Authors@R: c(
     person("Hadley", "Wickham", , "hadley@rstudio.com", role = c("aut", "cre")),
     person("RStudio", role = "cph")
   )
-Description: R's raw vector is useful for storing a single binary object. 
-  What if you want to put a vector of them in a data frame? The blob
-  package provides the blob object, a list of raw vectors, suitable for
-  use as a column in data frame.
-Imports: tibble
+Description: R's raw vector is useful for storing a single binary object.
+    What if you want to put a vector of them in a data frame? The blob
+    package provides the blob object, a list of raw vectors, suitable for
+    use as a column in data frame.
+Imports:
+    tibble
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
 URL: https://github.com/hadley/blob
 BugReports: https://github.com/hadley/blob/issues
-Suggests: 
+Suggests:
     testthat,
     covr
-RoxygenNote: 5.0.1.9000
+RoxygenNote: 5.0.1
