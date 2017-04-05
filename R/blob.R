@@ -53,3 +53,6 @@ as.blob.character <- function(x, ...) {
 as.blob.integer <- function(x, ...) {
   new_blob(lapply(x, as.raw))
 }
+
+#' @export
+as.data.frame.blob <- as.data.frame.difftime
