@@ -19,4 +19,5 @@ BugReports: https://github.com/hadley/blob/issues
 Suggests:
     testthat,
     covr
-RoxygenNote: 5.0.1
+Roxygen: list(markdown = TRUE, roclets = c("collate", "namespace", "rd", "pkgapi::api_roclet"))
+RoxygenNote: 6.0.1

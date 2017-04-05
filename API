@@ -1,0 +1,14 @@
+# API for blob package
+
+## Exported functions
+
+as.blob(x, ...)
+blob(...)
+new_blob(x)
+
+## S3 methods
+
+as.blob.character(x, ...)
+as.blob.integer(x, ...)
+as.blob.list(x, ...)
+as.blob.raw(x, ...)
