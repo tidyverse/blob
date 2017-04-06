@@ -35,6 +35,11 @@ as.blob <- function(x, ...) {
 }
 
 #' @export
+as.blob.blob <- function(x, ...) {
+  x
+}
+
+#' @export
 as.blob.list <- function(x, ...) {
   new_blob(x)
 }
