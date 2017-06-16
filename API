@@ -8,6 +8,7 @@ new_blob(x)
 
 ## S3 methods
 
+as.blob.blob(x, ...)
 as.blob.character(x, ...)
 as.blob.integer(x, ...)
 as.blob.list(x, ...)
