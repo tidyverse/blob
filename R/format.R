@@ -32,7 +32,7 @@ obj_sum.blob <- function(x) {
 is_vector_s3.blob <- function(x) TRUE
 
 blob_size <- function(x, digits = 3, trim = TRUE, ...) {
-  x <- vapply(x, length, integer(1))
+  x <- vapply(x, length, numeric(1))
 
   power <- min(floor(log(abs(x), 1000)), 4)
   if (power < 1) {
