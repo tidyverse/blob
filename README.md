@@ -1,5 +1,5 @@
 
-[![Travis-CI Build Status](https://travis-ci.org/rstats-db/blob.svg?branch=master)](https://travis-ci.org/rstats-db/blob) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/blob)](https://cran.r-project.org/package=blob) [![Coverage Status](https://img.shields.io/codecov/c/github/rstats-db/blob/master.svg)](https://codecov.io/github/rstats-db/blob?branch=master)
+[![Travis-CI Build Status](https://travis-ci.org/tidyverse/blob.svg?branch=master)](https://travis-ci.org/tidyverse/blob) [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/blob)](https://cran.r-project.org/package=blob) [![Coverage Status](https://codecov.io/gh/tidyverse/blob/branch/master/graph/badge.svg)](https://codecov.io/github/tidyverse/blob?branch=master)
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 blob
@@ -16,7 +16,7 @@ You can install blob from github with:
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("rstats-db/blob")
+devtools::install_github("tidyverse/blob")
 ```
 
 Example

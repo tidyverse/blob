@@ -1,8 +1,9 @@
 Package: blob
 Title: A Simple S3 Class for Representing Vectors of Binary Data ('BLOBS')
-Version: 1.0.0
+Version: 1.1.0
 Authors@R: c(
-    person("Hadley", "Wickham", , "hadley@rstudio.com", role = c("aut", "cre")),
+    person("Hadley", "Wickham", role = c("aut")),
+    person("Kirill", "Müller", , "krlmlr+r@mailbox.org", role = c("cre")),
     person("RStudio", role = "cph")
   )
 Description: R's raw vector is useful for storing a single binary object.
@@ -19,4 +20,5 @@ BugReports: https://github.com/hadley/blob/issues
 Suggests:
     testthat,
     covr
-RoxygenNote: 5.0.1
+Roxygen: list(markdown = TRUE, roclets = c("collate", "namespace", "rd", "pkgapi::api_roclet"))
+RoxygenNote: 6.0.1
