@@ -3,7 +3,7 @@ format.blob <- function(x, ...) {
   if (length(x) == 0)
     return(character())
 
-  ifelse(is.na(x), "<NA>", paste0("blob[", blob_size(x, ...) , "]"))
+  ifelse(is.na(x), "<NA>", paste0("blob[", blob_size(x, ...), "]"))
 }
 
 #' @export
