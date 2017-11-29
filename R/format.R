@@ -34,7 +34,7 @@ is_vector_s3.blob <- function(x) TRUE
 blob_size <- function(x, digits = 3, trim = TRUE, ...) {
   x <- vapply(x, length, numeric(1))
 
-  units <- c("kb", "Mb", "Gb", "Tb")
+  units <- c("kB", "MB", "GB", "TB")
   power <- min(floor(log(abs(x), 1000)), length(units))
   if (power < 1) {
     unit <- "B"

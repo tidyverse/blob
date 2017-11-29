@@ -35,9 +35,9 @@ test_that("similar sizes", {
   expect_format_equal(
     format(x),
     c(
-      "blob[1 kb]",
-      "blob[2 kb]",
-      "blob[4 kb]"
+      "blob[1 kB]",
+      "blob[2 kB]",
+      "blob[4 kB]"
     )
   )
 })
