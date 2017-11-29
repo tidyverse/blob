@@ -12,7 +12,8 @@ Description: R's raw vector is useful for storing a single binary object.
     use as a column in data frame.
 Imports:
     methods,
-    pillar
+    pillar,
+    prettyunits
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
