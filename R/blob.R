@@ -1,3 +1,6 @@
+#' @importFrom methods setOldClass
+setOldClass("blob")
+
 #' Construct a blob object
 #'
 #' \code{new_blob} is a low-level constructor that takes a list of
