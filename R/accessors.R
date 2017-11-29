@@ -25,3 +25,6 @@
     NextMethod()
   }
 }
+
+#' @export
+c.blob <- function(x, ...) as.blob(NextMethod())

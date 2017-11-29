@@ -22,3 +22,10 @@ test_that("can insert raw or NULL", {
 
   expect_equal(x, blob(as.raw(0), as.raw(0), NULL, NULL))
 })
+
+test_that("can combine", {
+  expect_identical(
+    c(blob(raw(4), raw(5)), blob(raw(7))),
+    blob(raw(4), raw(5), raw(7))
+  )
+})
