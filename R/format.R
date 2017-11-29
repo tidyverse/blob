@@ -16,19 +16,19 @@ print.blob <- function(x, ...) {
 }
 
 #' @export
-#' @importFrom tibble type_sum
+#' @importFrom pillar type_sum
 type_sum.blob <- function(x) {
   "blob"
 }
 
 #' @export
-#' @importFrom tibble obj_sum
+#' @importFrom pillar obj_sum
 obj_sum.blob <- function(x) {
   format(x, trim = FALSE)
 }
 
 #' @export
-#' @importFrom tibble is_vector_s3
+#' @importFrom pillar is_vector_s3
 is_vector_s3.blob <- function(x) TRUE
 
 blob_size <- function(x, digits = 3, trim = TRUE, ...) {
@@ -46,4 +46,16 @@ blob_size <- function(x, digits = 3, trim = TRUE, ...) {
   x1 <- signif(x, digits = digits %||% 3)
   x2 <- format(x1, big.mark = ",", scientific = FALSE, trim = trim)
   paste0(x2, " ", unit)
+}
+
+#' @importFrom pillar pillar_shaft
+#' @export
+pillar_shaft.blob <- function(x, ...) {
+  out <- ifelse(
+    is.na(x),
+    NA_character_,
+    paste0(pillar::style_subtle("["), blob_size(x, ...), pillar::style_subtle("]"))
+  )
+
+  pillar::new_pillar_shaft_simple(out, align = "right")
 }
