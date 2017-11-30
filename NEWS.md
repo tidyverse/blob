@@ -1,3 +1,8 @@
+### blob 1.1.0.9001 (2017-11-30)
+
+- Now using the prettyunits package to format data sizes.
+
+
 ### blob 1.1.0.9000 (2017-11-29)
 
 - Use `B` instead of `b` as unit.
