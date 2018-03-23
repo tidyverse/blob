@@ -15,20 +15,17 @@ print.blob <- function(x, ...) {
   }
 }
 
-#' @export
-#' @importFrom pillar type_sum
+# Dynamically exported, see zzz.R
 type_sum.blob <- function(x) {
   "blob"
 }
 
-#' @export
-#' @importFrom pillar obj_sum
+# Dynamically exported, see zzz.R
 obj_sum.blob <- function(x) {
   format(x, trim = FALSE)
 }
 
-#' @export
-#' @importFrom pillar is_vector_s3
+# Dynamically exported, see zzz.R
 is_vector_s3.blob <- function(x) TRUE
 
 blob_size <- function(x, digits = 3, trim = TRUE, ...) {
