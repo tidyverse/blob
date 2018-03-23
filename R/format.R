@@ -36,8 +36,7 @@ blob_size <- function(x, digits = 3, trim = TRUE, ...) {
   prettyunits::pretty_bytes(x)
 }
 
-#' @importFrom pillar pillar_shaft
-#' @export
+# Dynamically exported, see zzz.R
 pillar_shaft.blob <- function(x, ...) {
   out <- ifelse(
     is.na(x),
