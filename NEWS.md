@@ -1,17 +1,11 @@
-### blob 1.1.0.9002 (2018-03-24)
+## blob 1.1.1 (2018-03-24)
 
-- The *pillar* package is now suggested only, using dynamic method registration (#9).
+- Now suggesting *pillar* instead of importing *tibble*, and using colored
+  formatting with the *prettyunits* package with `B` instead of `b` as units
+  (#7, #9).
 
-### blob 1.1.0.9001 (2017-11-30)
-
-- Now using the prettyunits package to format data sizes.
-
-
-### blob 1.1.0.9000 (2017-11-29)
-
-- Use `B` instead of `b` as unit.
-- Now importing pillar instead of tibble, and using colored formatting.
 - The blob class can now be used for S4 dispatch.
+
 - Calling `c()` on blob objects returns a blob.
 
 
