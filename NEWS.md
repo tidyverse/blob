@@ -1,3 +1,7 @@
+### blob 1.1.0.9002 (2018-03-24)
+
+- The *pillar* package is now suggested only, using dynamic method registration (#9).
+
 ### blob 1.1.0.9001 (2017-11-30)
 
 - Now using the prettyunits package to format data sizes.
