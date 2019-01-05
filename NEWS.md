@@ -1,3 +1,5 @@
+# blob (development version)
+
 ## blob 1.1.1 (2018-03-24)
 
 - Now suggesting *pillar* instead of importing *tibble*, and using colored
