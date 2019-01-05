@@ -1,0 +1,7 @@
+template:
+  package: tidytemplate
+
+url: https://blob.tidyverse.org
+
+home:
+  strip_header: true
