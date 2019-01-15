@@ -1,4 +1,5 @@
 #' @import vctrs
+#' @import rlang
 NULL
 
 #' @importFrom methods setOldClass
@@ -23,10 +24,15 @@ setOldClass(c("blob", "vctrs_blob", "vctrs_vctr"))
 #' as.blob(c("Good morning", "Good evening"))
 blob <- function(...) {
   x <- list(...)
-  if (!is_raw_list(x)) {
-    stop("`x` must be a list of raw vectors", call. = FALSE)
-  }
+  check_raw_list(x)
   new_blob(x)
+}
+
+check_raw_list <- function(x) {
+  quo <- enquo(x)
+  if (!is_raw_list(x)) {
+    stop("`", as_label(quo), "` must be a list of raw vectors", call. = FALSE)
+  }
 }
 
 #' @export
