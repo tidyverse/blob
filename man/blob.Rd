@@ -3,14 +3,17 @@
 \name{blob}
 \alias{blob}
 \alias{new_blob}
-\alias{as.blob}
+\alias{as_blob}
+\alias{is_blob}
 \title{Construct a blob object}
 \usage{
 blob(...)
 
 new_blob(x = list())
 
-as.blob(x, ...)
+as_blob(x)
+
+is_blob(x)
 }
 \arguments{
 \item{...}{Individual raw vectors}
@@ -19,8 +22,10 @@ as.blob(x, ...)
 }
 \description{
 \code{new_blob()} is a low-level constructor that takes a list of
-raw vectors. \code{blob()} constructs a blob from individual raw vectors,
-and \code{as.blob()} is a S3 generic that converts existing objects.
+raw vectors.
+\code{blob()} constructs a blob from individual raw vectors.
+\code{as_blob()} and \code{is_blob()} are simple forwarders to \code{\link[vctrs:vec_cast]{vctrs::vec_cast()}}
+and \code{\link[=inherits]{inherits()}}, respectively.
 }
 \examples{
 x1 <- charToRaw("Good morning")
@@ -30,4 +35,7 @@ new_blob(list(x1, x2))
 blob(x1, x2)
 
 as.blob(c("Good morning", "Good evening"))
+}
+\seealso{
+\code{\link[=as.blob]{as.blob()}} for the legacy interface for specifying casts.
 }

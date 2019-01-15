@@ -8,8 +8,12 @@ setOldClass(c("blob", "vctrs_blob", "vctrs_vctr"))
 #' Construct a blob object
 #'
 #' `new_blob()` is a low-level constructor that takes a list of
-#' raw vectors. `blob()` constructs a blob from individual raw vectors,
-#' and `as.blob()` is a S3 generic that converts existing objects.
+#' raw vectors.
+#' `blob()` constructs a blob from individual raw vectors.
+#' `as_blob()` and `is_blob()` are simple forwarders to [vctrs::vec_cast()]
+#' and [inherits()], respectively.
+#'
+#' @seealso [as.blob()] for the legacy interface for specifying casts.
 #'
 #' @param ... Individual raw vectors
 #' @param x A list of raw vectors, or other object to coerce
@@ -44,11 +48,31 @@ new_blob <- function(x = list()) {
 
 #' @export
 #' @rdname blob
+as_blob <- function(x) {
+  vec_cast(x, new_blob())
+}
+
+#' @export
+#' @rdname blob
+is_blob <- function(x) {
+  inherits(x, "blob")
+}
+
+#' Deprecated generic
+#'
+#' The `as.blob()` generic has been deprecated in favor of
+#' [vec_cast.vctrs_blob()].
+#' Implement a `vec_cast.vctrs_blob.myclass()` method to support
+#' coercing objects of your class to blobs.
+#' See [vctrs::vec_cast()] for more detail.
+#'
+#' @export
 as.blob <- function(x, ...) {
+  signal_soft_deprecated("as.blob() is deprecated, use as_blob().")
   UseMethod("as.blob")
 }
 
 #' @export
 as.blob.default <- function(x, ...) {
-  vec_cast(x, new_blob())
+  as_blob(x)
 }
