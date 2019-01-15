@@ -6,15 +6,6 @@ format.blob <- function(x, ...) {
   ifelse(is.na(x), "<NA>", paste0("blob[", blob_size(x, ...), "]"))
 }
 
-#' @export
-print.blob <- function(x, ...) {
-  if (length(x) == 0) {
-    cat("blob()\n")
-  } else {
-    print(format(x, ...), quote = FALSE)
-  }
-}
-
 # Dynamically exported, see zzz.R
 type_sum.blob <- function(x) {
   "blob"
