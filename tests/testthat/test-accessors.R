@@ -28,4 +28,27 @@ test_that("can combine", {
     c(blob(raw(4), raw(5)), blob(raw(7))),
     blob(raw(4), raw(5), raw(7))
   )
+  expect_identical(
+    # Doesn't work with c()
+    vec_c(list(raw(4), raw(5)), blob(raw(7))),
+    blob(raw(4), raw(5), raw(7))
+  )
+  expect_identical(
+    vec_c(list(raw(7)), blob(raw(4), raw(5)), list(raw(7))),
+    blob(raw(7), raw(4), raw(5), raw(7))
+  )
+  expect_identical(
+    vec_c(NA, blob()),
+    blob(NULL)
+  )
+  expect_identical(
+    c(blob(), NA),
+    blob(NULL)
+  )
+  expect_error(
+    c(blob(raw(4), raw(5)), raw(7))
+  )
+  expect_error(
+    c(blob(raw(4), raw(5)), 7)
+  )
 })

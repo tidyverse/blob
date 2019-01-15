@@ -11,3 +11,9 @@ test_that("is.na<- sets missing values", {
 
   expect_equal(x, blob(as.raw(1), NULL, as.raw(3), NULL))
 })
+
+test_that("is.na<- error", {
+  x <- as.blob(1:4)
+  expect_error(is.na(x) <- rep(TRUE, 26))
+  expect_error(is.na(x) <- letters[1:4])
+})
