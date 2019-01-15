@@ -23,7 +23,7 @@ setOldClass(c("blob", "vctrs_blob", "vctrs_vctr"))
 #'
 #' as.blob(c("Good morning", "Good evening"))
 blob <- function(...) {
-  x <- list(...)
+  x <- list2(...)
   check_raw_list(x)
   new_blob(x)
 }
