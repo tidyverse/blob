@@ -1,5 +1,8 @@
+#' @import vctrs
+NULL
+
 #' @importFrom methods setOldClass
-setOldClass("blob")
+setOldClass(c("blob", "vctrs_blob", "vctrs_vctr"))
 
 #' Construct a blob object
 #'
@@ -19,16 +22,18 @@ setOldClass("blob")
 #'
 #' as.blob(c("Good morning", "Good evening"))
 blob <- function(...) {
-  new_blob(list(...))
+  x <- list(...)
+  if (!is_raw_list(x)) {
+    stop("`x` must be a list of raw vectors", call. = FALSE)
+  }
+  new_blob(x)
 }
 
 #' @export
 #' @rdname blob
 new_blob <- function(x) {
-  if (!is_raw_list(x)) {
-    stop("`x` must be a list of raw vectors", call. = FALSE)
-  }
-  structure(x, class = "blob")
+  vec_assert(x, list())
+  new_vctr(x, class = c("blob", "vctrs_blob"))
 }
 
 #' @export
@@ -61,6 +66,3 @@ as.blob.character <- function(x, ...) {
 as.blob.integer <- function(x, ...) {
   new_blob(lapply(x, as.raw))
 }
-
-#' @export
-as.data.frame.blob <- as.data.frame.difftime
