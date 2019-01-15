@@ -18,9 +18,9 @@ as.blob(x, ...)
 \item{x}{A list of raw vectors, or other object to coerce}
 }
 \description{
-\code{new_blob} is a low-level constructor that takes a list of
-raw vectors. \code{blob} constructs a blob from individual raw vectors,
-and \code{as.blob} is a S3 generic that converts existing objects.
+\code{new_blob()} is a low-level constructor that takes a list of
+raw vectors. \code{blob()} constructs a blob from individual raw vectors,
+and \code{as.blob()} is a S3 generic that converts existing objects.
 }
 \examples{
 x1 <- charToRaw("Good morning")

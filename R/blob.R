@@ -3,9 +3,9 @@ setOldClass("blob")
 
 #' Construct a blob object
 #'
-#' \code{new_blob} is a low-level constructor that takes a list of
-#' raw vectors. \code{blob} constructs a blob from individual raw vectors,
-#' and \code{as.blob} is a S3 generic that converts existing objects.
+#' `new_blob()` is a low-level constructor that takes a list of
+#' raw vectors. `blob()` constructs a blob from individual raw vectors,
+#' and `as.blob()` is a S3 generic that converts existing objects.
 #'
 #' @param ... Individual raw vectors
 #' @param x A list of raw vectors, or other object to coerce
