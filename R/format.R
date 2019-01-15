@@ -21,11 +21,6 @@ type_sum.blob <- function(x) {
 }
 
 # Dynamically exported, see zzz.R
-obj_sum.blob <- function(x) {
-  format(x, trim = FALSE)
-}
-
-# Dynamically exported, see zzz.R
 is_vector_s3.blob <- function(x) TRUE
 
 blob_size <- function(x, digits = 3, trim = TRUE, ...) {
