@@ -1,12 +1,3 @@
-#' @export
-`[<-.blob` <- function(x, i, ..., value) {
-  if (!is_raw_list(value)) {
-    stop("RHS must be list of raw vectors", call. = FALSE)
-  }
-
-  NextMethod()
-}
-
 # Required, because blob wraps a list, and the default implementation
 # doesn't cast if the underlying type is a list.
 #' @export
@@ -24,6 +15,3 @@
     NextMethod()
   }
 }
-
-#' @export
-c.blob <- function(x, ...) as.blob(NextMethod())
