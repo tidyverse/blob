@@ -37,7 +37,7 @@ check_raw_list <- function(x) {
 
 #' @export
 #' @rdname blob
-new_blob <- function(x) {
+new_blob <- function(x = list()) {
   vec_assert(x, list())
   new_vctr(x, class = c("blob", "vctrs_blob"))
 }

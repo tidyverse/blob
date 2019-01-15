@@ -8,7 +8,7 @@
 \usage{
 blob(...)
 
-new_blob(x)
+new_blob(x = list())
 
 as.blob(x, ...)
 }
