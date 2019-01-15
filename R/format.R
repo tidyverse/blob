@@ -6,8 +6,8 @@ format.blob <- function(x, ...) {
   ifelse(is.na(x), "<NA>", paste0("blob[", blob_size(x, ...), "]"))
 }
 
-# Dynamically exported, see zzz.R
-type_sum.blob <- function(x) {
+#' @export
+vec_ptype_abbr.vctrs_percent <- function(x) {
   "blob"
 }
 

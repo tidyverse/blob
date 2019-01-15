@@ -2,7 +2,6 @@
 .onLoad <- function(...) {
   register_s3_method("pillar", "pillar_shaft", "blob")
   register_s3_method("pillar", "is_vector_s3", "blob")
-  register_s3_method("pillar", "type_sum", "blob")
 
   invisible()
 }
