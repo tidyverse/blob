@@ -25,6 +25,18 @@ vec_cast.vctrs_blob.vctrs_blob <- function(x, to) x
 #' @export
 vec_cast.vctrs_blob.list <- function(x, to) blob(!!!x)
 
+#' @method vec_cast.vctrs_blob integer
+#' @export
+vec_cast.vctrs_blob.integer <- function(x, to) blob(!!!lapply(x, as.raw))
+
+#' @method vec_cast.vctrs_blob raw
+#' @export
+vec_cast.vctrs_blob.raw <- function(x, to) blob(x)
+
+#' @method vec_cast.vctrs_blob character
+#' @export
+vec_cast.vctrs_blob.character <- function(x, to) blob(!!!lapply(x, charToRaw))
+
 #' @method vec_cast.list vctrs_blob
 #' @export
 vec_cast.list.vctrs_blob <- function(x, to) vec_data(x)

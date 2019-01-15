@@ -49,26 +49,6 @@ as.blob <- function(x, ...) {
 }
 
 #' @export
-as.blob.blob <- function(x, ...) {
-  x
-}
-
-#' @export
-as.blob.list <- function(x, ...) {
-  new_blob(x)
-}
-
-#' @export
-as.blob.raw <- function(x, ...) {
-  new_blob(list(x))
-}
-
-#' @export
-as.blob.character <- function(x, ...) {
-  new_blob(lapply(x, charToRaw))
-}
-
-#' @export
-as.blob.integer <- function(x, ...) {
-  new_blob(lapply(x, as.raw))
+as.blob.default <- function(x, ...) {
+  vec_cast(x, new_blob())
 }
