@@ -7,7 +7,12 @@ format.blob <- function(x, ...) {
 }
 
 #' @export
-vec_ptype_abbr.vctrs_percent <- function(x) {
+vec_ptype_abbr.vctrs_blob <- function(x) {
+  "blob"
+}
+
+#' @export
+vec_ptype_full.vctrs_blob <- function(x) {
   "blob"
 }
 
