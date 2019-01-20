@@ -1,19 +1,19 @@
 context("accessors")
 
 test_that("subsetting blob returns blob", {
-  x <- as_blob(1:5)
+  x <- blob(!!!as.raw(1:5))
   expect_s3_class(x[1], "blob")
 })
 
 test_that("can't insert objects of incorrect type", {
-  x <- as_blob(1:5)
+  x <- blob(!!!as.raw(1:5))
 
   expect_error(x[[1]] <- 1, "Can't cast <double> to <raw>", fixed = TRUE)
   expect_error(x[1] <- 1, "Can't cast <double> to <blob>", fixed = TRUE)
 })
 
 test_that("can insert raw or NULL", {
-  x <- as_blob(1:4)
+  x <- blob(!!!as.raw(1:4))
 
   x[[1]] <- as.raw(0)
   x[2] <- list(as.raw(0))

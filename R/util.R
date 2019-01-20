@@ -10,3 +10,7 @@ is_raw_list <- function(x) {
 
   TRUE
 }
+
+as_single_raw <- function(x) {
+  if (is.na(x)) NULL else as.raw(x)
+}

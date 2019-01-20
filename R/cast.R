@@ -27,7 +27,10 @@ vec_cast.blob.list <- function(x, to) blob(!!!x)
 
 #' @method vec_cast.blob integer
 #' @export
-vec_cast.blob.integer <- function(x, to) blob(!!!lapply(x, as.raw))
+vec_cast.blob.integer <- function(x, to) {
+  warn_deprecated("Coercing an integer vector to a blob is deprecated, please coerce to a list first.")
+  blob(!!!lapply(x, as_single_raw))
+}
 
 #' @method vec_cast.blob raw
 #' @export
