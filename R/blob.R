@@ -3,7 +3,7 @@
 NULL
 
 #' @importFrom methods setOldClass
-setOldClass(c("blob", "vctrs_vctr"))
+setOldClass(c("blob", "vctrs_list_of", "vctrs_vctr"))
 
 #' Construct a blob object
 #'
@@ -43,7 +43,7 @@ check_raw_list <- function(x) {
 #' @rdname blob
 new_blob <- function(x = list()) {
   vec_assert(x, list())
-  new_vctr(x, class = "blob")
+  new_list_of(x, ptype = raw(), class = "blob")
 }
 
 #' @export
