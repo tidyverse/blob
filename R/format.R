@@ -7,12 +7,12 @@ format.blob <- function(x, ...) {
 }
 
 #' @export
-vec_ptype_abbr.vctrs_blob <- function(x) {
+vec_ptype_abbr.blob <- function(x) {
   "blob"
 }
 
 #' @export
-vec_ptype_full.vctrs_blob <- function(x) {
+vec_ptype_full.blob <- function(x) {
   "blob"
 }
 

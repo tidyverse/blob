@@ -3,7 +3,7 @@
 NULL
 
 #' @importFrom methods setOldClass
-setOldClass(c("blob", "vctrs_blob", "vctrs_vctr"))
+setOldClass(c("blob", "vctrs_vctr"))
 
 #' Construct a blob object
 #'
@@ -43,7 +43,7 @@ check_raw_list <- function(x) {
 #' @rdname blob
 new_blob <- function(x = list()) {
   vec_assert(x, list())
-  new_vctr(x, class = c("blob", "vctrs_blob"))
+  new_vctr(x, class = "blob")
 }
 
 #' @export
@@ -61,8 +61,8 @@ is_blob <- function(x) {
 #' Deprecated generic
 #'
 #' The `as.blob()` generic has been deprecated in favor of
-#' [vec_cast.vctrs_blob()].
-#' Implement a `vec_cast.vctrs_blob.myclass()` method to support
+#' [vec_cast.blob()].
+#' Implement a `vec_cast.blob.myclass()` method to support
 #' coercing objects of your class to blobs.
 #' See [vctrs::vec_cast()] for more detail.
 #'

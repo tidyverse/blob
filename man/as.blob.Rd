@@ -8,8 +8,8 @@ as.blob(x, ...)
 }
 \description{
 The \code{as.blob()} generic has been deprecated in favor of
-\code{\link[=vec_cast.vctrs_blob]{vec_cast.vctrs_blob()}}.
-Implement a \code{vec_cast.vctrs_blob.myclass()} method to support
+\code{\link[=vec_cast.blob]{vec_cast.blob()}}.
+Implement a \code{vec_cast.blob.myclass()} method to support
 coercing objects of your class to blobs.
 See \code{\link[vctrs:vec_cast]{vctrs::vec_cast()}} for more detail.
 }

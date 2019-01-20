@@ -4,39 +4,39 @@
 #'
 #' @inheritParams vctrs::vec_cast
 #'
-#' @method vec_cast vctrs_blob
+#' @method vec_cast blob
 #' @export
-#' @export vec_cast.vctrs_blob
-vec_cast.vctrs_blob <- function(x, to) UseMethod("vec_cast.vctrs_blob")
+#' @export vec_cast.blob
+vec_cast.blob <- function(x, to) UseMethod("vec_cast.blob")
 
-#' @method vec_cast.vctrs_blob default
+#' @method vec_cast.blob default
 #' @export
-vec_cast.vctrs_blob.default <- function(x, to) stop_incompatible_cast(x, to)
+vec_cast.blob.default <- function(x, to) stop_incompatible_cast(x, to)
 
-#' @method vec_cast.vctrs_blob logical
+#' @method vec_cast.blob logical
 #' @export
-vec_cast.vctrs_blob.logical <- function(x, to) vec_unspecified_cast(x, to)
+vec_cast.blob.logical <- function(x, to) vec_unspecified_cast(x, to)
 
-#' @method vec_cast.vctrs_blob vctrs_blob
+#' @method vec_cast.blob blob
 #' @export
-vec_cast.vctrs_blob.vctrs_blob <- function(x, to) x
+vec_cast.blob.blob <- function(x, to) x
 
-#' @method vec_cast.vctrs_blob list
+#' @method vec_cast.blob list
 #' @export
-vec_cast.vctrs_blob.list <- function(x, to) blob(!!!x)
+vec_cast.blob.list <- function(x, to) blob(!!!x)
 
-#' @method vec_cast.vctrs_blob integer
+#' @method vec_cast.blob integer
 #' @export
-vec_cast.vctrs_blob.integer <- function(x, to) blob(!!!lapply(x, as.raw))
+vec_cast.blob.integer <- function(x, to) blob(!!!lapply(x, as.raw))
 
-#' @method vec_cast.vctrs_blob raw
+#' @method vec_cast.blob raw
 #' @export
-vec_cast.vctrs_blob.raw <- function(x, to) blob(x)
+vec_cast.blob.raw <- function(x, to) blob(x)
 
-#' @method vec_cast.vctrs_blob character
+#' @method vec_cast.blob character
 #' @export
-vec_cast.vctrs_blob.character <- function(x, to) blob(!!!lapply(x, charToRaw))
+vec_cast.blob.character <- function(x, to) blob(!!!lapply(x, charToRaw))
 
-#' @method vec_cast.list vctrs_blob
+#' @method vec_cast.list blob
 #' @export
-vec_cast.list.vctrs_blob <- function(x, to) vec_data(x)
+vec_cast.list.blob <- function(x, to) vec_data(x)
