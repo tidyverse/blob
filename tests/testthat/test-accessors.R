@@ -5,6 +5,22 @@ test_that("subsetting blob returns blob", {
   expect_s3_class(x[1], "blob")
 })
 
+test_that("subsetting can return NA", {
+  x <- blob(!!!as.raw(1:5))
+  expect_identical(x[6], blob(NULL))
+  expect_identical(x[5:6], blob(as.raw(5L), NULL))
+})
+
+test_that("subset assignment works", {
+  x <- blob(!!!as.raw(1:5))
+  x[3] <- blob(raw(1))
+  expect_identical(x, blob(!!!as.raw(c(1:2, 0L, 4:5))))
+  x[[4]] <- raw(1)
+  expect_identical(x, blob(!!!as.raw(c(1:2, 0L, 0L, 5L))))
+  x[7] <- blob(raw(1))
+  expect_identical(x, blob(!!!as.raw(c(1:2, 0L, 0L, 5L)), NULL, raw(1)))
+})
+
 test_that("can't insert objects of incorrect type", {
   x <- blob(!!!as.raw(1:5))
 
