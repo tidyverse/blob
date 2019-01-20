@@ -8,7 +8,7 @@ test_that("subsetting blob returns blob", {
 test_that("can't insert objects of incorrect type", {
   x <- as_blob(1:5)
 
-  expect_error(x[[1]] <- 1, "RHS must be raw vector or NULL", fixed = TRUE)
+  expect_error(x[[1]] <- 1, "Can't cast <double> to <raw>", fixed = TRUE)
   expect_error(x[1] <- 1, "Can't cast <double> to <blob>", fixed = TRUE)
 })
 
