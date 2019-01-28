@@ -66,6 +66,9 @@ is_blob <- function(x) {
 #' coercing objects of your class to blobs.
 #' See [vctrs::vec_cast()] for more detail.
 #'
+#' @param x An object.
+#' @param ... Passed on to methods.
+#'
 #' @export
 as.blob <- function(x, ...) {
   signal_soft_deprecated("as.blob() is deprecated, use as_blob().")

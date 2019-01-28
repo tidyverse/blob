@@ -6,6 +6,11 @@
 \usage{
 as.blob(x, ...)
 }
+\arguments{
+\item{x}{An object.}
+
+\item{...}{Passed on to methods.}
+}
 \description{
 The \code{as.blob()} generic has been deprecated in favor of
 \code{\link[=vec_cast.blob]{vec_cast.blob()}}.
