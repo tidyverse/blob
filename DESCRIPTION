@@ -26,6 +26,7 @@ Imports:
     vctrs
 Suggests: 
     covr,
+    crayon,
     pillar (>= 1.2.1),
     testthat
 Remotes: 
