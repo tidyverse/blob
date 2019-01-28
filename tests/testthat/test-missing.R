@@ -14,8 +14,7 @@ test_that("is.na<- sets missing values", {
 
 test_that("is.na<- auto-expansion for logical indexes", {
   x <- blob(!!!as.raw(1:4))
-  is.na(x) <- rep(TRUE, 5)
-  expect_identical(x, rep(blob(NULL), 5))
+  expect_error(is.na(x) <- rep(TRUE, 5))
 })
 
 test_that("is.na<- auto-expansion for character indices", {
