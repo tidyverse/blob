@@ -1,0 +1,14 @@
+url: https://blob.tidyverse.org
+
+template:
+  package: tidytemplate
+
+home:
+  strip_header: true
+
+development:
+  mode: auto
+
+authors:
+  Kirill Müller:
+    href: http://krlmlr.info
