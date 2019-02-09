@@ -30,7 +30,7 @@ Suggests:
     pillar (>= 1.2.1),
     testthat
 Remotes: 
-    krlmlr/vctrs@f-blob-2
+    r-lib/vctrs
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE, roclets = c("collate", "namespace", "rd", "pkgapi::api_roclet"))
