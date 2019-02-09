@@ -2,6 +2,7 @@
 
 S3method(as.blob,default)
 S3method(format,blob)
+S3method(obj_print_data,blob)
 S3method(vec_cast,blob)
 S3method(vec_cast.blob,blob)
 S3method(vec_cast.blob,character)

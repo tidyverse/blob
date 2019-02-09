@@ -7,6 +7,17 @@ format.blob <- function(x, ...) {
 }
 
 #' @export
+obj_print_data.blob <- function(x, ...) {
+  if (length(x) == 0)
+    return()
+
+  out <- stats::setNames(format(x), names(x))
+  print(out, quote = FALSE)
+
+  invisible(x)
+}
+
+#' @export
 vec_ptype_abbr.blob <- function(x) {
   "blob"
 }

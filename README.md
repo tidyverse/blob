@@ -9,6 +9,8 @@ Status](https://codecov.io/gh/tidyverse/blob/branch/master/graph/badge.svg)](htt
 
 # blob
 
+## Overview
+
 The goal of blob is to provide a simple S3 class to represent a vector
 of binary objects, aka blobs. The `blob` class is a lightweight wrapper
 around a list of raw vectors, suitable for inclusion in a data frame.
