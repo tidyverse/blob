@@ -19,7 +19,7 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
 <!-- clipboard.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
 
 <!-- sticky kit -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
@@ -28,6 +28,8 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script>
 <link href="../tidyverse-2.css" rel="stylesheet">
+
+
 
 <meta property="og:title" content="Changelog" />
 
@@ -69,7 +71,7 @@
         <a class="navbar-brand" href="../index.html">blob</a>
         <div class="info">
           <span class="partof">part of the <a href="https://tidyverse.org">tidyverse</a></span>
-          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.1.9000</span>
+          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.1.1</span>
         </div>
       </div>
     </div>
@@ -109,6 +111,15 @@
       <small>Source: <a href='https://github.com/tidyverse/blob/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
+    <div id="blob-1-1-1-2018-03-24" class="section level2">
+<h2 class="hasAnchor">
+<a href="#blob-1-1-1-2018-03-24" class="anchor"></a>blob 1.1.1 (2018-03-24)</h2>
+<ul>
+<li><p>Now suggesting <em>pillar</em> instead of importing <em>tibble</em>, and using colored formatting with the <em>prettyunits</em> package with <code>B</code> instead of <code>b</code> as units (<a href='https://github.com/tidyverse/blob/issues/7'>#7</a>, <a href='https://github.com/tidyverse/blob/issues/9'>#9</a>).</p></li>
+<li><p>The blob class can now be used for S4 dispatch.</p></li>
+<li><p>Calling <code><a href="https://www.rdocumentation.org/packages/base/topics/c">c()</a></code> on blob objects returns a blob.</p></li>
+</ul>
+</div>
     <div id="blob-1-1-0-2017-06-17" class="section level1">
 <h1 class="page-header">
 <a href="#blob-1-1-0-2017-06-17" class="anchor"></a>blob 1.1.0 (2017-06-17)<small> 2017-06-17 </small>
@@ -133,6 +144,7 @@
     <div id="tocnav">
       <h2>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
+        <li><a href="#blob-1-1-1-2018-03-24">1.1.1</a></li>
         <li><a href="#blob-1-1-0-2017-06-17">1.1.0</a></li>
         <li><a href="#blob-1-0-0">1.0.0</a></li>
       </ul>
@@ -148,7 +160,7 @@
 
 <div class="author">
   <p>
-    Developed by <a href='http://hadley.nz'>Hadley Wickham</a>, Kirill Müller.
+    Developed by <a href='http://hadley.nz'>Hadley Wickham</a>, <a href='http://krlmlr.info'>Kirill Müller</a>.
     Site built by <a href="https://pkgdown.r-lib.org">pkgdown</a>.
   </p>
 </div>
