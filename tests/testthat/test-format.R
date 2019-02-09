@@ -45,3 +45,11 @@ test_that("similar sizes", {
     )
   )
 })
+
+test_that("output", {
+  skip_on_cran()
+
+  x <- blob(raw(2 ** 2), raw(2 ** 11), raw(2 ** 20))
+
+  expect_known_output(print(x), "blob.txt")
+})
