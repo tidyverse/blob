@@ -42,7 +42,6 @@ check_raw_list <- function(x) {
 #' @export
 #' @rdname blob
 new_blob <- function(x = list()) {
-  vec_assert(x, list())
   new_list_of(x, ptype = raw(), class = "blob")
 }
 
