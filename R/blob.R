@@ -28,21 +28,28 @@ setOldClass(c("blob", "vctrs_list_of", "vctrs_vctr"))
 #' as.blob(c("Good morning", "Good evening"))
 blob <- function(...) {
   x <- list2(...)
-  check_raw_list(x)
+  validate_blob(x)
   new_blob(x)
-}
-
-check_raw_list <- function(x) {
-  quo <- enquo(x)
-  if (!is_raw_list(x)) {
-    stop("`", as_label(quo), "` must be a list of raw vectors", call. = FALSE)
-  }
 }
 
 #' @export
 #' @rdname blob
 new_blob <- function(x = list()) {
   new_list_of(x, ptype = raw(), class = "blob")
+}
+
+#' @export
+#' @rdname blob
+validate_blob <- function(x) {
+  x <- enquo(x)
+  check_raw_list(!!x)
+}
+
+check_raw_list <- function(x) {
+  quo <- enquo(x)
+  if (!is_raw_list(eval_tidy(quo))) {
+    stop("`", as_label(quo), "` must be a list of raw vectors", call. = FALSE)
+  }
 }
 
 #' @export

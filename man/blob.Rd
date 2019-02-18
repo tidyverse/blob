@@ -3,6 +3,7 @@
 \name{blob}
 \alias{blob}
 \alias{new_blob}
+\alias{validate_blob}
 \alias{as_blob}
 \alias{is_blob}
 \title{Construct a blob object}
@@ -10,6 +11,8 @@
 blob(...)
 
 new_blob(x = list())
+
+validate_blob(x)
 
 as_blob(x)
 
