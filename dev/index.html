@@ -105,17 +105,20 @@
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
 <a href="#example" class="anchor"></a>Example</h2>
-<p>To create a blob, use <code><a href="reference/blob.html">blob()</a></code>, <code><a href="reference/blob.html">new_blob()</a></code> or <code><a href="reference/blob.html">as.blob()</a></code>:</p>
+<p>To create a blob, use <code><a href="reference/blob.html">blob()</a></code>, <code><a href="reference/blob.html">new_blob()</a></code> or <code><a href="reference/blob.html">as_blob()</a></code>:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1">x1 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/rawConversion">charToRaw</a></span>(<span class="st">"Good morning"</span>)</a>
 <a class="sourceLine" id="cb2-2" data-line-number="2">x2 &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/raw">as.raw</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="dv">0x48</span>, <span class="dv">0x65</span>, <span class="dv">0x6c</span>, <span class="dv">0x6c</span>, <span class="dv">0x6f</span>))</a>
 <a class="sourceLine" id="cb2-3" data-line-number="3"></a>
 <a class="sourceLine" id="cb2-4" data-line-number="4"><span class="kw"><a href="reference/blob.html">new_blob</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/list">list</a></span>(x1, x2))</a>
-<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt; [1] blob[12 B] blob[ 5 B]</span></a>
-<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="kw"><a href="reference/blob.html">blob</a></span>(x1, x2)</a>
-<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt; [1] blob[12 B] blob[ 5 B]</span></a>
-<a class="sourceLine" id="cb2-8" data-line-number="8"></a>
-<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="kw"><a href="reference/blob.html">as.blob</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"Good morning"</span>, <span class="st">"Good evening"</span>))</a>
-<a class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt; [1] blob[12 B] blob[12 B]</span></a></code></pre></div>
+<a class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt; &lt;blob[2]&gt;</span></a>
+<a class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt; [1] blob[12 B] blob[ 5 B]</span></a>
+<a class="sourceLine" id="cb2-7" data-line-number="7"><span class="kw"><a href="reference/blob.html">blob</a></span>(x1, x2)</a>
+<a class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt; &lt;blob[2]&gt;</span></a>
+<a class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt; [1] blob[12 B] blob[ 5 B]</span></a>
+<a class="sourceLine" id="cb2-10" data-line-number="10"></a>
+<a class="sourceLine" id="cb2-11" data-line-number="11"><span class="kw"><a href="reference/blob.html">as_blob</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"Good morning"</span>, <span class="st">"Good evening"</span>))</a>
+<a class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt; &lt;blob[2]&gt;</span></a>
+<a class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt; [1] blob[12 B] blob[12 B]</span></a></code></pre></div>
 </div>
 </div>
   </div>
