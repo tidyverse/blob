@@ -1,19 +1,35 @@
 context("accessors")
 
 test_that("subsetting blob returns blob", {
-  x <- as.blob(1:5)
+  x <- blob(!!!as.raw(1:5))
   expect_s3_class(x[1], "blob")
 })
 
-test_that("can't insert objects of incorrect type", {
-  x <- as.blob(1:5)
+test_that("subsetting can return NA", {
+  x <- blob(!!!as.raw(1:5))
+  expect_identical(x[6], blob(NULL))
+  expect_identical(x[5:6], blob(as.raw(5L), NULL))
+})
 
-  expect_error(x[[1]] <- 1, "must be raw vector")
-  expect_error(x[1] <- 1, "must be list of raw vectors")
+test_that("subset assignment works", {
+  x <- blob(!!!as.raw(1:5))
+  x[3] <- blob(raw(1))
+  expect_identical(x, blob(!!!as.raw(c(1:2, 0L, 4:5))))
+  x[[4]] <- raw(1)
+  expect_identical(x, blob(!!!as.raw(c(1:2, 0L, 0L, 5L))))
+  x[7] <- blob(raw(1))
+  expect_identical(x, blob(!!!as.raw(c(1:2, 0L, 0L, 5L)), NULL, raw(1)))
+})
+
+test_that("can't insert objects of incorrect type", {
+  x <- blob(!!!as.raw(1:5))
+
+  expect_error(x[[1]] <- 1, "Can't cast <double> to <raw>", fixed = TRUE)
+  expect_error(x[1] <- 1, "Can't cast <double> to <blob>", fixed = TRUE)
 })
 
 test_that("can insert raw or NULL", {
-  x <- as.blob(1:4)
+  x <- blob(!!!as.raw(1:4))
 
   x[[1]] <- as.raw(0)
   x[2] <- list(as.raw(0))
@@ -27,5 +43,28 @@ test_that("can combine", {
   expect_identical(
     c(blob(raw(4), raw(5)), blob(raw(7))),
     blob(raw(4), raw(5), raw(7))
+  )
+  expect_identical(
+    # Doesn't work with c()
+    vec_c(list(raw(4), raw(5)), blob(raw(7))),
+    blob(raw(4), raw(5), raw(7))
+  )
+  expect_identical(
+    vec_c(list(raw(7)), blob(raw(4), raw(5)), list(raw(7))),
+    blob(raw(7), raw(4), raw(5), raw(7))
+  )
+  expect_identical(
+    vec_c(NA, blob()),
+    blob(NULL)
+  )
+  expect_identical(
+    c(blob(), NA),
+    blob(NULL)
+  )
+  expect_error(
+    c(blob(raw(4), raw(5)), raw(7))
+  )
+  expect_error(
+    c(blob(raw(4), raw(5)), 7)
   )
 })

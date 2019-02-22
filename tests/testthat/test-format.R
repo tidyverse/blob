@@ -46,6 +46,15 @@ test_that("similar sizes", {
   )
 })
 
+test_that("empty", {
+  x <- blob()
+
+  expect_format_equal(
+    format(x),
+    character()
+  )
+})
+
 test_that("output", {
   skip_on_cran()
 

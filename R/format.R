@@ -7,16 +7,23 @@ format.blob <- function(x, ...) {
 }
 
 #' @export
-print.blob <- function(x, ...) {
-  if (length(x) == 0) {
-    cat("blob()\n")
-  } else {
-    print(format(x, ...), quote = FALSE)
-  }
+obj_print_data.blob <- function(x, ...) {
+  if (length(x) == 0)
+    return()
+
+  out <- stats::setNames(format(x), names(x))
+  print(out, quote = FALSE)
+
+  invisible(x)
 }
 
-# Dynamically exported, see zzz.R
-type_sum.blob <- function(x) {
+#' @export
+vec_ptype_abbr.blob <- function(x) {
+  "blob"
+}
+
+#' @export
+vec_ptype_full.blob <- function(x) {
   "blob"
 }
 

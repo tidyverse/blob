@@ -1,11 +1,19 @@
+#' @import vctrs
+#' @import rlang
+NULL
+
 #' @importFrom methods setOldClass
-setOldClass("blob")
+setOldClass(c("blob", "vctrs_list_of", "vctrs_vctr"))
 
 #' Construct a blob object
 #'
 #' `new_blob()` is a low-level constructor that takes a list of
-#' raw vectors. `blob()` constructs a blob from individual raw vectors,
-#' and `as.blob()` is a S3 generic that converts existing objects.
+#' raw vectors.
+#' `blob()` constructs a blob from individual raw vectors.
+#' `as_blob()` and `is_blob()` are simple forwarders to [vctrs::vec_cast()]
+#' and [inherits()], respectively.
+#'
+#' @seealso [as.blob()] for the legacy interface for specifying casts.
 #'
 #' @param ... Individual raw vectors
 #' @param x A list of raw vectors, or other object to coerce
@@ -19,48 +27,55 @@ setOldClass("blob")
 #'
 #' as.blob(c("Good morning", "Good evening"))
 blob <- function(...) {
-  new_blob(list(...))
+  x <- list2(...)
+  check_raw_list(x)
+  new_blob(x)
 }
 
-#' @export
-#' @rdname blob
-new_blob <- function(x) {
+check_raw_list <- function(x) {
+  quo <- enquo(x)
   if (!is_raw_list(x)) {
-    stop("`x` must be a list of raw vectors", call. = FALSE)
+    stop("`", as_label(quo), "` must be a list of raw vectors", call. = FALSE)
   }
-  structure(x, class = "blob")
 }
 
 #' @export
 #' @rdname blob
+new_blob <- function(x = list()) {
+  vec_assert(x, list())
+  new_list_of(x, ptype = raw(), class = "blob")
+}
+
+#' @export
+#' @rdname blob
+as_blob <- function(x) {
+  vec_cast(x, new_blob())
+}
+
+#' @export
+#' @rdname blob
+is_blob <- function(x) {
+  inherits(x, "blob")
+}
+
+#' Deprecated generic
+#'
+#' The `as.blob()` generic has been deprecated in favor of
+#' [vec_cast.blob()].
+#' Implement a `vec_cast.blob.myclass()` method to support
+#' coercing objects of your class to blobs.
+#' See [vctrs::vec_cast()] for more detail.
+#'
+#' @param x An object.
+#' @param ... Passed on to methods.
+#'
+#' @export
 as.blob <- function(x, ...) {
+  signal_soft_deprecated("as.blob() is deprecated, use as_blob().")
   UseMethod("as.blob")
 }
 
 #' @export
-as.blob.blob <- function(x, ...) {
-  x
+as.blob.default <- function(x, ...) {
+  as_blob(x)
 }
-
-#' @export
-as.blob.list <- function(x, ...) {
-  new_blob(x)
-}
-
-#' @export
-as.blob.raw <- function(x, ...) {
-  new_blob(list(x))
-}
-
-#' @export
-as.blob.character <- function(x, ...) {
-  new_blob(lapply(x, charToRaw))
-}
-
-#' @export
-as.blob.integer <- function(x, ...) {
-  new_blob(lapply(x, as.raw))
-}
-
-#' @export
-as.data.frame.blob <- as.data.frame.difftime
