@@ -16,7 +16,6 @@ knitr::opts_chunk$set(
   comment = "#>",
   fig.path = "README-"
 )
-pkgload::load_all(".")
 ```
 
 # blob
@@ -41,6 +40,8 @@ devtools::install_github("tidyverse/blob")
 To create a blob, use `blob()`, `new_blob()` or `as_blob()`:
 
 ```{r example}
+library(blob)
+
 x1 <- charToRaw("Good morning")
 x2 <- as.raw(c(0x48, 0x65, 0x6c, 0x6c, 0x6f))
 

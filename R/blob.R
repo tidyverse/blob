@@ -61,13 +61,14 @@ as_blob <- function(x) {
 #' @export
 #' @rdname blob
 is_blob <- function(x) {
-  inherits(x, "blob")
+  vec_is(x, new_blob())
 }
 
 #' Deprecated generic
 #'
 #' The `as.blob()` generic has been deprecated in favor of
-#' [vec_cast.blob()].
+#' the [as_blob()] function (for users) and the [vec_cast.blob()] method
+#' (for implementers).
 #' Implement a `vec_cast.blob.myclass()` method to support
 #' coercing objects of your class to blobs.
 #' See [vctrs::vec_cast()] for more detail.

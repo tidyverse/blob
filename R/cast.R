@@ -4,6 +4,7 @@
 #'
 #' @inheritParams vctrs::vec_cast
 #'
+#' @keywords internal
 #' @method vec_cast blob
 #' @export
 #' @export vec_cast.blob
@@ -23,7 +24,7 @@ vec_cast.blob.blob <- function(x, to) x
 
 #' @method vec_cast.blob list
 #' @export
-vec_cast.blob.list <- function(x, to) blob(!!!x)
+vec_cast.blob.list <- function(x, to) vec_list_cast(x, new_blob())
 
 #' @method vec_cast.blob integer
 #' @export
