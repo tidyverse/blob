@@ -14,3 +14,4 @@
 \description{
 Double dispatch methods to support \code{\link[vctrs:vec_cast]{vctrs::vec_cast()}}.
 }
+\keyword{internal}

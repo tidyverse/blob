@@ -24,7 +24,7 @@ vec_cast.blob.blob <- function(x, to) x
 
 #' @method vec_cast.blob list
 #' @export
-vec_cast.blob.list <- function(x, to) vec_list_cast(x, new_blob())
+vec_cast.blob.list <- function(x, to) blob(!!!x)
 
 #' @method vec_cast.blob integer
 #' @export
