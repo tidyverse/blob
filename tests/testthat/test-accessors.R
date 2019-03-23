@@ -7,8 +7,8 @@ test_that("subsetting blob returns blob", {
 
 test_that("subsetting can return NA", {
   x <- blob(!!!as.raw(1:5))
-  expect_identical(x[6], blob(NULL))
-  expect_identical(x[5:6], blob(as.raw(5L), NULL))
+  expect_identical(x[NA_integer_], blob(NULL))
+  expect_identical(x[c(5, NA)], blob(as.raw(5L), NULL))
 })
 
 test_that("subset assignment works", {
