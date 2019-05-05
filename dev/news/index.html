@@ -71,7 +71,7 @@
         <a class="navbar-brand" href="../index.html">blob</a>
         <div class="info">
           <span class="partof">part of the <a href="https://tidyverse.org">tidyverse</a></span>
-          <span class="version version-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.1.1.9000</span>
+          <span class="version version-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.1.1.9001</span>
         </div>
       </div>
     </div>
@@ -111,6 +111,26 @@
       <small>Source: <a href='https://github.com/tidyverse/blob/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
+    <div id="blob-1-1-1-9001" class="section level1">
+<h1 class="page-header">
+<a href="#blob-1-1-1-9001" class="anchor"></a>blob 1.1.1.9001<small> Unreleased </small>
+</h1>
+<ul>
+<li>Indexing a vector of blobs out of bounds now raises an error. Use <code>NA</code> as index to create a <code>NULL</code> blob.</li>
+<li>New <code><a href="../reference/blob.html">validate_blob()</a></code>.</li>
+<li>The <code>blob</code> class is now based on <code>list_of(raw())</code> from the vctrs package (<a href='https://github.com/tidyverse/blob/issues/11'>#11</a>).</li>
+</ul>
+</div>
+    <div id="blob-1-1-1-2018-03-24" class="section level1">
+<h1 class="page-header">
+<a href="#blob-1-1-1-2018-03-24" class="anchor"></a>blob 1.1.1 (2018-03-24)<small> 2018-03-25 </small>
+</h1>
+<ul>
+<li><p>Now suggesting <em>pillar</em> instead of importing <em>tibble</em>, and using colored formatting with the <em>prettyunits</em> package with <code>B</code> instead of <code>b</code> as units (<a href='https://github.com/tidyverse/blob/issues/7'>#7</a>, <a href='https://github.com/tidyverse/blob/issues/9'>#9</a>).</p></li>
+<li><p>The blob class can now be used for S4 dispatch.</p></li>
+<li><p>Calling <code><a href="https://www.rdocumentation.org/packages/base/topics/c">c()</a></code> on blob objects returns a blob.</p></li>
+</ul>
+</div>
     <div id="blob-1-1-0-2017-06-17" class="section level1">
 <h1 class="page-header">
 <a href="#blob-1-1-0-2017-06-17" class="anchor"></a>blob 1.1.0 (2017-06-17)<small> 2017-06-17 </small>
@@ -135,6 +155,8 @@
     <div id="tocnav">
       <h2>Contents</h2>
       <ul class="nav nav-pills nav-stacked">
+        <li><a href="#blob-1-1-1-9001">1.1.1.9001</a></li>
+        <li><a href="#blob-1-1-1-2018-03-24">1.1.1</a></li>
         <li><a href="#blob-1-1-0-2017-06-17">1.1.0</a></li>
         <li><a href="#blob-1-0-0">1.0.0</a></li>
       </ul>
