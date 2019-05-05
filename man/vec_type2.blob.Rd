@@ -4,7 +4,7 @@
 \alias{vec_type2.blob}
 \title{Coercion}
 \usage{
-\method{vec_type2}{blob}(x, y)
+\method{vec_type2}{blob}(x, y, ..., x_arg = "", y_arg = "")
 }
 \arguments{
 \item{x}{Either vector types; i.e.}
