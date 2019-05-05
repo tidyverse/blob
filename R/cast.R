@@ -41,8 +41,10 @@ vec_cast.blob.character <- function(x, to) blob(!!!lapply(x, charToRaw))
 #' @export
 vec_cast.list.blob <- function(x, to) vec_data(x)
 
+# Requires vctrs > 0.1.0
 vec_default_cast <- NULL
 
+utils::globalVariables("vec_unspecified_cast")
 vec_default_cast_old <- function(x, to) {
   if (is.logical(to)) {
     vec_unspecified_cast(x, to)
