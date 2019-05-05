@@ -1,6 +1,11 @@
-# blob (development version)
+# blob 1.1.1.9001
 
-## blob 1.1.1 (2018-03-24)
+- Indexing a vector of blobs out of bounds now raises an error. Use `NA` as index to create a `NULL` blob.
+- New `validate_blob()`.
+- The `blob` class is now based on `list_of(raw())` from the vctrs package (#11).
+
+
+# blob 1.1.1 (2018-03-24)
 
 - Now suggesting *pillar* instead of importing *tibble*, and using colored
   formatting with the *prettyunits* package with `B` instead of `b` as units
