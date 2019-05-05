@@ -11,3 +11,4 @@
 ^cran-comments\.md$
 ^API$
 ^revdep$
+^tic\.R$

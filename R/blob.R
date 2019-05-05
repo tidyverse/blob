@@ -41,14 +41,13 @@ new_blob <- function(x = list()) {
 #' @export
 #' @rdname blob
 validate_blob <- function(x) {
-  x <- enquo(x)
-  check_raw_list(!!x)
+  x_arg <- as_label(enexpr(x))
+  check_raw_list(x, x_arg)
 }
 
-check_raw_list <- function(x) {
-  quo <- enquo(x)
-  if (!is_raw_list(eval_tidy(quo))) {
-    stop("`", as_label(quo), "` must be a list of raw vectors", call. = FALSE)
+check_raw_list <- function(x, x_arg) {
+  if (!is_raw_list(x)) {
+    stop("`", x_arg, "` must be a list of raw vectors", call. = FALSE)
   }
 }
 
