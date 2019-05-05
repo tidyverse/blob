@@ -122,18 +122,34 @@
     </div>
 
     <pre class="usage"><span class='co'># S3 method for blob</span>
-<span class='fu'>vec_type2</span>(<span class='no'>x</span>, <span class='no'>y</span>)</pre>
+<span class='fu'>vec_type2</span>(<span class='no'>x</span>, <span class='no'>y</span>, <span class='no'>...</span>, <span class='kw'>x_arg</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>y_arg</span> <span class='kw'>=</span> <span class='st'>""</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>Either vector types; i.e.</p></td>
+      <td><p>Vector types</p></td>
     </tr>
     <tr>
       <th>y</th>
-      <td><p>Either vector types; i.e.</p></td>
+      <td><p>Vector types</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>Unused</p></td>
+    </tr>
+    <tr>
+      <th>x_arg</th>
+      <td><p>Argument names for <code>x</code> and <code>y</code>. These are used
+in error messages to inform the user about the locations of
+incompatible types (see <code>stop_incompatible_type()</code>).</p></td>
+    </tr>
+    <tr>
+      <th>y_arg</th>
+      <td><p>Argument names for <code>x</code> and <code>y</code>. These are used
+in error messages to inform the user about the locations of
+incompatible types (see <code>stop_incompatible_type()</code>).</p></td>
     </tr>
     </table>
     
