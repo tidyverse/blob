@@ -22,6 +22,12 @@ vec_cast.blob.blob <- function(x, to) x
 #' @export
 vec_cast.blob.list <- function(x, to) blob(!!!x)
 
+#' @method vec_cast.blob vctrs_list_of
+#' @export
+vec_cast.blob.vctrs_list_of <- function(x, to) {
+  new_blob(vec_cast(x, new_list_of(ptype = raw())))
+}
+
 #' @method vec_cast.blob integer
 #' @export
 vec_cast.blob.integer <- function(x, to) {
@@ -36,10 +42,6 @@ vec_cast.blob.raw <- function(x, to) blob(x)
 #' @method vec_cast.blob character
 #' @export
 vec_cast.blob.character <- function(x, to) blob(!!!lapply(x, charToRaw))
-
-#' @method vec_cast.list blob
-#' @export
-vec_cast.list.blob <- function(x, to) vec_data(x)
 
 # Requires vctrs > 0.1.0
 vec_default_cast <- NULL
