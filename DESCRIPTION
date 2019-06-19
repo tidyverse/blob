@@ -23,7 +23,7 @@ Imports:
     methods,
     prettyunits,
     rlang,
-    vctrs
+    vctrs (>= 0.1.0.9004)
 Suggests: 
     covr,
     crayon,
