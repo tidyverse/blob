@@ -23,14 +23,12 @@ Imports:
     methods,
     prettyunits,
     rlang,
-    vctrs (>= 0.1.0.9004)
+    vctrs (>= 0.2.0)
 Suggests: 
     covr,
     crayon,
     pillar (>= 1.2.1),
     testthat
-Remotes: 
-    r-lib/vctrs
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE, roclets = c("collate", "namespace", "rd", "pkgapi::api_roclet"))
