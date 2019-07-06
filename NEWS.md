@@ -1,3 +1,8 @@
+# blob 1.1.1.9002
+
+- Bump vctrs dependency to v0.2.0.
+
+
 # blob 1.1.1.9001
 
 - Indexing a vector of blobs out of bounds now raises an error. Use `NA` as index to create a `NULL` blob.
