@@ -29,6 +29,8 @@ Suggests:
     crayon,
     pillar (>= 1.2.1),
     testthat
+Remotes: 
+    r-lib/vctrs@ee40ab5
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE, roclets = c("collate", "namespace", "rd", "pkgapi::api_roclet"))
