@@ -19,3 +19,4 @@ Implement a \code{vec_cast.blob.myclass()} method to support
 coercing objects of your class to blobs.
 See \code{\link[vctrs:vec_cast]{vctrs::vec_cast()}} for more detail.
 }
+\keyword{internal}

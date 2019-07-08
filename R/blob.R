@@ -76,6 +76,7 @@ is_blob <- function(x) {
 #' @param ... Passed on to methods.
 #'
 #' @export
+#' @keywords internal
 as.blob <- function(x, ...) {
   signal_soft_deprecated("as.blob() is deprecated, use as_blob().")
   UseMethod("as.blob")
