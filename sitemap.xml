@@ -4,6 +4,15 @@
     <loc>https://blob.tidyverse.org/index.html</loc>
   </url>
   <url>
+    <loc>https://blob.tidyverse.org/reference/as.blob.html</loc>
+  </url>
+  <url>
     <loc>https://blob.tidyverse.org/reference/blob.html</loc>
+  </url>
+  <url>
+    <loc>https://blob.tidyverse.org/reference/vec_cast.blob.html</loc>
+  </url>
+  <url>
+    <loc>https://blob.tidyverse.org/reference/vec_ptype2.blob.html</loc>
   </url>
 </urlset>

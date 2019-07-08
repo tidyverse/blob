@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Changelog • blob</title>
+<title>Deprecated generic — as.blob • blob</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -31,7 +31,15 @@
 
 
 
-<meta property="og:title" content="Changelog" />
+<meta property="og:title" content="Deprecated generic — as.blob" />
+
+<meta property="og:description" content="The as.blob() generic has been deprecated in favor of
+the as_blob() function (for users) and the vec_cast.blob() method
+(for implementers).
+Implement a vec_cast.blob.myclass() method to support
+coercing objects of your class to blobs.
+See vctrs::vec_cast() for more detail." />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -55,7 +63,7 @@
   </head>
 
   <body>
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -107,66 +115,46 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Changelog <small></small></h1>
-      <small>Source: <a href='https://github.com/tidyverse/blob/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+    <h1>Deprecated generic</h1>
+    <small class="dont-index">Source: <a href='https://github.com/tidyverse/blob/blob/master/R/blob.R'><code>R/blob.R</code></a></small>
+    <div class="hidden name"><code>as.blob.Rd</code></div>
     </div>
 
-    <div id="blob-1-2-0" class="section level1">
-<h1 class="page-header">
-<a href="#blob-1-2-0" class="anchor"></a>blob 1.2.0<small> Unreleased </small>
-</h1>
-<div id="breaking-changes" class="section level2">
-<h2 class="hasAnchor">
-<a href="#breaking-changes" class="anchor"></a>Breaking changes</h2>
-<ul>
-<li><p>The <code>blob</code> class is now based on <code>list_of(raw())</code> from the vctrs package (<a href='https://github.com/tidyverse/blob/issues/11'>#11</a>). This adds support for <code>vec_cast()</code> and <code>vec_ptype2()</code>. Some operations (such as subset assignment) are now stricter. The <code><a href="../reference/blob.html">new_blob()</a></code> constructor permits safe and fast construction of <code>blob</code> objects from a list, and <code><a href="../reference/blob.html">validate_blob()</a></code> checks an existing object for conformity with the rules.</p></li>
-<li><p>The new <code><a href="../reference/blob.html">is_blob()</a></code> deprecates the existing <code>is.blob()</code>. <code><a href="../reference/as.blob.html">as.blob()</a></code> is deprecated in favor of <code>vec_cast()</code> or the new <code><a href="../reference/blob.html">as_blob()</a></code> (which is just a thin wrapper around <code>vec_cast()</code>).</p></li>
-<li><p>Indexing a vector of blobs out of bounds now raises an error. Use <code>NA</code> as index to create a <code>NULL</code> blob.</p></li>
-</ul>
-</div>
-</div>
-    <div id="blob-1-1-1-2018-03-24" class="section level1">
-<h1 class="page-header">
-<a href="#blob-1-1-1-2018-03-24" class="anchor"></a>blob 1.1.1 (2018-03-24)<small> 2018-03-25 </small>
-</h1>
-<ul>
-<li><p>Now suggesting <em>pillar</em> instead of importing <em>tibble</em>, and using colored formatting with the <em>prettyunits</em> package with <code>B</code> instead of <code>b</code> as units (<a href='https://github.com/tidyverse/blob/issues/7'>#7</a>, <a href='https://github.com/tidyverse/blob/issues/9'>#9</a>).</p></li>
-<li><p>The blob class can now be used for S4 dispatch.</p></li>
-<li><p>Calling <code><a href="https://www.rdocumentation.org/packages/base/topics/c">c()</a></code> on blob objects returns a blob.</p></li>
-</ul>
-</div>
-    <div id="blob-1-1-0-2017-06-17" class="section level1">
-<h1 class="page-header">
-<a href="#blob-1-1-0-2017-06-17" class="anchor"></a>blob 1.1.0 (2017-06-17)<small> 2017-06-17 </small>
-</h1>
-<ul>
-<li><p>New maintainer: Kirill Müller.</p></li>
-<li><p>Added <code>as.blob.blob()</code>and <code>as.data.frame.blob()</code> methods (<a href='https://github.com/tidyverse/blob/issues/3'>#3</a>).</p></li>
-<li><p>Size of very large blobs is displayed correctly.</p></li>
-</ul>
-</div>
-    <div id="blob-1-0-0" class="section level1">
-<h1 class="page-header">
-<a href="#blob-1-0-0" class="anchor"></a>blob 1.0.0<small> 2016-12-28 </small>
-</h1>
-<ul>
-<li>Initial release.</li>
-</ul>
-</div>
-  </div>
+    <div class="ref-description">
+    
+    <p>The <code>as.blob()</code> generic has been deprecated in favor of
+the <code><a href='blob.html'>as_blob()</a></code> function (for users) and the <code><a href='vec_cast.blob.html'>vec_cast.blob()</a></code> method
+(for implementers).
+Implement a <code>vec_cast.blob.myclass()</code> method to support
+coercing objects of your class to blobs.
+See <code><a href='https://www.rdocumentation.org/packages/vctrs/topics/vec_cast'>vctrs::vec_cast()</a></code> for more detail.</p>
+    
+    </div>
 
+    <pre class="usage"><span class='fu'>as.blob</span>(<span class='no'>x</span>, <span class='no'>...</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>x</th>
+      <td><p>An object.</p></td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td><p>Passed on to methods.</p></td>
+    </tr>
+    </table>
+    
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <div id="tocnav">
-      <h2>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="#blob-1-2-0">1.2.0</a></li>
-        <li><a href="#blob-1-1-1-2018-03-24">1.1.1</a></li>
-        <li><a href="#blob-1-1-0-2017-06-17">1.1.0</a></li>
-        <li><a href="#blob-1-0-0">1.0.0</a></li>
-      </ul>
-    </div>
-  </div>
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
+                </ul>
 
+  </div>
 </div>
 
       <footer>
