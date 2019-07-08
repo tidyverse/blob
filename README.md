@@ -1,9 +1,14 @@
 
+<!-- badges: start -->
+
+[![Lifecycle:
+maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Travis-CI Build
 Status](https://travis-ci.org/tidyverse/blob.svg?branch=master)](https://travis-ci.org/tidyverse/blob)
 [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/blob)](https://cran.r-project.org/package=blob)
 [![Coverage
 Status](https://codecov.io/gh/tidyverse/blob/branch/master/graph/badge.svg)](https://codecov.io/github/tidyverse/blob?branch=master)
+<!-- badges: end -->
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
@@ -21,9 +26,14 @@ databases or binary file formats.
 
 ## Installation
 
-You can install blob from github with:
-
 ``` r
+# The easiest way to get blob is to install the whole tidyverse:
+install.packages("tidyverse")
+
+# Alternatively, install just blob:
+install.packages("blob")
+
+# Or the the development version from GitHub:
 # install.packages("devtools")
 devtools::install_github("tidyverse/blob")
 ```
@@ -33,6 +43,8 @@ devtools::install_github("tidyverse/blob")
 To create a blob, use `blob()`, `new_blob()` or `as_blob()`:
 
 ``` r
+library(blob)
+
 x1 <- charToRaw("Good morning")
 x2 <- as.raw(c(0x48, 0x65, 0x6c, 0x6c, 0x6f))
 

@@ -4,13 +4,18 @@ output:
     html_preview: false
 ---
 
+<!-- badges: start -->
+[![Lifecycle: maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Travis-CI Build Status](https://travis-ci.org/tidyverse/blob.svg?branch=master)](https://travis-ci.org/tidyverse/blob)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/blob)](https://cran.r-project.org/package=blob)
 [![Coverage Status](https://codecov.io/gh/tidyverse/blob/branch/master/graph/badge.svg)](https://codecov.io/github/tidyverse/blob?branch=master)
+<!-- badges: end -->
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 ```{r, include = FALSE}
+pkgload::load_all()
+
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
@@ -28,9 +33,14 @@ In most cases you will not need to use this package explicitly: it will be used 
 
 ## Installation
 
-You can install blob from github with:
+```r
+# The easiest way to get blob is to install the whole tidyverse:
+install.packages("tidyverse")
 
-```{r gh-installation, eval = FALSE}
+# Alternatively, install just blob:
+install.packages("blob")
+
+# Or the the development version from GitHub:
 # install.packages("devtools")
 devtools::install_github("tidyverse/blob")
 ```
