@@ -59,3 +59,9 @@ as_blob(c("Good morning", "Good evening"))
 #> <blob[2]>
 #> [1] blob[12 B] blob[12 B]
 ```
+
+-----
+
+Please note that the ‘blob’ project is released with a [Contributor Code
+of Conduct](CODE_OF_CONDUCT.md). By contributing to this project, you
+agree to abide by its terms.
