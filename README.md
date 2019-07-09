@@ -63,5 +63,6 @@ as_blob(c("Good morning", "Good evening"))
 -----
 
 Please note that the ‘blob’ project is released with a [Contributor Code
-of Conduct](https://github.com/tidyverse/blob/CODE_OF_CONDUCT.md). By
-contributing to this project, you agree to abide by its terms.
+of
+Conduct](https://github.com/tidyverse/blob/blob/master/CODE_OF_CONDUCT.md).
+By contributing to this project, you agree to abide by its terms.
