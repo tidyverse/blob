@@ -1,3 +1,8 @@
+# blob 1.2.0.9000
+
+- Same as previous version.
+
+
 # blob 1.2.0
 
 ## Breaking changes
