@@ -46,7 +46,7 @@
         <a class="navbar-brand" href="index.html">blob</a>
         <div class="info">
           <span class="partof">part of the <a href="https://tidyverse.org">tidyverse</a></span>
-          <span class="version version-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.1.1.9002</span>
+          <span class="version version-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.2.0.9000</span>
         </div>
       </div>
     </div>
@@ -85,6 +85,7 @@
 
     
     
+<!-- badges: start -->
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 <div id="blob" class="section level1">
@@ -98,9 +99,15 @@
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<p>You can install blob from github with:</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># install.packages("devtools")</span></a>
-<a class="sourceLine" id="cb1-2" data-line-number="2">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"tidyverse/blob"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="co"># The easiest way to get blob is to install the whole tidyverse:</span></a>
+<a class="sourceLine" id="cb1-2" data-line-number="2"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"tidyverse"</span>)</a>
+<a class="sourceLine" id="cb1-3" data-line-number="3"></a>
+<a class="sourceLine" id="cb1-4" data-line-number="4"><span class="co"># Alternatively, install just blob:</span></a>
+<a class="sourceLine" id="cb1-5" data-line-number="5"><span class="kw"><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages</a></span>(<span class="st">"blob"</span>)</a>
+<a class="sourceLine" id="cb1-6" data-line-number="6"></a>
+<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="co"># Or the the development version from GitHub:</span></a>
+<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="co"># install.packages("devtools")</span></a>
+<a class="sourceLine" id="cb1-9" data-line-number="9">devtools<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"tidyverse/blob"</span>)</a></code></pre></div>
 </div>
 <div id="example" class="section level2">
 <h2 class="hasAnchor">
@@ -121,6 +128,8 @@
 <a class="sourceLine" id="cb2-13" data-line-number="13"><span class="kw"><a href="reference/blob.html">as_blob</a></span>(<span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/c">c</a></span>(<span class="st">"Good morning"</span>, <span class="st">"Good evening"</span>))</a>
 <a class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt; &lt;blob[2]&gt;</span></a>
 <a class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt; [1] blob[12 B] blob[12 B]</span></a></code></pre></div>
+<hr>
+<p>Please note that the ‘blob’ project is released with a <a href="https://github.com/tidyverse/blob/blob/master/CODE_OF_CONDUCT.md">Contributor Code of Conduct</a>. By contributing to this project, you agree to abide by its terms.</p>
 </div>
 </div>
   </div>
@@ -157,6 +166,7 @@
       <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
+<li><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle: maturing"></a></li>
 <li><a href="https://travis-ci.org/tidyverse/blob"><img src="https://travis-ci.org/tidyverse/blob.svg?branch=master" alt="Travis-CI Build Status"></a></li>
 <li><a href="https://cran.r-project.org/package=blob"><img src="https://www.r-pkg.org/badges/version/blob" alt="CRAN_Status_Badge"></a></li>
 <li><a href="https://codecov.io/github/tidyverse/blob?branch=master"><img src="https://codecov.io/gh/tidyverse/blob/branch/master/graph/badge.svg" alt="Coverage Status"></a></li>
