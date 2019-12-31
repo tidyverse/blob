@@ -11,7 +11,9 @@ vec_ptype2.blob <- function(x, y, ..., x_arg = "", y_arg = "") UseMethod("vec_pt
 
 #' @method vec_ptype2.blob default
 #' @export
-vec_ptype2.blob.default <- function(x, y, ..., x_arg = "", y_arg = "") stop_incompatible_type(x, y, x_arg, y_arg)
+vec_ptype2.blob.default <- function(x, y, ..., x_arg = "", y_arg = "") {
+  vec_default_ptype2(x, y, x_arg = x_arg, y_arg = y_arg)
+}
 
 #' @method vec_ptype2.blob blob
 #' @export
