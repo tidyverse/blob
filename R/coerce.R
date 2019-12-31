@@ -21,10 +21,6 @@ vec_ptype2.blob.blob <- function(x, y, ...) {
   new_blob(list())
 }
 
-#' @method vec_ptype2.blob vctrs_unspecified
-#' @export
-vec_ptype2.blob.vctrs_unspecified <- function(x, y, ...) x
-
 #' @method vec_ptype2.blob list
 #' @export
 vec_ptype2.blob.list <- function(x, y, ..., x_arg = "", y_arg = "") {
