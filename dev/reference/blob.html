@@ -165,8 +165,8 @@ and <code><a href='https://rdrr.io/r/base/class.html'>inherits()</a></code>, res
 <span class='no'>x2</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/raw.html'>as.raw</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='fl'>0x48</span>, <span class='fl'>0x65</span>, <span class='fl'>0x6c</span>, <span class='fl'>0x6c</span>, <span class='fl'>0x6f</span>))
 
 <span class='fu'>new_blob</span>(<span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span>(<span class='no'>x1</span>, <span class='no'>x2</span>))</div><div class='output co'>#&gt; &lt;blob[2]&gt;
-#&gt; [1] blob[12 B] blob[ 5 B]</div><div class='input'><span class='fu'>blob</span>(<span class='no'>x1</span>, <span class='no'>x2</span>)</div><div class='output co'>#&gt; &lt;blob[2]&gt;
-#&gt; [1] blob[12 B] blob[ 5 B]</div><div class='input'>
+#&gt; [1] blob[12 B] blob[5 B] </div><div class='input'><span class='fu'>blob</span>(<span class='no'>x1</span>, <span class='no'>x2</span>)</div><div class='output co'>#&gt; &lt;blob[2]&gt;
+#&gt; [1] blob[12 B] blob[5 B] </div><div class='input'>
 <span class='fu'><a href='as.blob.html'>as.blob</a></span>(<span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"Good morning"</span>, <span class='st'>"Good evening"</span>))</div><div class='output co'>#&gt; <span class='warning'>Warning: as.blob() is deprecated, use as_blob().</span>
 #&gt; <span class='warning'>This warning is displayed once per session.</span></div><div class='output co'>#&gt; &lt;blob[2]&gt;
 #&gt; [1] blob[12 B] blob[12 B]</div></pre>
