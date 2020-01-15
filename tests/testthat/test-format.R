@@ -15,7 +15,7 @@ test_that("unequal sizes", {
   expect_format_equal(
     format(x),
     c(
-      "blob[4.00 B]",
+      "blob[4 B]",
       "blob[2.05 kB]",
       "blob[1.05 MB]"
     )
@@ -24,7 +24,7 @@ test_that("unequal sizes", {
   expect_format_equal(
     format(x, trim = FALSE),
     c(
-      "blob[4.00 B]",
+      "blob[    4 B]",
       "blob[2.05 kB]",
       "blob[1.05 MB]"
     )

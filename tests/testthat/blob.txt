@@ -1,2 +1,2 @@
 <blob[3]>
-[1] blob[4.00 B]  blob[2.05 kB] blob[1.05 MB]
+[1] blob[4 B]     blob[2.05 kB] blob[1.05 MB]
