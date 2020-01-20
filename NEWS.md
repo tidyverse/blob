@@ -1,22 +1,7 @@
 # blob 1.2.1
 
-- Same as previous version.
-
-
-# blob 1.2.0.9002
-
 - Inline prettyunits.
-- Adapt to dev prettyunits.
-
-
-# blob 1.2.0.9001
-
 - `vec_ptype2.hms.default()` forwards to `vec_default_ptype2()` for compatibility with vctrs 0.2.1.
-
-
-# blob 1.2.0.9000
-
-- Same as previous version.
 
 
 # blob 1.2.0
