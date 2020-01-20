@@ -1,8 +1,8 @@
-Add vctrs support.
+Update for compatibility with upcoming version of vctrs.
 
 ## Test environments
 
-* ubuntu 18.04 (local install), R 3.6.0
+* ubuntu 18.04 (local install), R 3.6.2
 * ubuntu 16.04 (on travis-ci), R devel, release, and oldrel
 * win-builder (devel and release)
 
@@ -13,4 +13,4 @@ Add vctrs support.
 
 ## Reverse dependencies
 
-Checked all reverse dependencies, found problems in RSQLite which are already fixed in the development version.
+Not checked.
