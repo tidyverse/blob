@@ -1,3 +1,8 @@
+# blob 1.2.1
+
+- Same as previous version.
+
+
 # blob 1.2.0.9002
 
 - Inline prettyunits.
