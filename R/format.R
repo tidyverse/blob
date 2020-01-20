@@ -32,7 +32,11 @@ is_vector_s3.blob <- function(x) TRUE
 
 blob_size <- function(x, digits = 3, trim = TRUE, ...) {
   x <- vapply(x, length, numeric(1))
-  prettyunits::pretty_bytes(x, if (isTRUE(trim)) "nopad" else "default")
+  if (isTRUE(trim)) {
+    pretty_bytes_nopad(x)
+  } else {
+    pretty_bytes_default(x)
+  }
 }
 
 # Dynamically exported, see zzz.R
