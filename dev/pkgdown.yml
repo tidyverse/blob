@@ -2,7 +2,7 @@ pandoc: '2.2'
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles: {}
-last_built: 2020-11-08T00:12Z
+last_built: 2020-11-09T00:17Z
 urls:
   reference: https://blob.tidyverse.org/reference
   article: https://blob.tidyverse.org/articles
