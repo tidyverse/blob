@@ -1,8 +1,8 @@
-pandoc: '2.2'
-pkgdown: 1.6.1
-pkgdown_sha: ~
+pandoc: 2.7.3
+pkgdown: 1.6.1.9000
+pkgdown_sha: 3e607f03a54c0edc40e33c299c4dc621e6548f63
 articles: {}
-last_built: 2020-12-06T00:28Z
+last_built: 2021-03-14T06:06Z
 urls:
   reference: https://blob.tidyverse.org/reference
   article: https://blob.tidyverse.org/articles
