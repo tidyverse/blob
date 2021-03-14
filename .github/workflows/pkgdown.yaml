@@ -5,10 +5,14 @@ on:
     - main
     - "docs*"
     - "cran-*"
+    - "r-*"
+    tags:
+    - "v*"
   pull_request:
     branches:
       - main
       - master
+      - "r-*"
   schedule:
     - cron:  '20 2 * * *'
 
@@ -37,6 +41,8 @@ jobs:
       - uses: actions/checkout@v2
 
       - uses: r-lib/actions/setup-r@v1
+        with:
+          install-r: false
 
       - uses: r-lib/actions/setup-pandoc@v1
 
@@ -88,14 +94,15 @@ jobs:
 
       - name: Install dependencies
         run: |
-          if (!requireNamespace("curl", quietly = TRUE)) install.packages("curl")
-          if (!requireNamespace("remotes", quietly = TRUE)) install.packages("remotes")
           remotes::install_deps(dependencies = TRUE, type = .Platform$pkgType)
           remotes::install_github("r-lib/pkgdown")
         shell: Rscript {0}
 
+      # Begin custom: install
+      # End custom: install
+
       - name: Install package
-        run: R CMD INSTALL .
+        run: R CMD INSTALL . --with-keep.source --with-keep.parse.data
 
       - name: Session info
         run: |
