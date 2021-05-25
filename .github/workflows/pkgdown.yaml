@@ -108,7 +108,6 @@ jobs:
           remotes::install_deps(dependencies = TRUE, type = .Platform$pkgType)
           remotes::install_github("r-lib/pkgdown")
           # Begin custom: dep install
-          remotes::install_github("tidyverse/tidytemplate")
           # End custom: dep install
         shell: Rscript {0}
 
