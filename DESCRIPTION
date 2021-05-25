@@ -7,9 +7,12 @@ Authors@R:
              family = "Wickham",
              role = "aut"),
       person(given = "Kirill",
-             family = "Müller",
-             role = "cre",
-             email = "krlmlr+r@mailbox.org"),
+             family = "M\u00fcller",
+             role = c("aut", "cre"),
+             email = "krlmlr+r@mailbox.org",
+             comment = c(ORCID = "0000-0002-1416-3412")),
+      person(given = "R Consortium",
+             role = "fnd"),
       person(given = "RStudio",
              role = "cph"))
 Description: R's raw vector is useful for storing a single
@@ -17,8 +20,8 @@ Description: R's raw vector is useful for storing a single
     frame? The 'blob' package provides the blob object, a list of raw
     vectors, suitable for use as a column in data frame.
 License: MIT + file LICENSE
-URL: https://github.com/tidyverse/blob
-BugReports: https://github.com/tidyverse/blob/issues
+URL: https://blob.r-dbi.org/, https://github.com/r-dbi/blob
+BugReports: https://github.com/r-dbi/blob/issues
 Imports: 
     methods,
     rlang,
@@ -29,5 +32,6 @@ Suggests:
     pillar (>= 1.2.1),
     testthat
 Encoding: UTF-8
-Roxygen: list(markdown = TRUE, roclets = c("collate", "namespace", "rd", "pkgapi::api_roclet"))
-RoxygenNote: 7.0.2
+Roxygen: list(markdown = TRUE, roclets = c("collate",
+    "namespace", "rd"))
+RoxygenNote: 7.1.1.9001
