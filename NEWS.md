@@ -1,3 +1,10 @@
+<!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
+
+# blob 1.2.1.9001 (2021-07-22)
+
+- Remove `is_vector_s3()` (#19).
+
+
 # blob 1.2.1.9000
 
 - Same as previous version.
