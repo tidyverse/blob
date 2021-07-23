@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# blob 1.2.2.9000 (2021-07-23)
+
+- Same as previous version.
+
+
 # blob 1.2.2 (2021-07-23)
 
 - Same as previous version.
