@@ -2,17 +2,7 @@
 
 # blob 1.2.2 (2021-07-23)
 
-- Same as previous version.
-
-
-# blob 1.2.1.9001 (2021-07-22)
-
 - Remove `is_vector_s3()` (#19).
-
-
-# blob 1.2.1.9000
-
-- Same as previous version.
 
 
 # blob 1.2.1
