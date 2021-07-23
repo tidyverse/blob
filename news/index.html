@@ -10,27 +10,35 @@
 
 
 <!-- jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
 <!-- Bootstrap -->
 <link href="../tidyverse.css" rel="stylesheet">
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+
+<!-- bootstrap-toc -->
+<link rel="stylesheet" href="../bootstrap-toc.css">
+<script src="../bootstrap-toc.js"></script>
 
 <!-- Font Awesome icons -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous" />
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous" />
 
 <!-- clipboard.js -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script>
 
 <!-- headroom.js -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script>
 <link href="../tidyverse-2.css" rel="stylesheet">
+
+<!--optional theme-->
+<link href="../.css" rel="stylesheet">
+
 
 
 
@@ -58,9 +66,15 @@
   gtag('config', 'UA-115082821-1');
 </script>
 
+  
+
+  
+
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-news">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -75,29 +89,23 @@
 
       <div class="navbar-brand-container">
         <a class="navbar-brand" href="../index.html">blob</a>
-        <div class="info">
+        <div class="info hidden-xs hidden-sm">
           <span class="partof">part of the <a href="https://tidyverse.org">tidyverse</a></span>
-          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.1</span>
+          <span class="version version-default" data-toggle="tooltip" data-placement="bottom" title="Released version">1.2.2</span>
         </div>
       </div>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li>
   <a href="../news/index.html">Changelog</a>
 </li>
         <li>
-  <a href="https://github.com/tidyverse/blob">
-    <span class="fab fa fab fa-github fa-lg"></span>
+  <a href="https://github.com/tidyverse/blob/">
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -114,75 +122,68 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Changelog <small></small></h1>
+      <h1 data-toc-skip>Changelog <small></small></h1>
       <small>Source: <a href='https://github.com/tidyverse/blob/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
     </div>
 
-    <div id="blob-1-2-1" class="section level1">
-<h1 class="page-header">
-<a href="#blob-1-2-1" class="anchor"></a>blob 1.2.1<small> 2020-01-20 </small>
-</h1>
-<ul>
-<li>Inline prettyunits.</li>
+    <div id="blob-122-2021-07-23" class="section level1">
+<h1 class="page-header" data-toc-text="1.2.2">
+<a href="#blob-122-2021-07-23" class="anchor" aria-hidden="true"></a>blob 1.2.2 (2021-07-23)<small> Unreleased </small></h1>
+<ul><li>Same as previous version.</li>
+</ul></div>
+    <div id="blob-1219001-2021-07-22" class="section level1">
+<h1 class="page-header" data-toc-text="1.2.1.9001">
+<a href="#blob-1219001-2021-07-22" class="anchor" aria-hidden="true"></a>blob 1.2.1.9001 (2021-07-22)<small> Unreleased </small></h1>
+<ul><li>Remove <code>is_vector_s3()</code> (<a href='https://github.com/tidyverse/blob/issues/19'>#19</a>).</li>
+</ul></div>
+    <div id="blob-1219000" class="section level1">
+<h1 class="page-header" data-toc-text="1.2.1.9000">
+<a href="#blob-1219000" class="anchor" aria-hidden="true"></a>blob 1.2.1.9000<small> Unreleased </small></h1>
+<ul><li>Same as previous version.</li>
+</ul></div>
+    <div id="blob-121" class="section level1">
+<h1 class="page-header" data-toc-text="1.2.1">
+<a href="#blob-121" class="anchor" aria-hidden="true"></a>blob 1.2.1<small> 2020-01-20 </small></h1>
+<ul><li>Inline prettyunits.</li>
 <li>
 <code>vec_ptype2.hms.default()</code> forwards to <code>vec_default_ptype2()</code> for compatibility with vctrs 0.2.1.</li>
-</ul>
-</div>
-    <div id="blob-1-2-0" class="section level1">
-<h1 class="page-header">
-<a href="#blob-1-2-0" class="anchor"></a>blob 1.2.0<small> 2019-07-09 </small>
-</h1>
+</ul></div>
+    <div id="blob-120" class="section level1">
+<h1 class="page-header" data-toc-text="1.2.0">
+<a href="#blob-120" class="anchor" aria-hidden="true"></a>blob 1.2.0<small> 2019-07-09 </small></h1>
 <div id="breaking-changes" class="section level2">
 <h2 class="hasAnchor">
-<a href="#breaking-changes" class="anchor"></a>Breaking changes</h2>
-<ul>
-<li><p>The <code>blob</code> class is now based on <code>list_of(raw())</code> from the vctrs package (<a href='https://github.com/tidyverse/blob/issues/11'>#11</a>). This adds support for <code>vec_cast()</code> and <code>vec_ptype2()</code>. Some operations (such as subset assignment) are now stricter. The <code><a href="../reference/blob.html">new_blob()</a></code> constructor permits safe and fast construction of <code>blob</code> objects from a list, and <code><a href="../reference/blob.html">validate_blob()</a></code> checks an existing object for conformity with the rules.</p></li>
+<a href="#breaking-changes" class="anchor" aria-hidden="true"></a>Breaking changes</h2>
+<ul><li><p>The <code>blob</code> class is now based on <code>list_of(raw())</code> from the vctrs package (<a href='https://github.com/tidyverse/blob/issues/11'>#11</a>). This adds support for <code>vec_cast()</code> and <code>vec_ptype2()</code>. Some operations (such as subset assignment) are now stricter. The <code><a href="../reference/blob.html">new_blob()</a></code> constructor permits safe and fast construction of <code>blob</code> objects from a list, and <code><a href="../reference/blob.html">validate_blob()</a></code> checks an existing object for conformity with the rules.</p></li>
 <li><p>The new <code><a href="../reference/blob.html">is_blob()</a></code> deprecates the existing <code>is.blob()</code>. <code><a href="../reference/as.blob.html">as.blob()</a></code> is deprecated in favor of <code>vec_cast()</code> or the new <code><a href="../reference/blob.html">as_blob()</a></code> (which is just a thin wrapper around <code>vec_cast()</code>).</p></li>
 <li><p>Indexing a vector of blobs out of bounds now raises an error. Use <code>NA</code> as index to create a <code>NULL</code> blob.</p></li>
-</ul>
+</ul></div>
 </div>
-</div>
-    <div id="blob-1-1-1-2018-03-24" class="section level1">
-<h1 class="page-header">
-<a href="#blob-1-1-1-2018-03-24" class="anchor"></a>blob 1.1.1 (2018-03-24)<small> 2018-03-25 </small>
-</h1>
-<ul>
-<li><p>Now suggesting <em>pillar</em> instead of importing <em>tibble</em>, and using colored formatting with the <em>prettyunits</em> package with <code>B</code> instead of <code>b</code> as units (<a href='https://github.com/tidyverse/blob/issues/7'>#7</a>, <a href='https://github.com/tidyverse/blob/issues/9'>#9</a>).</p></li>
+    <div id="blob-111-2018-03-24" class="section level1">
+<h1 class="page-header" data-toc-text="1.1.1">
+<a href="#blob-111-2018-03-24" class="anchor" aria-hidden="true"></a>blob 1.1.1 (2018-03-24)<small> 2018-03-25 </small></h1>
+<ul><li><p>Now suggesting <em>pillar</em> instead of importing <em>tibble</em>, and using colored formatting with the <em>prettyunits</em> package with <code>B</code> instead of <code>b</code> as units (<a href='https://github.com/tidyverse/blob/issues/7'>#7</a>, <a href='https://github.com/tidyverse/blob/issues/9'>#9</a>).</p></li>
 <li><p>The blob class can now be used for S4 dispatch.</p></li>
-<li><p>Calling <code><a href="https://rdrr.io/r/base/c.html">c()</a></code> on blob objects returns a blob.</p></li>
-</ul>
-</div>
-    <div id="blob-1-1-0-2017-06-17" class="section level1">
-<h1 class="page-header">
-<a href="#blob-1-1-0-2017-06-17" class="anchor"></a>blob 1.1.0 (2017-06-17)<small> 2017-06-17 </small>
-</h1>
-<ul>
-<li><p>New maintainer: Kirill Müller.</p></li>
+<li><p>Calling <code><a href="https://rdrr.io/r/base/c.html" class="external-link">c()</a></code> on blob objects returns a blob.</p></li>
+</ul></div>
+    <div id="blob-110-2017-06-17" class="section level1">
+<h1 class="page-header" data-toc-text="1.1.0">
+<a href="#blob-110-2017-06-17" class="anchor" aria-hidden="true"></a>blob 1.1.0 (2017-06-17)<small> 2017-06-17 </small></h1>
+<ul><li><p>New maintainer: Kirill Müller.</p></li>
 <li><p>Added <code>as.blob.blob()</code>and <code>as.data.frame.blob()</code> methods (<a href='https://github.com/tidyverse/blob/issues/3'>#3</a>).</p></li>
 <li><p>Size of very large blobs is displayed correctly.</p></li>
-</ul>
-</div>
-    <div id="blob-1-0-0" class="section level1">
-<h1 class="page-header">
-<a href="#blob-1-0-0" class="anchor"></a>blob 1.0.0<small> 2016-12-28 </small>
-</h1>
-<ul>
-<li>Initial release.</li>
-</ul>
-</div>
+</ul></div>
+    <div id="blob-100" class="section level1">
+<h1 class="page-header" data-toc-text="1.0.0">
+<a href="#blob-100" class="anchor" aria-hidden="true"></a>blob 1.0.0<small> 2016-12-28 </small></h1>
+<ul><li>Initial release.</li>
+</ul></div>
   </div>
 
-  <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <div id="tocnav">
-      <h2>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="#blob-1-2-1">1.2.1</a></li>
-        <li><a href="#blob-1-2-0">1.2.0</a></li>
-        <li><a href="#blob-1-1-1-2018-03-24">1.1.1</a></li>
-        <li><a href="#blob-1-1-0-2017-06-17">1.1.0</a></li>
-        <li><a href="#blob-1-0-0">1.0.0</a></li>
-      </ul>
-    </div>
+  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
+    <nav id="toc" data-toggle="toc" class="sticky-top">
+      <h2 data-toc-skip>Contents</h2>
+    </nav>
   </div>
 
 </div>
@@ -195,7 +196,7 @@
 
 <div class="author">
   <p>
-    Developed by <a href='http://hadley.nz'>Hadley Wickham</a>, <a href='http://krlmlr.info'>Kirill Müller</a>.
+    Developed by <a href='http://hadley.nz'>Hadley Wickham</a>, <a href='https://krlmlr.info'>Kirill Müller</a>.
     Site built by <a href="https://pkgdown.r-lib.org">pkgdown</a>.
   </p>
 </div>
@@ -205,6 +206,8 @@
 
   
 
+
+  
 
   </body>
 </html>
