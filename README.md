@@ -2,7 +2,7 @@
 <!-- badges: start -->
 
 [![Lifecycle:
-maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![Travis-CI Build
 Status](https://travis-ci.org/tidyverse/blob.svg?branch=master)](https://travis-ci.org/tidyverse/blob)
 [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/blob)](https://cran.r-project.org/package=blob)
@@ -50,17 +50,17 @@ x2 <- as.raw(c(0x48, 0x65, 0x6c, 0x6c, 0x6f))
 
 new_blob(list(x1, x2))
 #> <blob[2]>
-#> [1] blob[12 B] blob[ 5 B]
+#> [1] blob[12 B] blob[5 B]
 blob(x1, x2)
 #> <blob[2]>
-#> [1] blob[12 B] blob[ 5 B]
+#> [1] blob[12 B] blob[5 B]
 
 as_blob(c("Good morning", "Good evening"))
 #> <blob[2]>
 #> [1] blob[12 B] blob[12 B]
 ```
 
------
+------------------------------------------------------------------------
 
 Please note that the ‘blob’ project is released with a [Contributor Code
 of
