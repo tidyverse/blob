@@ -87,14 +87,14 @@
 <div id="blob" class="section level1">
 
 <div id="overview" class="section level2">
-<h2 class="hasAnchor">
-<a href="#overview" class="anchor" aria-hidden="true"></a>Overview</h2>
+<h2>Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
+</h2>
 <p>The goal of blob is to provide a simple S3 class to represent a vector of binary objects, aka blobs. The <code>blob</code> class is a lightweight wrapper around a list of raw vectors, suitable for inclusion in a data frame.</p>
 <p>In most cases you will not need to use this package explicitly: it will be used transparently by packages that need to load BLOB columns from databases or binary file formats.</p>
 </div>
 <div id="installation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#installation" class="anchor" aria-hidden="true"></a>Installation</h2>
+<h2>Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
+</h2>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># The easiest way to get blob is to install the whole tidyverse:</span>
 <span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span>
@@ -107,8 +107,8 @@
 <span class="fu">devtools</span><span class="fu">::</span><span class="fu">install_github</span><span class="op">(</span><span class="st">"tidyverse/blob"</span><span class="op">)</span></code></pre></div>
 </div>
 <div id="example" class="section level2">
-<h2 class="hasAnchor">
-<a href="#example" class="anchor" aria-hidden="true"></a>Example</h2>
+<h2>Example<a class="anchor" aria-label="anchor" href="#example"></a>
+</h2>
 <p>To create a blob, use <code><a href="reference/blob.html">blob()</a></code>, <code><a href="reference/blob.html">new_blob()</a></code> or <code><a href="reference/blob.html">as_blob()</a></code>:</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://blob.tidyverse.org">blob</a></span><span class="op">)</span>
@@ -118,10 +118,10 @@
 
 <span class="fu"><a href="reference/blob.html">new_blob</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="va">x1</span>, <span class="va">x2</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; &lt;blob[2]&gt;</span>
-<span class="co">#&gt; [1] blob[12 B] blob[ 5 B]</span>
+<span class="co">#&gt; [1] blob[12 B] blob[5 B]</span>
 <span class="fu"><a href="reference/blob.html">blob</a></span><span class="op">(</span><span class="va">x1</span>, <span class="va">x2</span><span class="op">)</span>
 <span class="co">#&gt; &lt;blob[2]&gt;</span>
-<span class="co">#&gt; [1] blob[12 B] blob[ 5 B]</span>
+<span class="co">#&gt; [1] blob[12 B] blob[5 B]</span>
 
 <span class="fu"><a href="reference/blob.html">as_blob</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Good morning"</span>, <span class="st">"Good evening"</span><span class="op">)</span><span class="op">)</span>
 <span class="co">#&gt; &lt;blob[2]&gt;</span>
@@ -176,7 +176,7 @@
 <div class="dev-status">
 <h2 data-toc-skip>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://www.tidyverse.org/lifecycle/#maturing" class="external-link"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle: maturing"></a></li>
+<li><a href="https://lifecycle.r-lib.org/articles/stages.html#stable" class="external-link"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
 <li><a href="https://travis-ci.org/tidyverse/blob" class="external-link"><img src="https://travis-ci.org/tidyverse/blob.svg?branch=master" alt="Travis-CI Build Status"></a></li>
 <li><a href="https://cran.r-project.org/package=blob" class="external-link"><img src="https://www.r-pkg.org/badges/version/blob" alt="CRAN_Status_Badge"></a></li>
 <li><a href="https://codecov.io/github/tidyverse/blob?branch=master" class="external-link"><img src="https://codecov.io/gh/tidyverse/blob/branch/master/graph/badge.svg" alt="Coverage Status"></a></li>
