@@ -56,52 +56,52 @@
       <small>Source: <a href="https://github.com/tidyverse/blob/blob/master/NEWS.md"><code>NEWS.md</code></a></small>
     </div>
 
-    <div id="blob-1229000-2021-07-23" class="section level1">
-<h1 class="page-header" data-toc-text="1.2.2.9000">blob 1.2.2.9000 (2021-07-23)<a class="anchor" aria-label="anchor" href="#blob-1229000-2021-07-23"></a>
-<small> Unreleased </small></h1>
+    <div class="section level2">
+<h2 id="blob-1229000-2021-07-23" class="page-header" data-toc-text="1.2.2.9000">blob 1.2.2.9000 (2021-07-23)<a class="anchor" aria-label="anchor" href="#blob-1229000-2021-07-23"></a>
+</h2>
 <ul><li>Same as previous version.</li>
 </ul></div>
-    <div id="blob-122-2021-07-23" class="section level1">
-<h1 class="page-header" data-toc-text="1.2.2">blob 1.2.2 (2021-07-23)<a class="anchor" aria-label="anchor" href="#blob-122-2021-07-23"></a>
-<small> 2021-07-23 </small></h1>
+    <div class="section level2">
+<h2 id="blob-122-2021-07-23" class="page-header" data-toc-text="1.2.2">blob 1.2.2 (2021-07-23)<a class="anchor" aria-label="anchor" href="#blob-122-2021-07-23"></a>
+<small>2021-07-23</small></h2>
 <ul><li>Moved to “stable” lifecycle stage.</li>
 <li>Remove <code>is_vector_s3()</code> (<a href="https://github.com/tidyverse/blob/issues/19">#19</a>).</li>
 </ul></div>
-    <div id="blob-121" class="section level1">
-<h1 class="page-header" data-toc-text="1.2.1">blob 1.2.1<a class="anchor" aria-label="anchor" href="#blob-121"></a>
-<small> 2020-01-20 </small></h1>
+    <div class="section level2">
+<h2 id="blob-121" class="page-header" data-toc-text="1.2.1">blob 1.2.1<a class="anchor" aria-label="anchor" href="#blob-121"></a>
+<small>2020-01-20</small></h2>
 <ul><li>Inline prettyunits.</li>
 <li>
 <code>vec_ptype2.hms.default()</code> forwards to <code>vec_default_ptype2()</code> for compatibility with vctrs 0.2.1.</li>
 </ul></div>
-    <div id="blob-120" class="section level1">
-<h1 class="page-header" data-toc-text="1.2.0">blob 1.2.0<a class="anchor" aria-label="anchor" href="#blob-120"></a>
-<small> 2019-07-09 </small></h1>
-<div id="breaking-changes" class="section level2">
-<h2>Breaking changes<a class="anchor" aria-label="anchor" href="#breaking-changes"></a>
-</h2>
+    <div class="section level2">
+<h2 id="blob-120" class="page-header" data-toc-text="1.2.0">blob 1.2.0<a class="anchor" aria-label="anchor" href="#blob-120"></a>
+<small>2019-07-09</small></h2>
+<div class="section level3">
+<h3 id="breaking-changes-1-2-0">Breaking changes<a class="anchor" aria-label="anchor" href="#breaking-changes-1-2-0"></a>
+</h3>
 <ul><li><p>The <code>blob</code> class is now based on <code>list_of(raw())</code> from the vctrs package (<a href="https://github.com/tidyverse/blob/issues/11">#11</a>). This adds support for <code>vec_cast()</code> and <code>vec_ptype2()</code>. Some operations (such as subset assignment) are now stricter. The <code><a href="../reference/blob.html">new_blob()</a></code> constructor permits safe and fast construction of <code>blob</code> objects from a list, and <code><a href="../reference/blob.html">validate_blob()</a></code> checks an existing object for conformity with the rules.</p></li>
 <li><p>The new <code><a href="../reference/blob.html">is_blob()</a></code> deprecates the existing <code>is.blob()</code>. <code><a href="../reference/as.blob.html">as.blob()</a></code> is deprecated in favor of <code>vec_cast()</code> or the new <code><a href="../reference/blob.html">as_blob()</a></code> (which is just a thin wrapper around <code>vec_cast()</code>).</p></li>
 <li><p>Indexing a vector of blobs out of bounds now raises an error. Use <code>NA</code> as index to create a <code>NULL</code> blob.</p></li>
 </ul></div>
 </div>
-    <div id="blob-111-2018-03-24" class="section level1">
-<h1 class="page-header" data-toc-text="1.1.1">blob 1.1.1 (2018-03-24)<a class="anchor" aria-label="anchor" href="#blob-111-2018-03-24"></a>
-<small> 2018-03-25 </small></h1>
+    <div class="section level2">
+<h2 id="blob-111-2018-03-24" class="page-header" data-toc-text="1.1.1">blob 1.1.1 (2018-03-24)<a class="anchor" aria-label="anchor" href="#blob-111-2018-03-24"></a>
+<small>2018-03-25</small></h2>
 <ul><li><p>Now suggesting <em>pillar</em> instead of importing <em>tibble</em>, and using colored formatting with the <em>prettyunits</em> package with <code>B</code> instead of <code>b</code> as units (<a href="https://github.com/tidyverse/blob/issues/7">#7</a>, <a href="https://github.com/tidyverse/blob/issues/9">#9</a>).</p></li>
 <li><p>The blob class can now be used for S4 dispatch.</p></li>
 <li><p>Calling <code><a href="https://rdrr.io/r/base/c.html" class="external-link">c()</a></code> on blob objects returns a blob.</p></li>
 </ul></div>
-    <div id="blob-110-2017-06-17" class="section level1">
-<h1 class="page-header" data-toc-text="1.1.0">blob 1.1.0 (2017-06-17)<a class="anchor" aria-label="anchor" href="#blob-110-2017-06-17"></a>
-<small> 2017-06-17 </small></h1>
+    <div class="section level2">
+<h2 id="blob-110-2017-06-17" class="page-header" data-toc-text="1.1.0">blob 1.1.0 (2017-06-17)<a class="anchor" aria-label="anchor" href="#blob-110-2017-06-17"></a>
+<small>2017-06-17</small></h2>
 <ul><li><p>New maintainer: Kirill Müller.</p></li>
 <li><p>Added <code>as.blob.blob()</code>and <code>as.data.frame.blob()</code> methods (<a href="https://github.com/tidyverse/blob/issues/3">#3</a>).</p></li>
 <li><p>Size of very large blobs is displayed correctly.</p></li>
 </ul></div>
-    <div id="blob-100" class="section level1">
-<h1 class="page-header" data-toc-text="1.0.0">blob 1.0.0<a class="anchor" aria-label="anchor" href="#blob-100"></a>
-<small> 2016-12-28 </small></h1>
+    <div class="section level2">
+<h2 id="blob-100" class="page-header" data-toc-text="1.0.0">blob 1.0.0<a class="anchor" aria-label="anchor" href="#blob-100"></a>
+<small>2016-12-28</small></h2>
 <ul><li>Initial release.</li>
 </ul></div>
   </div>
