@@ -1,7 +1,5 @@
 ---
-output:
-  github_document:
-    html_preview: false
+output: downlit::readme_document
 ---
 
 <!-- badges: start -->
