@@ -3,8 +3,7 @@
 
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
-[![Travis-CI Build
-Status](https://travis-ci.org/tidyverse/blob.svg?branch=master)](https://travis-ci.org/tidyverse/blob)
+[![rcc](https://github.com/tidyverse/blob/workflows/rcc/badge.svg)](https://github.com/tidyverse/blob/actions)
 [![CRAN\_Status\_Badge](https://www.r-pkg.org/badges/version/blob)](https://cran.r-project.org/package=blob)
 [![Coverage
 Status](https://codecov.io/gh/tidyverse/blob/branch/master/graph/badge.svg)](https://codecov.io/github/tidyverse/blob?branch=master)
