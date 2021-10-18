@@ -2,7 +2,7 @@ pandoc: 2.7.3
 pkgdown: 1.9000.9000.9000
 pkgdown_sha: cd888beda61ac8855bf823bd0664dd997a32a5f8
 articles: {}
-last_built: 2021-10-18T16:37Z
+last_built: 2021-10-18T20:01Z
 urls:
   reference: https://blob.tidyverse.org/reference
   article: https://blob.tidyverse.org/articles
