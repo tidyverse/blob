@@ -29,7 +29,7 @@ and inherits(), respectively."><meta name="twitter:card" content="summary"><meta
       <div class="navbar-brand-container">
         <a class="navbar-brand" href="../index.html">blob</a>
         <div class="info hidden-xs hidden-sm">
-          <span class="partof">part of the <a href="https://tidyverse.org">tidyverse</a></span>
+          <span class="partof">part of the <a href="https://tidyverse.org" class="external-link">tidyverse</a></span>
           <span class="version version-danger" data-toggle="tooltip" data-placement="bottom" title="In-development version">1.2.2.9000</span>
         </div>
       </div>
@@ -42,7 +42,7 @@ and inherits(), respectively."><meta name="twitter:card" content="summary"><meta
   <a href="../news/index.html">Changelog</a>
 </li>
         <li>
-  <a href="https://github.com/tidyverse/blob/">
+  <a href="https://github.com/tidyverse/blob/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -57,7 +57,7 @@ and inherits(), respectively."><meta name="twitter:card" content="summary"><meta
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Construct a blob object</h1>
-    <small class="dont-index">Source: <a href="https://github.com/tidyverse/blob/blob/master/R/blob.R"><code>R/blob.R</code></a></small>
+    <small class="dont-index">Source: <a href="https://github.com/tidyverse/blob/blob/master/R/blob.R" class="external-link"><code>R/blob.R</code></a></small>
     <div class="hidden name"><code>blob.Rd</code></div>
     </div>
 
@@ -65,13 +65,13 @@ and inherits(), respectively."><meta name="twitter:card" content="summary"><meta
     <p><code>new_blob()</code> is a low-level constructor that takes a list of
 raw vectors.
 <code>blob()</code> constructs a blob from individual raw vectors.
-<code>as_blob()</code> and <code>is_blob()</code> are simple forwarders to <code><a href="https://vctrs.r-lib.org/reference/vec_cast.html">vctrs::vec_cast()</a></code>
-and <code><a href="https://rdrr.io/r/base/class.html">inherits()</a></code>, respectively.</p>
+<code>as_blob()</code> and <code>is_blob()</code> are simple forwarders to <code><a href="https://vctrs.r-lib.org/reference/vec_cast.html" class="external-link">vctrs::vec_cast()</a></code>
+and <code><a href="https://rdrr.io/r/base/class.html" class="external-link">inherits()</a></code>, respectively.</p>
     </div>
 
     <div class="ref-usage sourceCode"><pre class="sourceCode r"><code><span class="fu">blob</span><span class="op">(</span><span class="va">...</span><span class="op">)</span>
 
-<span class="fu">new_blob</span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
+<span class="fu">new_blob</span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>
 
 <span class="fu">validate_blob</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
 
@@ -79,32 +79,33 @@ and <code><a href="https://rdrr.io/r/base/class.html">inherits()</a></code>, res
 
 <span class="fu">is_blob</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></code></pre></div>
 
+    <div id="ref-sections">
     <div id="arguments">
     <h2>Arguments</h2>
-    <table class="ref-arguments"><colgroup><col class="name"><col class="desc"></colgroup><tr><th>...</th>
-      <td><p>Individual raw vectors</p></td>
-    </tr><tr><th>x</th>
-      <td><p>A list of raw vectors, or other object to coerce</p></td>
-    </tr></table></div>
+    
 
+<dl><dt>...</dt><dd><p>Individual raw vectors</p></dd>
+</dl><dl><dt>x</dt><dd><p>A list of raw vectors, or other object to coerce</p></dd>
+</dl></div>
     <div id="see-also">
     <h2>See also</h2>
     <div class="dont-index"><p><code><a href="as.blob.html">as.blob()</a></code> for the legacy interface for specifying casts.</p></div>
     </div>
+    </div>
 
     <div id="examples">
     <h2>Examples</h2>
-    <div class="ref-examples sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">x1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rawConversion.html">charToRaw</a></span><span class="op">(</span><span class="st">"Good morning"</span><span class="op">)</span></span>
-<span class="r-in"><span class="va">x2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/raw.html">as.raw</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0x48</span>, <span class="fl">0x65</span>, <span class="fl">0x6c</span>, <span class="fl">0x6c</span>, <span class="fl">0x6f</span><span class="op">)</span><span class="op">)</span></span>
+    <div class="ref-examples sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="va">x1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/rawConversion.html" class="external-link">charToRaw</a></span><span class="op">(</span><span class="st">"Good morning"</span><span class="op">)</span></span>
+<span class="r-in"><span class="va">x2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/raw.html" class="external-link">as.raw</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0x48</span>, <span class="fl">0x65</span>, <span class="fl">0x6c</span>, <span class="fl">0x6c</span>, <span class="fl">0x6f</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-in"></span>
-<span class="r-in"><span class="fu">new_blob</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span><span class="va">x1</span>, <span class="va">x2</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu">new_blob</span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="va">x1</span>, <span class="va">x2</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;blob[2]&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] blob[12 B] blob[5 B] </span>
 <span class="r-in"><span class="fu">blob</span><span class="op">(</span><span class="va">x1</span>, <span class="va">x2</span><span class="op">)</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;blob[2]&gt;</span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> [1] blob[12 B] blob[5 B] </span>
 <span class="r-in"></span>
-<span class="r-in"><span class="fu"><a href="as.blob.html">as.blob</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Good morning"</span>, <span class="st">"Good evening"</span><span class="op">)</span><span class="op">)</span></span>
+<span class="r-in"><span class="fu"><a href="as.blob.html">as.blob</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Good morning"</span>, <span class="st">"Good evening"</span><span class="op">)</span><span class="op">)</span></span>
 <span class="r-wrn co"><span class="r-pr">#&gt;</span> <span class="warning">Warning: </span>as.blob() is deprecated, use as_blob().</span>
 <span class="r-wrn co"><span class="r-pr">#&gt;</span> <span style="color: #555555;">This warning is displayed once per session.</span></span>
 <span class="r-out co"><span class="r-pr">#&gt;</span> &lt;blob[2]&gt;</span>
@@ -119,13 +120,13 @@ and <code><a href="https://rdrr.io/r/base/class.html">inherits()</a></code>, res
 
 
       <footer><div class="tidyverse">
-  <p>blob is a part of the <strong>tidyverse</strong>, an ecosystem of packages designed with common APIs and a shared philosophy. Learn more at <a href="https://tidyverse.org">tidyverse.org</a>.</p>
+  <p>blob is a part of the <strong>tidyverse</strong>, an ecosystem of packages designed with common APIs and a shared philosophy. Learn more at <a href="https://tidyverse.org" class="external-link">tidyverse.org</a>.</p>
 </div>
 
 <div class="author">
   <p>
-    Developed by <a href="http://hadley.nz">Hadley Wickham</a>, <a href="https://krlmlr.info">Kirill Müller</a>.
-    Site built by <a href="https://pkgdown.r-lib.org">pkgdown</a>.
+    Developed by .
+    Site built by <a href="https://pkgdown.r-lib.org" class="external-link">pkgdown</a>.
   </p>
 </div>
 
