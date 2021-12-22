@@ -64,7 +64,7 @@ signal_soft_deprecated <- function(msg, id = msg, env = caller_env(2)) {
   }
 
   if (rlang::is_true(rlang::peek_option("lifecycle_verbose_soft_deprecation")) ||
-      rlang::is_reference(topenv(env), rlang::global_env())) {
+    rlang::is_reference(topenv(env), rlang::global_env())) {
     warn_deprecated(msg, id)
     return(invisible(NULL))
   }
@@ -73,8 +73,8 @@ signal_soft_deprecated <- function(msg, id = msg, env = caller_env(2)) {
   # testthat clones the namespace
   tested_package <- Sys.getenv("TESTTHAT_PKG")
   if (nzchar(tested_package) &&
-        identical(Sys.getenv("NOT_CRAN"), "true") &&
-        rlang::env_name(topenv(env)) == rlang::env_name(ns_env(tested_package))) {
+    identical(Sys.getenv("NOT_CRAN"), "true") &&
+    rlang::env_name(topenv(env)) == rlang::env_name(ns_env(tested_package))) {
     warn_deprecated(msg, id)
     return(invisible(NULL))
   }
@@ -204,9 +204,7 @@ lifecycle_img <- function(stage, url) {
         url,
         file.path("figures", file),
         stage_alt
-      )
-   ,
-
+      ),
     `soft-deprecated` = ,
     deprecated = ,
     defunct =

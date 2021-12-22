@@ -13,7 +13,7 @@ compute_bytes <- function(bytes, smallest_unit = "B") {
   bytes <- abs(bytes)
   smallest_idx <- match(smallest_unit, units0)
 
-  limits <- c(1000, 999950 * 1000 ^ (seq_len(length(units0) - 2) - 1))
+  limits <- c(1000, 999950 * 1000^(seq_len(length(units0) - 2) - 1))
   idx <- cut(bytes, c(0, limits, Inf), labels = FALSE, right = FALSE)
   idx <- pmax(idx, smallest_idx)
 

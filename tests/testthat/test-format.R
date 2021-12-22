@@ -10,7 +10,7 @@ expect_format_equal <- function(formatted, result) {
 test_that("unequal sizes", {
   skip_on_cran()
 
-  x <- blob(raw(2 ** 2), raw(2 ** 11), raw(2 ** 20))
+  x <- blob(raw(2**2), raw(2**11), raw(2**20))
 
   expect_format_equal(
     format(x),
@@ -34,7 +34,7 @@ test_that("unequal sizes", {
 test_that("similar sizes", {
   skip_on_cran()
 
-  x <- blob(raw(2 ** 10), raw(2 ** 11), raw(2 ** 12))
+  x <- blob(raw(2**10), raw(2**11), raw(2**12))
 
   expect_format_equal(
     format(x),
@@ -58,7 +58,7 @@ test_that("empty", {
 test_that("output", {
   skip_on_cran()
 
-  x <- blob(raw(2 ** 2), raw(2 ** 11), raw(2 ** 20))
+  x <- blob(raw(2**2), raw(2**11), raw(2**20))
 
   expect_known_output(print(x), "blob.txt")
 })
