@@ -31,3 +31,5 @@ Suggests:
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE, roclets = c("collate", "namespace", "rd", "pkgapi::api_roclet"))
 RoxygenNote: 7.0.2
+Config/autostyle/scope: line_breaks
+Config/autostyle/strict: false
