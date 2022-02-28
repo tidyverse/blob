@@ -1,21 +1,15 @@
 Package: blob
-Title: A Simple S3 Class for Representing Vectors of Binary Data
-    ('BLOBS')
+Title: A Simple S3 Class for Representing Vectors of Binary Data ('BLOBS')
 Version: 1.2.2.9000
-Authors@R: 
-    c(person(given = "Hadley",
-             family = "Wickham",
-             role = "aut"),
-      person(given = "Kirill",
-             family = "Müller",
-             role = "cre",
-             email = "krlmlr+r@mailbox.org"),
-      person(given = "RStudio",
-             role = "cph"))
-Description: R's raw vector is useful for storing a single
-    binary object.  What if you want to put a vector of them in a data
-    frame? The 'blob' package provides the blob object, a list of raw
-    vectors, suitable for use as a column in data frame.
+Authors@R: c(
+    person("Hadley", "Wickham", role = "aut"),
+    person("Kirill", "Müller", , "krlmlr+r@mailbox.org", role = "cre"),
+    person("RStudio", role = "cph")
+  )
+Description: R's raw vector is useful for storing a single binary object.
+    What if you want to put a vector of them in a data frame? The 'blob'
+    package provides the blob object, a list of raw vectors, suitable for
+    use as a column in data frame.
 License: MIT + file LICENSE
 URL: https://blob.tidyverse.org, https://github.com/tidyverse/blob
 BugReports: https://github.com/tidyverse/blob/issues
@@ -28,9 +22,9 @@ Suggests:
     crayon,
     pillar (>= 1.2.1),
     testthat
-Encoding: UTF-8
-Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.1.2
 Config/autostyle/scope: line_breaks
 Config/autostyle/strict: false
 Config/Needs/website: tidyverse/tidytemplate
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
