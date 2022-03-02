@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://blob.tidyverse.org/CODE_OF_CONDUCT.html</loc>
+    <loc>https://blob.tidyverse.org/dev/CODE_OF_CONDUCT.html</loc>
   </url>
   <url>
-    <loc>https://blob.tidyverse.org/CONTRIBUTING.html</loc>
+    <loc>https://blob.tidyverse.org/dev/CONTRIBUTING.html</loc>
   </url>
   <url>
-    <loc>https://blob.tidyverse.org/LICENSE-text.html</loc>
+    <loc>https://blob.tidyverse.org/dev/LICENSE-text.html</loc>
   </url>
   <url>
-    <loc>https://blob.tidyverse.org/LICENSE.html</loc>
+    <loc>https://blob.tidyverse.org/dev/LICENSE.html</loc>
   </url>
   <url>
-    <loc>https://blob.tidyverse.org/SUPPORT.html</loc>
+    <loc>https://blob.tidyverse.org/dev/SUPPORT.html</loc>
   </url>
   <url>
-    <loc>https://blob.tidyverse.org/authors.html</loc>
+    <loc>https://blob.tidyverse.org/dev/authors.html</loc>
   </url>
   <url>
-    <loc>https://blob.tidyverse.org/index.html</loc>
+    <loc>https://blob.tidyverse.org/dev/index.html</loc>
   </url>
   <url>
-    <loc>https://blob.tidyverse.org/news/index.html</loc>
+    <loc>https://blob.tidyverse.org/dev/news/index.html</loc>
   </url>
   <url>
-    <loc>https://blob.tidyverse.org/reference/as.blob.html</loc>
+    <loc>https://blob.tidyverse.org/dev/reference/as.blob.html</loc>
   </url>
   <url>
-    <loc>https://blob.tidyverse.org/reference/blob.html</loc>
+    <loc>https://blob.tidyverse.org/dev/reference/blob.html</loc>
   </url>
   <url>
-    <loc>https://blob.tidyverse.org/reference/index.html</loc>
+    <loc>https://blob.tidyverse.org/dev/reference/index.html</loc>
   </url>
   <url>
-    <loc>https://blob.tidyverse.org/reference/vec_cast.blob.html</loc>
+    <loc>https://blob.tidyverse.org/dev/reference/vec_cast.blob.html</loc>
   </url>
   <url>
-    <loc>https://blob.tidyverse.org/reference/vec_ptype2.blob.html</loc>
+    <loc>https://blob.tidyverse.org/dev/reference/vec_ptype2.blob.html</loc>
   </url>
 </urlset>
