@@ -11,7 +11,7 @@ Authors@R:
              role = "cre",
              email = "krlmlr+r@mailbox.org"),
       person(given = "RStudio",
-             role = "cph"))
+             role = c("cph", "fnd")))
 Description: R's raw vector is useful for storing a single
     binary object.  What if you want to put a vector of them in a data
     frame? The 'blob' package provides the blob object, a list of raw
