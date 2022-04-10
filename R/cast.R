@@ -41,4 +41,10 @@ vec_cast.blob.raw <- function(x, to, ...) blob(x)
 
 #' @method vec_cast.blob character
 #' @export
-vec_cast.blob.character <- function(x, to, ...) blob(!!!lapply(x, charToRaw))
+vec_cast.blob.character <- function(x, to, ...) {
+  out <- as_blob(vector("list", length(x)))
+  # charToRaw(NA_character_) == charToRaw("NA"), so only convert non-missing entries
+  non_missing <- !is.na(x)
+  out[non_missing] <- blob(!!!lapply(x[non_missing], charToRaw))
+  out
+}
