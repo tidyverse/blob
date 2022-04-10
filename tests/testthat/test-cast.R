@@ -2,7 +2,7 @@ context("test-cast")
 
 test_that("casting with as.blob()", {
   # Deprecated in v1.2.0
-  scoped_lifecycle_silence()
+  local_lifecycle_silence()
 
   expect_identical(as.blob(blob(raw(1))), blob(raw(1)))
   expect_identical(as.blob(list(raw(1))), blob(raw(1)))
