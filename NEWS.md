@@ -2,8 +2,7 @@
 
 # blob 1.2.2.9000 (2021-07-23)
 
-- Same as previous version.
-
+- `as_blob(NA_character_)` returns a missing `blob` instead of `as_blob("NA")` (#26, @michaelchirico)
 
 # blob 1.2.2 (2021-07-23)
 
