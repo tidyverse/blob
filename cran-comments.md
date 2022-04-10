@@ -1,18 +1,19 @@
-blob 1.2.2
+blob 1.2.3
 
 ## Cran Repository Policy
 
-- [x] Reviewed CRP last edited 2021-04-25.
+- [ ] Reviewed CRP last edited 2022-02-08.
+
+See changes at https://github.com/eddelbuettel/crp/compare/master@%7B2021-04-25%7D...master@%7B2022-02-08%7D
 
 ## R CMD check results
 
-- [x] Checked locally, R 4.1.0
-- [x] Checked on CI system, R 4.1.0
-- [x] Checked on win-builder, R devel
+- [x] Checked locally, R 4.1.2
+- [ ] Checked on CI system, R 4.1.3
+- [ ] Checked on win-builder, R devel
 
 Check the boxes above after successful execution and remove this line. Then run `fledge::release()`.
 
 ## Current CRAN check results
 
-- [x] Checked on 2021-07-23, problems found: https://cran.r-project.org/web/checks/check_results_blob.html
-- [x] NOTE: r-devel-linux-x86_64-debian-clang, r-devel-linux-x86_64-debian-gcc, r-devel-linux-x86_64-fedora-clang, r-devel-linux-x86_64-fedora-gcc, r-devel-windows-x86_64, r-devel-windows-x86_64-gcc10-UCRT, r-patched-linux-x86_64, r-patched-solaris-x86, r-release-linux-x86_64, r-release-macos-arm64, r-release-macos-x86_64, r-release-windows-ix86+x86_64: Removed LazyData field
+- [x] Checked on 2022-04-10, no problems found.
