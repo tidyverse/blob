@@ -100,7 +100,7 @@ signal_soft_deprecated <- function(msg, id = msg, env = rlang::caller_env(2)) {
   }
 
   if (rlang::is_true(rlang::peek_option("lifecycle_verbose_soft_deprecation")) ||
-      env_inherits_global(env)) {
+    env_inherits_global(env)) {
     warn_deprecated(msg, id)
     return(invisible(NULL))
   }
@@ -109,8 +109,8 @@ signal_soft_deprecated <- function(msg, id = msg, env = rlang::caller_env(2)) {
   # testthat clones the namespace
   tested_package <- Sys.getenv("TESTTHAT_PKG")
   if (nzchar(tested_package) &&
-        identical(Sys.getenv("NOT_CRAN"), "true") &&
-        rlang::env_name(topenv(env)) == rlang::env_name(rlang::ns_env(tested_package))) {
+    identical(Sys.getenv("NOT_CRAN"), "true") &&
+    rlang::env_name(topenv(env)) == rlang::env_name(rlang::ns_env(tested_package))) {
     warn_deprecated(msg, id)
     return(invisible(NULL))
   }
@@ -127,7 +127,7 @@ warn_deprecated <- function(msg, id = msg) {
   }
 
   if (!rlang::is_true(rlang::peek_option("lifecycle_repeat_warnings")) &&
-        rlang::env_has(.rlang_lifecycle_deprecation_env, id)) {
+    rlang::env_has(.rlang_lifecycle_deprecation_env, id)) {
     return(invisible(NULL))
   }
 
