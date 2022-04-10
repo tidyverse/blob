@@ -1,5 +1,13 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# blob 1.2.3.9000 (2022-04-10)
+
+- Reduce parallelism
+- Also check dev on cran-* branches
+- Update hash key for dev
+- Remove R 3.3
+
+
 # blob 1.2.3 (2022-04-10)
 
 - Reduce parallelism
