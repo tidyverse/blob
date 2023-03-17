@@ -1,5 +1,16 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# blob 1.2.4 (2023-03-17)
+
+## Bug fixes
+
+- Fix argument consistency between S3 generics and methods.
+
+## Chore
+
+- Change maintainer e-mail.
+
+
 # blob 1.2.3.9003 (2023-02-17)
 
 - Internal changes only.
