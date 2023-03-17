@@ -3,7 +3,7 @@ Title: A Simple S3 Class for Representing Vectors of Binary Data ('BLOBS')
 Version: 1.2.3.9003
 Authors@R: c(
     person("Hadley", "Wickham", role = "aut"),
-    person("Kirill", "Müller", , "krlmlr+r@mailbox.org", role = "cre"),
+    person("Kirill", "Müller", , "kirill@cynkra.com", role = "cre"),
     person("RStudio", role = c("cph", "fnd"))
   )
 Description: R's raw vector is useful for storing a single binary object.
