@@ -18,12 +18,12 @@ obj_print_data.blob <- function(x, ...) {
 }
 
 #' @export
-vec_ptype_abbr.blob <- function(x) {
+vec_ptype_abbr.blob <- function(x, ..., prefix_named, suffix_shape) {
   "blob"
 }
 
 #' @export
-vec_ptype_full.blob <- function(x) {
+vec_ptype_full.blob <- function(x, ...) {
   "blob"
 }
 
