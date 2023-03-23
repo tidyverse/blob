@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# blob 1.2.4.9001 (2023-03-23)
+
+- Internal changes only.
+
+
 # blob 1.2.4.9000 (2023-03-17)
 
 ## Bug fixes
