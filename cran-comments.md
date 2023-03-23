@@ -1,15 +1,6 @@
-blob 1.2.3
-
-## Cran Repository Policy
-
-- [x] Reviewed CRP last edited 2022-02-08.
-
-## R CMD check results
-
-- [x] Checked locally, R 4.1.2
-- [x] Checked on CI system, R 4.1.3
-- [x] Checked on win-builder, R devel
+blob 1.2.4
 
 ## Current CRAN check results
 
-- [x] Checked on 2022-04-10, no problems found.
+- [x] Checked on 2023-03-17, problems found: https://cran.r-project.org/web/checks/check_results_blob.html
+- [x] WARN: r-devel-linux-x86_64-debian-clang, r-devel-linux-x86_64-debian-gcc, r-devel-linux-x86_64-fedora-clang, r-devel-linux-x86_64-fedora-gcc, r-devel-windows-x86_64: Fixed

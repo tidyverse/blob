@@ -22,41 +22,6 @@
 
 - Fix argument consistency between S3 generics and methods.
 
-## Chore
-
-- Change maintainer e-mail.
-
-
-# blob 1.2.3.9003 (2023-02-17)
-
-- Internal changes only.
-
-
-# blob 1.2.3.9002 (2022-12-30)
-
-- Internal changes only.
-
-
-# blob 1.2.3.9001 (2022-12-24)
-
-- Harmonize yaml formatting.
-
-- Revert changes to matrix section.
-
-- Merge remote-tracking branch 'refs/remotes/origin/main'.
-
-
-- Merged cran-1.2.3 into main.
-
-
-
-# blob 1.2.3.9000 (2022-04-10)
-
-- Reduce parallelism
-- Also check dev on cran-* branches
-- Update hash key for dev
-- Remove R 3.3
-
 
 # blob 1.2.3 (2022-04-10)
 
