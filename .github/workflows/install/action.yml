@@ -110,4 +110,9 @@ runs:
         # mkdir -p $(dirname $(pwd))/.ccache-debug
 
         echo 'PKG_BUILD_EXTRA_FLAGS=false' | tee -a $GITHUB_ENV
+
+        echo 'CCACHE_CACHE_DIR=${{ runner.temp }}/ccache' | tee -a $GITHUB_ENV
+
+        # Repair
+        git rm -rf .ccache
       shell: bash
