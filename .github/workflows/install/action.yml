@@ -111,7 +111,7 @@ runs:
 
         echo 'PKG_BUILD_EXTRA_FLAGS=false' | tee -a $GITHUB_ENV
 
-        echo 'CCACHE_CACHE_DIR=${{ runner.temp }}/ccache' | tee -a $GITHUB_ENV
+        echo 'CCACHE_DIR=${{ runner.temp }}/ccache' | tee -a $GITHUB_ENV
         mkdir -p '${{ runner.temp }}/ccache'
 
         # Repair
