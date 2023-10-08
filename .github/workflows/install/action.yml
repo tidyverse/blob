@@ -116,4 +116,6 @@ runs:
         # Repair
         git rm -rf .ccache || true
         rm -rf .ccache
+
+        ccache -p
       shell: bash
