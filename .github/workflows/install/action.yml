@@ -114,6 +114,6 @@ runs:
         echo 'CCACHE_CACHE_DIR=${{ runner.temp }}/ccache' | tee -a $GITHUB_ENV
 
         # Repair
-        git rm -rf .ccache
+        git rm -rf .ccache || true
         rm -rf .ccache
       shell: bash
