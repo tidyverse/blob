@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# blob 1.2.4.9003 (2023-10-09)
+
+- Internal changes only.
+
+
 # blob 1.2.4.9002 (2023-03-24)
 
 - Merged cran-1.2.4 into main.
