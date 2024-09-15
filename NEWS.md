@@ -1,5 +1,16 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# blob 1.2.4.9005 (2024-09-15)
+
+## Continuous integration
+
+  - Install via R CMD INSTALL ., not pak (#30).
+    
+      - ci: Install via R CMD INSTALL ., not pak
+    
+      - ci: Bump version of upload-artifact action
+
+
 # blob 1.2.4.9004 (2024-08-31)
 
 ## Chore
