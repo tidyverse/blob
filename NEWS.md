@@ -1,5 +1,18 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# blob 1.2.4.9006 (2024-10-28)
+
+## Continuous integration
+
+  - Trigger run (#32).
+
+  - Use pkgdown branch (#31).
+    
+      - ci: Use pkgdown branch
+    
+      - ci: Updates from duckdb
+
+
 # blob 1.2.4.9005 (2024-09-15)
 
 ## Continuous integration
