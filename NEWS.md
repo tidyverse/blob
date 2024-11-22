@@ -1,5 +1,12 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# blob 1.2.4.9009 (2024-11-22)
+
+## Continuous integration
+
+  - Correctly detect branch protection (#35).
+
+
 # blob 1.2.4.9008 (2024-11-18)
 
 ## Continuous integration
