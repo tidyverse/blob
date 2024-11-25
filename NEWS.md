@@ -1,5 +1,14 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# blob 1.2.4.9010 (2024-11-25)
+
+## Continuous integration
+
+- Need to install R on Ubuntu 24.04 (#38).
+
+- Use Ubuntu 24.04 and styler PR (#36).
+
+
 # blob 1.2.4.9009 (2024-11-22)
 
 ## Continuous integration
