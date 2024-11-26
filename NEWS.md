@@ -1,5 +1,12 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# blob 1.2.4.9011 (2024-11-26)
+
+## Continuous integration
+
+- Use styler from main branch (#39).
+
+
 # blob 1.2.4.9010 (2024-11-25)
 
 ## Continuous integration
