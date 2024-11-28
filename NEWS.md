@@ -1,5 +1,12 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# blob 1.2.4.9013 (2024-11-28)
+
+## Continuous integration
+
+- Ignore errors when removing pkg-config on macOS (#41).
+
+
 # blob 1.2.4.9012 (2024-11-27)
 
 ## Continuous integration
