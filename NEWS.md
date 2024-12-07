@@ -1,5 +1,12 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# blob 1.2.4.9014 (2024-12-07)
+
+## Continuous integration
+
+- Use larger retry count for lock-threads workflow (#42).
+
+
 # blob 1.2.4.9013 (2024-11-28)
 
 ## Continuous integration
