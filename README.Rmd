@@ -1,5 +1,5 @@
 ---
-output: downlit::readme_document
+output: github_document
 ---
 
 <!-- badges: start -->
