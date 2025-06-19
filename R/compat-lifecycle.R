@@ -25,7 +25,6 @@
 #
 # - Soft-namespaced private objects.
 
-
 #' Signal deprecation
 #'
 #' @description
@@ -99,8 +98,10 @@ signal_soft_deprecated <- function(msg, id = msg, env = rlang::caller_env(2)) {
     rlang::is_reference(topenv(env), rlang::global_env())
   }
 
-  if (rlang::is_true(rlang::peek_option("lifecycle_verbose_soft_deprecation")) ||
-    env_inherits_global(env)) {
+  if (
+    rlang::is_true(rlang::peek_option("lifecycle_verbose_soft_deprecation")) ||
+      env_inherits_global(env)
+  ) {
     warn_deprecated(msg, id)
     return(invisible(NULL))
   }
@@ -108,9 +109,12 @@ signal_soft_deprecated <- function(msg, id = msg, env = rlang::caller_env(2)) {
   # Test for environment names rather than reference/contents because
   # testthat clones the namespace
   tested_package <- Sys.getenv("TESTTHAT_PKG")
-  if (nzchar(tested_package) &&
-    identical(Sys.getenv("NOT_CRAN"), "true") &&
-    rlang::env_name(topenv(env)) == rlang::env_name(rlang::ns_env(tested_package))) {
+  if (
+    nzchar(tested_package) &&
+      identical(Sys.getenv("NOT_CRAN"), "true") &&
+      rlang::env_name(topenv(env)) ==
+        rlang::env_name(rlang::ns_env(tested_package))
+  ) {
     warn_deprecated(msg, id)
     return(invisible(NULL))
   }
@@ -126,12 +130,14 @@ warn_deprecated <- function(msg, id = msg) {
     return(invisible(NULL))
   }
 
-  if (!rlang::is_true(rlang::peek_option("lifecycle_repeat_warnings")) &&
-    rlang::env_has(.rlang_lifecycle_deprecation_env, id)) {
+  if (
+    !rlang::is_true(rlang::peek_option("lifecycle_repeat_warnings")) &&
+      rlang::env_has(.rlang_lifecycle_deprecation_env, id)
+  ) {
     return(invisible(NULL))
   }
 
-  rlang::env_poke(.rlang_lifecycle_deprecation_env, id, TRUE);
+  rlang::env_poke(.rlang_lifecycle_deprecation_env, id, TRUE)
 
   has_colour <- function() rlang::is_installed("crayon") && crayon::has_color()
   silver <- function(x) if (has_colour()) crayon::silver(x) else x
@@ -143,7 +149,11 @@ warn_deprecated <- function(msg, id = msg) {
   }
 
   if (!rlang::is_true(rlang::peek_option("lifecycle_repeat_warnings"))) {
-    msg <- paste0(msg, "\n", silver("This warning is displayed once per session."))
+    msg <- paste0(
+      msg,
+      "\n",
+      silver("This warning is displayed once per session.")
+    )
   }
 
   .Signal(msg = msg)
@@ -163,9 +173,7 @@ stop_defunct <- function(msg) {
 }
 
 local_lifecycle_silence <- function(frame = rlang::caller_env()) {
-  rlang::local_options(.frame = frame,
-    lifecycle_disable_warnings = TRUE
-  )
+  rlang::local_options(.frame = frame, lifecycle_disable_warnings = TRUE)
 }
 with_lifecycle_silence <- function(expr) {
   local_lifecycle_silence()
@@ -173,7 +181,8 @@ with_lifecycle_silence <- function(expr) {
 }
 
 local_lifecycle_warnings <- function(frame = rlang::caller_env()) {
-  rlang::local_options(.frame = frame,
+  rlang::local_options(
+    .frame = frame,
     lifecycle_disable_warnings = FALSE,
     lifecycle_verbose_soft_deprecation = TRUE,
     lifecycle_repeat_warnings = TRUE
@@ -186,9 +195,7 @@ with_lifecycle_warnings <- function(expr) {
 
 local_lifecycle_errors <- function(frame = rlang::caller_env()) {
   local_lifecycle_warnings(frame = frame)
-  rlang::local_options(.frame = frame,
-    lifecycle_warnings_as_errors = TRUE
-  )
+  rlang::local_options(.frame = frame, lifecycle_warnings_as_errors = TRUE)
 }
 with_lifecycle_errors <- function(expr) {
   local_lifecycle_errors()
