@@ -1,5 +1,5 @@
 ---
-output: downlit::readme_document
+output: github_document
 ---
 
 <!-- badges: start -->
@@ -21,7 +21,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# blob
+# blob <a href="https://blob.tidyverse.org"><img src="man/figures/logo.png" align="right" height="122" alt="blob website" /></a>
 
 ## Overview
 
@@ -39,8 +39,8 @@ install.packages("tidyverse")
 install.packages("blob")
 
 # Or the the development version from GitHub:
-# install.packages("devtools")
-devtools::install_github("tidyverse/blob")
+# install.packages("pak")
+pak::pak("tidyverse/blob")
 ```
 
 ## Example
