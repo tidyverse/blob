@@ -1,5 +1,3 @@
-context("accessors")
-
 test_that("subsetting blob returns blob", {
   x <- blob(!!!as.raw(1:5))
   expect_s3_class(x[1], "blob")

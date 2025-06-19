@@ -1,5 +1,3 @@
-context("test-cast")
-
 test_that("casting with as.blob()", {
   # Deprecated in v1.2.0
   local_lifecycle_silence()
