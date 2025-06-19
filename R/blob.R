@@ -1,8 +1,3 @@
-#' @import vctrs
-#' @import rlang
-NULL
-
-#' @importFrom methods setOldClass
 setOldClass(c("blob", "vctrs_list_of", "vctrs_vctr"))
 
 #' Construct a blob object
