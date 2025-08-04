@@ -1,5 +1,3 @@
-context("format")
-
 expect_format_equal <- function(formatted, result) {
   expect_equal(
     paste(formatted, collapse = "\n"),
