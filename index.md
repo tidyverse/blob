@@ -1,8 +1,3 @@
----
-output:
-  github_document:
-    html_preview: false
----
 
 <!-- badges: start -->
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
@@ -13,52 +8,9 @@ output:
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, include = FALSE}
-pkgload::load_all()
 
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "README-"
-)
 
-clean_output <- function(x, options) {
-  x <- gsub("0x[0-9a-f]+", "0xdeadbeef", x)
-  x <- gsub("dataframe_[0-9]*_[0-9]*", "      dataframe_42_42      ", x)
-  x <- gsub("[0-9]*\\.___row_number ASC", "42.___row_number ASC", x)
-
-  index <- x
-  index <- gsub("─", "-", index)
-  index <- strsplit(paste(index, collapse = "\n"), "\n---\n")[[1]][[2]]
-  writeLines(index, "index.md")
-
-  x <- gsub(
-    '(`vignette[(]"([^"]+)"[)]`)',
-    "[\\1](https://blob.tidyverse.org/articles/\\2.html)",
-    x
-  )
-  x <- fansi::strip_sgr(x)
-  x
-}
-
-options(
-  cli.num_colors = 256,
-  cli.width = 71,
-  width = 71,
-  pillar.bold = TRUE,
-  pillar.max_title_chars = 5,
-  pillar.min_title_chars = 5,
-  pillar.max_footer_lines = 12,
-  conflicts.policy = list(warn = FALSE)
-)
-
-local({
-  hook_source <- knitr::knit_hooks$get("document")
-  knitr::knit_hooks$set(document = clean_output)
-})
-```
-
-# blob
+# blob <a href="https://blob.tidyverse.org"><img src="man/figures/logo.png" align="right" height="122" alt="blob website" /></a>
 
 ## Overview
 
@@ -84,20 +36,22 @@ pak::pak("tidyverse/blob")
 
 To create a blob, use `blob()`, `new_blob()` or `as_blob()`:
 
-```{r example}
+
+``` r
 library(blob)
 
 x1 <- charToRaw("Good morning")
-x2 <- as.raw(c(0x48, 0x65, 0x6c, 0x6c, 0x6f))
+x2 <- as.raw(c(0xdeadbeef, 0xdeadbeef, 0xdeadbeef, 0xdeadbeef, 0xdeadbeef))
 
 new_blob(list(x1, x2))
+#> <blob[2]>
+#> [1] blob[12 B] blob[5 B]
 blob(x1, x2)
+#> <blob[2]>
+#> [1] blob[12 B] blob[5 B]
 
 as_blob(c("Good morning", "Good evening"))
+#> <blob[2]>
+#> [1] blob[12 B] blob[12 B]
 ```
 
----
-
-Please note that the 'blob' project is released with a
-[Contributor Code of Conduct](https://github.com/tidyverse/blob/blob/main/CODE_OF_CONDUCT.md).
-By contributing to this project, you agree to abide by its terms.
