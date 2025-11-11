@@ -15,13 +15,13 @@ Source:
 [`DESCRIPTION`](https://github.com/tidyverse/blob/blob/main/DESCRIPTION)
 
 Wickham H (2025). *blob: A Simple S3 Class for Representing Vectors of
-Binary Data ('BLOBS')*. R package version 1.2.4.9016,
+Binary Data ('BLOBS')*. R package version 1.2.4.9017,
 <https://blob.tidyverse.org>.
 
     @Manual{,
       title = {blob: A Simple S3 Class for Representing Vectors of Binary Data ('BLOBS')},
       author = {Hadley Wickham},
       year = {2025},
-      note = {R package version 1.2.4.9016},
+      note = {R package version 1.2.4.9017},
       url = {https://blob.tidyverse.org},
     }

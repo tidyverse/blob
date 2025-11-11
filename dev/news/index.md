@@ -1,5 +1,57 @@
 # Changelog
 
+## blob 1.2.4.9017 (2025-11-10)
+
+### Chore
+
+- Auto-update from GitHub Actions.
+
+  Run: <https://github.com/tidyverse/blob/actions/runs/17451417258>
+
+- Auto-update from GitHub Actions.
+
+  Run: <https://github.com/tidyverse/blob/actions/runs/14636194825>
+
+### Continuous integration
+
+- Use workflows for fledge
+  ([\#62](https://github.com/tidyverse/blob/issues/62)).
+
+- Sync ([\#61](https://github.com/tidyverse/blob/issues/61)).
+
+- Use reviewdog for external PRs
+  ([\#59](https://github.com/tidyverse/blob/issues/59)).
+
+- Cleanup and fix macOS
+  ([\#58](https://github.com/tidyverse/blob/issues/58)).
+
+- Format with air, check detritus, better handling of `extra-packages`
+  ([\#57](https://github.com/tidyverse/blob/issues/57)).
+
+- Enhance permissions for workflow
+  ([\#53](https://github.com/tidyverse/blob/issues/53)).
+
+- Permissions, better tests for missing suggests, lints
+  ([\#52](https://github.com/tidyverse/blob/issues/52)).
+
+- Only fail covr builds if token is given
+  ([\#51](https://github.com/tidyverse/blob/issues/51)).
+
+- Always use `_R_CHECK_FORCE_SUGGESTS_=false`
+  ([\#50](https://github.com/tidyverse/blob/issues/50)).
+
+- Correct installation of xml2
+  ([\#49](https://github.com/tidyverse/blob/issues/49)).
+
+- Explain ([\#48](https://github.com/tidyverse/blob/issues/48)).
+
+- Add xml2 for covr, print testthat results
+  ([\#47](https://github.com/tidyverse/blob/issues/47)).
+
+- Fix ([\#46](https://github.com/tidyverse/blob/issues/46)).
+
+- Sync ([\#45](https://github.com/tidyverse/blob/issues/45)).
+
 ## blob 1.2.4.9016 (2024-12-09)
 
 ### Continuous integration
