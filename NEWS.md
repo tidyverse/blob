@@ -1,5 +1,12 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# blob 1.2.4.9018 (2025-11-12)
+
+## Continuous integration
+
+- Fix reviewdog and add commenting workflow (#63).
+
+
 # blob 1.2.4.9017 (2025-11-10)
 
 ## Chore
