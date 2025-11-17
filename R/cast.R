@@ -31,7 +31,9 @@ vec_cast.blob.vctrs_list_of <- function(x, to, ...) {
 #' @method vec_cast.blob integer
 #' @export
 vec_cast.blob.integer <- function(x, to, ...) {
-  signal_soft_deprecated("Coercing an integer vector to a blob is deprecated, please coerce to a list first.")
+  signal_soft_deprecated(
+    "Coercing an integer vector to a blob is deprecated, please coerce to a list first."
+  )
   blob(!!!lapply(x, as_single_raw))
 }
 
