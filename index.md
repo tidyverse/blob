@@ -10,7 +10,7 @@
 
 
 
-# blob <a href="https://blob.tidyverse.org"><img src="man/figures/logo.png" align="right" height="122" alt="blob website" /></a>
+# blob
 
 ## Overview
 
