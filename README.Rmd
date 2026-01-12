@@ -75,7 +75,7 @@ install.packages("tidyverse")
 # Alternatively, install just blob:
 install.packages("blob")
 
-# Or the the development version from GitHub:
+# Or the development version from GitHub:
 # install.packages("pak")
 pak::pak("tidyverse/blob")
 ```
