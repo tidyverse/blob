@@ -1,5 +1,16 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# blob 1.2.4.9020 (2026-01-12)
+
+## Chore
+
+- Upkeep.
+
+## Testing
+
+- Expand on `NULL` subassignment tests related to vctrs changes (@DavisVaughan, #65).
+
+
 # blob 1.2.4.9019 (2025-11-17)
 
 ## Continuous integration
