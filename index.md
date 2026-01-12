@@ -41,7 +41,7 @@ To create a blob, use `blob()`, `new_blob()` or `as_blob()`:
 library(blob)
 
 x1 <- charToRaw("Good morning")
-x2 <- as.raw(c(0xdeadbeef, 0xdeadbeef, 0xdeadbeef, 0xdeadbeef, 0xdeadbeef))
+x2 <- as.raw(c(0x48, 0x65, 0x6c, 0x6c, 0x6f))
 
 new_blob(list(x1, x2))
 #> <blob[2]>
