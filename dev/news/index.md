@@ -2,162 +2,20 @@
 
 ## blob 1.2.99.9900 (2026-01-12)
 
-### Bug fixes
-
-- Fix argument consistency between S3 generics and methods.
-
-### Chore
-
-- Upkeep.
-
-- Auto-update from GitHub Actions.
-
-  Run: <https://github.com/tidyverse/blob/actions/runs/17451417258>
-
-  Run: <https://github.com/tidyverse/blob/actions/runs/14636194825>
-
-  Run: <https://github.com/tidyverse/blob/actions/runs/10425482785>
-
-  Run: <https://github.com/tidyverse/blob/actions/runs/10200111385>
-
-  Run: <https://github.com/tidyverse/blob/actions/runs/9728444615>
-
-  Run: <https://github.com/tidyverse/blob/actions/runs/9691616480>
-
-- Change maintainer e-mail.
-
-### Continuous integration
-
-- Install binaries from r-universe for dev workflow
-  ([\#64](https://github.com/tidyverse/blob/issues/64)).
-
-- Fix reviewdog and add commenting workflow
-  ([\#63](https://github.com/tidyverse/blob/issues/63)).
-
-- Use workflows for fledge
-  ([\#62](https://github.com/tidyverse/blob/issues/62)).
-
-- Sync ([\#61](https://github.com/tidyverse/blob/issues/61)).
-
-- Use reviewdog for external PRs
-  ([\#59](https://github.com/tidyverse/blob/issues/59)).
-
-- Cleanup and fix macOS
-  ([\#58](https://github.com/tidyverse/blob/issues/58)).
-
-- Format with air, check detritus, better handling of `extra-packages`
-  ([\#57](https://github.com/tidyverse/blob/issues/57)).
-
-- Enhance permissions for workflow
-  ([\#53](https://github.com/tidyverse/blob/issues/53)).
-
-- Permissions, better tests for missing suggests, lints
-  ([\#52](https://github.com/tidyverse/blob/issues/52)).
-
-- Only fail covr builds if token is given
-  ([\#51](https://github.com/tidyverse/blob/issues/51)).
-
-- Always use `_R_CHECK_FORCE_SUGGESTS_=false`
-  ([\#50](https://github.com/tidyverse/blob/issues/50)).
-
-- Correct installation of xml2
-  ([\#49](https://github.com/tidyverse/blob/issues/49)).
-
-- Explain ([\#48](https://github.com/tidyverse/blob/issues/48)).
-
-- Add xml2 for covr, print testthat results
-  ([\#47](https://github.com/tidyverse/blob/issues/47)).
-
-- Fix ([\#46](https://github.com/tidyverse/blob/issues/46)).
-
-- Sync ([\#45](https://github.com/tidyverse/blob/issues/45)).
-
-- Avoid failure in fledge workflow if no changes
-  ([\#44](https://github.com/tidyverse/blob/issues/44)).
-
-- Fetch tags for fledge workflow to avoid unnecessary NEWS entries
-  ([\#43](https://github.com/tidyverse/blob/issues/43)).
-
-- Use larger retry count for lock-threads workflow
-  ([\#42](https://github.com/tidyverse/blob/issues/42)).
-
-- Ignore errors when removing pkg-config on macOS
-  ([\#41](https://github.com/tidyverse/blob/issues/41)).
-
-- Explicit permissions
-  ([\#40](https://github.com/tidyverse/blob/issues/40)).
-
-- Use styler from main branch
-  ([\#39](https://github.com/tidyverse/blob/issues/39)).
-
-- Need to install R on Ubuntu 24.04
-  ([\#38](https://github.com/tidyverse/blob/issues/38)).
-
-- Use Ubuntu 24.04 and styler PR
-  ([\#36](https://github.com/tidyverse/blob/issues/36)).
-
-- Correctly detect branch protection
-  ([\#35](https://github.com/tidyverse/blob/issues/35)).
-
-- Use stable pak ([\#34](https://github.com/tidyverse/blob/issues/34)).
-
-- Trigger run ([\#33](https://github.com/tidyverse/blob/issues/33)).
-
-  - ci: Trigger run
-
-  - ci: Latest changes
-
-- Trigger run ([\#32](https://github.com/tidyverse/blob/issues/32)).
-
-- Use pkgdown branch
-  ([\#31](https://github.com/tidyverse/blob/issues/31)).
-
-  - ci: Use pkgdown branch
-
-  - ci: Updates from duckdb
-
-- Install via R CMD INSTALL ., not pak
-  ([\#30](https://github.com/tidyverse/blob/issues/30)).
-
-  - ci: Install via R CMD INSTALL ., not pak
-
-  - ci: Bump version of upload-artifact action
-
-- Install local package for pkgdown builds.
-
-- Improve support for protected branches with fledge.
-
-- Improve support for protected branches, without fledge.
-
-- Sync with latest developments.
-
-- Use v2 instead of master.
-
-- Inline action.
-
-- Use dev roxygen2 and decor.
-
-- Fix on Windows, tweak lock workflow.
-
-- Avoid checking bashisms on Windows.
-
-- Better commit message.
-
-- Bump versions, better default, consume custom matrix.
-
-- Recent updates.
-
 ### Testing
 
 - Expand on `NULL` subassignment tests related to vctrs changes
   ([@DavisVaughan](https://github.com/DavisVaughan),
   [\#65](https://github.com/tidyverse/blob/issues/65)).
 
-### Uncategorized
+### Bug fixes
 
-- Internal changes only.
+- Fix argument consistency between S3 generics and methods.
 
-- Merged cran-1.2.4 into main.
+### Chore
+
+- Upkeep ([@MikeJohnPage](https://github.com/MikeJohnPage),
+  [\#55](https://github.com/tidyverse/blob/issues/55)).
 
 ## blob 1.2.4 (2023-03-17)
 

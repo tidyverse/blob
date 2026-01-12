@@ -35,88 +35,16 @@
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.2.99.9900" id="blob-12999900-2026-01-12">blob 1.2.99.9900 (2026-01-12)<a class="anchor" aria-label="anchor" href="#blob-12999900-2026-01-12"></a></h2>
 <div class="section level3">
+<h3 id="testing-1-2-99-9900">Testing<a class="anchor" aria-label="anchor" href="#testing-1-2-99-9900"></a></h3>
+<ul><li>Expand on <code>NULL</code> subassignment tests related to vctrs changes (<a href="https://github.com/DavisVaughan" class="external-link">@DavisVaughan</a>, <a href="https://github.com/tidyverse/blob/issues/65" class="external-link">#65</a>).</li>
+</ul></div>
+<div class="section level3">
 <h3 id="bug-fixes-1-2-99-9900">Bug fixes<a class="anchor" aria-label="anchor" href="#bug-fixes-1-2-99-9900"></a></h3>
 <ul><li>Fix argument consistency between S3 generics and methods.</li>
 </ul></div>
 <div class="section level3">
 <h3 id="chore-1-2-99-9900">Chore<a class="anchor" aria-label="anchor" href="#chore-1-2-99-9900"></a></h3>
-<ul><li><p>Upkeep.</p></li>
-<li>
-<p>Auto-update from GitHub Actions.</p>
-<p>Run: <a href="https://github.com/tidyverse/blob/actions/runs/17451417258" class="external-link uri">https://github.com/tidyverse/blob/actions/runs/17451417258</a></p>
-<p>Run: <a href="https://github.com/tidyverse/blob/actions/runs/14636194825" class="external-link uri">https://github.com/tidyverse/blob/actions/runs/14636194825</a></p>
-<p>Run: <a href="https://github.com/tidyverse/blob/actions/runs/10425482785" class="external-link uri">https://github.com/tidyverse/blob/actions/runs/10425482785</a></p>
-<p>Run: <a href="https://github.com/tidyverse/blob/actions/runs/10200111385" class="external-link uri">https://github.com/tidyverse/blob/actions/runs/10200111385</a></p>
-<p>Run: <a href="https://github.com/tidyverse/blob/actions/runs/9728444615" class="external-link uri">https://github.com/tidyverse/blob/actions/runs/9728444615</a></p>
-<p>Run: <a href="https://github.com/tidyverse/blob/actions/runs/9691616480" class="external-link uri">https://github.com/tidyverse/blob/actions/runs/9691616480</a></p>
-</li>
-<li><p>Change maintainer e-mail.</p></li>
-</ul></div>
-<div class="section level3">
-<h3 id="continuous-integration-1-2-99-9900">Continuous integration<a class="anchor" aria-label="anchor" href="#continuous-integration-1-2-99-9900"></a></h3>
-<ul><li><p>Install binaries from r-universe for dev workflow (<a href="https://github.com/tidyverse/blob/issues/64" class="external-link">#64</a>).</p></li>
-<li><p>Fix reviewdog and add commenting workflow (<a href="https://github.com/tidyverse/blob/issues/63" class="external-link">#63</a>).</p></li>
-<li><p>Use workflows for fledge (<a href="https://github.com/tidyverse/blob/issues/62" class="external-link">#62</a>).</p></li>
-<li><p>Sync (<a href="https://github.com/tidyverse/blob/issues/61" class="external-link">#61</a>).</p></li>
-<li><p>Use reviewdog for external PRs (<a href="https://github.com/tidyverse/blob/issues/59" class="external-link">#59</a>).</p></li>
-<li><p>Cleanup and fix macOS (<a href="https://github.com/tidyverse/blob/issues/58" class="external-link">#58</a>).</p></li>
-<li><p>Format with air, check detritus, better handling of <code>extra-packages</code> (<a href="https://github.com/tidyverse/blob/issues/57" class="external-link">#57</a>).</p></li>
-<li><p>Enhance permissions for workflow (<a href="https://github.com/tidyverse/blob/issues/53" class="external-link">#53</a>).</p></li>
-<li><p>Permissions, better tests for missing suggests, lints (<a href="https://github.com/tidyverse/blob/issues/52" class="external-link">#52</a>).</p></li>
-<li><p>Only fail covr builds if token is given (<a href="https://github.com/tidyverse/blob/issues/51" class="external-link">#51</a>).</p></li>
-<li><p>Always use <code>_R_CHECK_FORCE_SUGGESTS_=false</code> (<a href="https://github.com/tidyverse/blob/issues/50" class="external-link">#50</a>).</p></li>
-<li><p>Correct installation of xml2 (<a href="https://github.com/tidyverse/blob/issues/49" class="external-link">#49</a>).</p></li>
-<li><p>Explain (<a href="https://github.com/tidyverse/blob/issues/48" class="external-link">#48</a>).</p></li>
-<li><p>Add xml2 for covr, print testthat results (<a href="https://github.com/tidyverse/blob/issues/47" class="external-link">#47</a>).</p></li>
-<li><p>Fix (<a href="https://github.com/tidyverse/blob/issues/46" class="external-link">#46</a>).</p></li>
-<li><p>Sync (<a href="https://github.com/tidyverse/blob/issues/45" class="external-link">#45</a>).</p></li>
-<li><p>Avoid failure in fledge workflow if no changes (<a href="https://github.com/tidyverse/blob/issues/44" class="external-link">#44</a>).</p></li>
-<li><p>Fetch tags for fledge workflow to avoid unnecessary NEWS entries (<a href="https://github.com/tidyverse/blob/issues/43" class="external-link">#43</a>).</p></li>
-<li><p>Use larger retry count for lock-threads workflow (<a href="https://github.com/tidyverse/blob/issues/42" class="external-link">#42</a>).</p></li>
-<li><p>Ignore errors when removing pkg-config on macOS (<a href="https://github.com/tidyverse/blob/issues/41" class="external-link">#41</a>).</p></li>
-<li><p>Explicit permissions (<a href="https://github.com/tidyverse/blob/issues/40" class="external-link">#40</a>).</p></li>
-<li><p>Use styler from main branch (<a href="https://github.com/tidyverse/blob/issues/39" class="external-link">#39</a>).</p></li>
-<li><p>Need to install R on Ubuntu 24.04 (<a href="https://github.com/tidyverse/blob/issues/38" class="external-link">#38</a>).</p></li>
-<li><p>Use Ubuntu 24.04 and styler PR (<a href="https://github.com/tidyverse/blob/issues/36" class="external-link">#36</a>).</p></li>
-<li><p>Correctly detect branch protection (<a href="https://github.com/tidyverse/blob/issues/35" class="external-link">#35</a>).</p></li>
-<li><p>Use stable pak (<a href="https://github.com/tidyverse/blob/issues/34" class="external-link">#34</a>).</p></li>
-<li>
-<p>Trigger run (<a href="https://github.com/tidyverse/blob/issues/33" class="external-link">#33</a>).</p>
-<ul><li><p>ci: Trigger run</p></li>
-<li><p>ci: Latest changes</p></li>
-</ul></li>
-<li><p>Trigger run (<a href="https://github.com/tidyverse/blob/issues/32" class="external-link">#32</a>).</p></li>
-<li>
-<p>Use pkgdown branch (<a href="https://github.com/tidyverse/blob/issues/31" class="external-link">#31</a>).</p>
-<ul><li><p>ci: Use pkgdown branch</p></li>
-<li><p>ci: Updates from duckdb</p></li>
-</ul></li>
-<li>
-<p>Install via R CMD INSTALL ., not pak (<a href="https://github.com/tidyverse/blob/issues/30" class="external-link">#30</a>).</p>
-<ul><li><p>ci: Install via R CMD INSTALL ., not pak</p></li>
-<li><p>ci: Bump version of upload-artifact action</p></li>
-</ul></li>
-<li><p>Install local package for pkgdown builds.</p></li>
-<li><p>Improve support for protected branches with fledge.</p></li>
-<li><p>Improve support for protected branches, without fledge.</p></li>
-<li><p>Sync with latest developments.</p></li>
-<li><p>Use v2 instead of master.</p></li>
-<li><p>Inline action.</p></li>
-<li><p>Use dev roxygen2 and decor.</p></li>
-<li><p>Fix on Windows, tweak lock workflow.</p></li>
-<li><p>Avoid checking bashisms on Windows.</p></li>
-<li><p>Better commit message.</p></li>
-<li><p>Bump versions, better default, consume custom matrix.</p></li>
-<li><p>Recent updates.</p></li>
-</ul></div>
-<div class="section level3">
-<h3 id="testing-1-2-99-9900">Testing<a class="anchor" aria-label="anchor" href="#testing-1-2-99-9900"></a></h3>
-<ul><li>Expand on <code>NULL</code> subassignment tests related to vctrs changes (<a href="https://github.com/DavisVaughan" class="external-link">@DavisVaughan</a>, <a href="https://github.com/tidyverse/blob/issues/65" class="external-link">#65</a>).</li>
-</ul></div>
-<div class="section level3">
-<h3 id="uncategorized-1-2-99-9900">Uncategorized<a class="anchor" aria-label="anchor" href="#uncategorized-1-2-99-9900"></a></h3>
-<ul><li><p>Internal changes only.</p></li>
-<li><p>Merged cran-1.2.4 into main.</p></li>
+<ul><li>Upkeep (<a href="https://github.com/MikeJohnPage" class="external-link">@MikeJohnPage</a>, <a href="https://github.com/tidyverse/blob/issues/55" class="external-link">#55</a>).</li>
 </ul></div>
 </div>
     <div class="section level2">
