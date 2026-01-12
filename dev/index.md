@@ -12,16 +12,16 @@ databases or binary file formats.
 
 ## Installation
 
-``` chroma
+``` r
 # The easiest way to get blob is to install the whole tidyverse:
 install.packages("tidyverse")
 
 # Alternatively, install just blob:
 install.packages("blob")
 
-# Or the the development version from GitHub:
-# install.packages("devtools")
-devtools::install_github("tidyverse/blob")
+# Or the development version from GitHub:
+# install.packages("pak")
+pak::pak("tidyverse/blob")
 ```
 
 ## Example
@@ -31,7 +31,7 @@ To create a blob, use
 [`new_blob()`](https://blob.tidyverse.org/dev/reference/blob.md) or
 [`as_blob()`](https://blob.tidyverse.org/dev/reference/blob.md):
 
-``` chroma
+``` r
 library(blob)
 
 x1 <- charToRaw("Good morning")
@@ -48,10 +48,3 @@ as_blob(c("Good morning", "Good evening"))
 #> <blob[2]>
 #> [1] blob[12 B] blob[12 B]
 ```
-
-------------------------------------------------------------------------
-
-Please note that the ‘blob’ project is released with a [Contributor Code
-of
-Conduct](https://github.com/tidyverse/blob/blob/main/CODE_OF_CONDUCT.md).
-By contributing to this project, you agree to abide by its terms.
