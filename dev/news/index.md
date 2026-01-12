@@ -4,7 +4,8 @@
 
 ### Testing
 
-- Expand on `NULL` subassignment tests related to vctrs changes
+- The upcoming vctrs update changes details on how subset assignment
+  with `NULL` works. This motivated the minor version bump
   ([@DavisVaughan](https://github.com/DavisVaughan),
   [\#65](https://github.com/tidyverse/blob/issues/65)).
 
