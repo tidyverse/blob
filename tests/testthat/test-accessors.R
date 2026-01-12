@@ -36,15 +36,87 @@ test_that("can't insert objects of incorrect type", {
   )
 })
 
-test_that("can insert raw or NULL", {
-  x <- blob(!!!as.raw(1:4))
+test_that("can insert raw", {
+  x <- blob(!!!as.raw(1:2))
 
   x[[1]] <- as.raw(0)
   x[2] <- list(as.raw(0))
-  x[[3]] <- NULL
-  x[4] <- list(NULL)
 
-  expect_equal(x, blob(as.raw(0), as.raw(0), NULL, NULL))
+  expect_equal(x, blob(as.raw(0), as.raw(0)))
+})
+
+test_that("`[<-` can insert missing values", {
+  # With `list(NULL)`
+  x <- blob(raw(1), raw(2), raw(3))
+  x[c(1, 3)] <- list(NULL)
+  expect_identical(x, blob(NULL, raw(2), NULL))
+
+  # With `blob(NULL)`
+  x <- blob(raw(1), raw(2), raw(3))
+  x[c(1, 3)] <- blob(NULL)
+  expect_identical(x, blob(NULL, raw(2), NULL))
+})
+
+test_that("`[<-` shrinks the blob when inserting literal `NULL`", {
+  # Because <blob> is implemented on <list_of> and inherits all list-like
+  # qualities, for better or worse
+
+  # `<list_of>` method threw an incomprehensible error before this
+  skip_if_not_installed("vctrs", "0.6.5.9000")
+
+  x <- blob(raw(1), raw(2))
+  x[1] <- NULL
+  expect_identical(x, blob(raw(2)))
+
+  x <- blob(raw(1), raw(2), raw(3))
+  x[2:3] <- NULL
+  expect_identical(x, blob(raw(1)))
+
+  # By name
+  x <- blob(a = raw(1), b = raw(2), c = raw(3))
+  x[c("b", "c")] <- NULL
+  expect_identical(x, blob(a = raw(1)))
+
+  # OOB
+  x <- blob(raw(1))
+  x[2] <- NULL
+  expect_identical(x, blob(raw(1)))
+})
+
+test_that("`[[<-` shrinks the blob when inserting literal `NULL`", {
+  # Because <blob> is implemented on <list_of> and inherits all list-like
+  # qualities, for better or worse
+
+  # `<list_of>` avoided shrinking the list before this, but we've changed that
+  # to better align with base R lists
+  skip_if_not_installed("vctrs", "0.6.5.9000")
+
+  x <- blob(raw(1), raw(2))
+  x[[1]] <- NULL
+  expect_identical(x, blob(raw(2)))
+
+  x <- blob(a = raw(1), b = raw(2), c = raw(3))
+  x[["b"]] <- NULL
+  expect_identical(x, blob(a = raw(1), c = raw(3)))
+
+  # OOB
+  x <- blob(raw(1))
+  x[[2]] <- NULL
+  expect_identical(x, blob(raw(1)))
+})
+
+test_that("`$<-` shrinks the blob when inserting literal `NULL`", {
+  # Because <blob> is implemented on <list_of> and inherits all list-like
+  # qualities, for better or worse
+
+  x <- blob(a = raw(1), b = raw(2), c = raw(3))
+  x$b <- NULL
+  expect_identical(x, blob(a = raw(1), c = raw(3)))
+
+  # OOB
+  x <- blob(a = raw(1))
+  x$b <- NULL
+  expect_identical(x, blob(a = raw(1)))
 })
 
 test_that("can combine", {
