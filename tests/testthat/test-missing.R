@@ -1,5 +1,3 @@
-context("missing")
-
 test_that("is.na detects nulls", {
   x <- blob(as.raw(1), NULL, as.raw(2), NULL)
   expect_equal(is.na(x), c(FALSE, TRUE, FALSE, TRUE))

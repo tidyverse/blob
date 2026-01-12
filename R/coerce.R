@@ -7,7 +7,9 @@
 #' @method vec_ptype2 blob
 #' @export
 #' @export vec_ptype2.blob
-vec_ptype2.blob <- function(x, y, ..., x_arg = "", y_arg = "") UseMethod("vec_ptype2.blob", y)
+vec_ptype2.blob <- function(x, y, ..., x_arg = "", y_arg = "") {
+  UseMethod("vec_ptype2.blob", y)
+}
 
 #' @method vec_ptype2.blob default
 #' @export

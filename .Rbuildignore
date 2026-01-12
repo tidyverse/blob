@@ -16,3 +16,6 @@
 ^CRAN-RELEASE$
 ^\.github$
 ^LICENSE\.md$
+^[\.]?air\.toml$
+^\.vscode$
+^index\.md$

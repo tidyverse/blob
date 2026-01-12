@@ -1,5 +1,3 @@
-context("construction")
-
 test_that("input must be list of raw blobs", {
   # error from vctrs package
   expect_error(new_blob(1))

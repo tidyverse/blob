@@ -1,15 +1,17 @@
 #' @export
 format.blob <- function(x, ...) {
-  if (length(x) == 0)
+  if (length(x) == 0) {
     return(character())
+  }
 
   ifelse(is.na(x), "<NA>", paste0("blob[", blob_size(x, ...), "]"))
 }
 
 #' @export
 obj_print_data.blob <- function(x, ...) {
-  if (length(x) == 0)
+  if (length(x) == 0) {
     return()
+  }
 
   out <- stats::setNames(format(x), names(x))
   print(out, quote = FALSE)
@@ -41,7 +43,11 @@ pillar_shaft.blob <- function(x, ...) {
   out <- ifelse(
     is.na(x),
     NA_character_,
-    paste0(pillar::style_subtle("<raw "), blob_size(x, ...), pillar::style_subtle(">"))
+    paste0(
+      pillar::style_subtle("<raw "),
+      blob_size(x, ...),
+      pillar::style_subtle(">")
+    )
   )
 
   pillar::new_pillar_shaft_simple(out, align = "right")

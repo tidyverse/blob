@@ -1,5 +1,3 @@
-context("accessors")
-
 test_that("subsetting blob returns blob", {
   x <- blob(!!!as.raw(1:5))
   expect_s3_class(x[1], "blob")
@@ -24,8 +22,18 @@ test_that("subset assignment works", {
 test_that("can't insert objects of incorrect type", {
   x <- blob(!!!as.raw(1:5))
 
-  expect_error(x[[1]] <- 1, class = "vctrs_error_incompatible", fixed = TRUE)
-  expect_error(x[1] <- 1, class = "vctrs_error_incompatible", fixed = TRUE)
+  expect_error(
+    x[[1]] <- 1,
+    regexp = "Can't convert `value` <double> to <raw>",
+    class = "vctrs_error_incompatible",
+    fixed = TRUE
+  )
+  expect_error(
+    x[1] <- 1,
+    regexp = "Can't convert `X[[i]]` <double> to <raw>",
+    class = "vctrs_error_incompatible",
+    fixed = TRUE
+  )
 })
 
 test_that("can insert raw", {
