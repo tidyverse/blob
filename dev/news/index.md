@@ -1,5 +1,12 @@
 # Changelog
 
+## blob 1.2.4.9019 (2025-11-17)
+
+### Continuous integration
+
+- Install binaries from r-universe for dev workflow
+  ([\#64](https://github.com/tidyverse/blob/issues/64)).
+
 ## blob 1.2.4.9018 (2025-11-12)
 
 ### Continuous integration
