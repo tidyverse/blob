@@ -2,137 +2,17 @@
 
 # blob 1.2.99.9900 (2026-01-12)
 
+## Testing
+
+- Expand on `NULL` subassignment tests related to vctrs changes (@DavisVaughan, #65).
+
 ## Bug fixes
 
 - Fix argument consistency between S3 generics and methods.
 
 ## Chore
 
-- Upkeep.
-
-- Auto-update from GitHub Actions.
-
-  Run: https://github.com/tidyverse/blob/actions/runs/17451417258
-
-  Run: https://github.com/tidyverse/blob/actions/runs/14636194825
-
-  Run: https://github.com/tidyverse/blob/actions/runs/10425482785
-
-  Run: https://github.com/tidyverse/blob/actions/runs/10200111385
-
-  Run: https://github.com/tidyverse/blob/actions/runs/9728444615
-
-  Run: https://github.com/tidyverse/blob/actions/runs/9691616480
-
-- Change maintainer e-mail.
-
-## Continuous integration
-
-- Install binaries from r-universe for dev workflow (#64).
-
-- Fix reviewdog and add commenting workflow (#63).
-
-- Use workflows for fledge (#62).
-
-- Sync (#61).
-
-- Use reviewdog for external PRs (#59).
-
-- Cleanup and fix macOS (#58).
-
-- Format with air, check detritus, better handling of `extra-packages` (#57).
-
-- Enhance permissions for workflow (#53).
-
-- Permissions, better tests for missing suggests, lints (#52).
-
-- Only fail covr builds if token is given (#51).
-
-- Always use `_R_CHECK_FORCE_SUGGESTS_=false` (#50).
-
-- Correct installation of xml2 (#49).
-
-- Explain (#48).
-
-- Add xml2 for covr, print testthat results (#47).
-
-- Fix (#46).
-
-- Sync (#45).
-
-- Avoid failure in fledge workflow if no changes (#44).
-
-- Fetch tags for fledge workflow to avoid unnecessary NEWS entries (#43).
-
-- Use larger retry count for lock-threads workflow (#42).
-
-- Ignore errors when removing pkg-config on macOS (#41).
-
-- Explicit permissions (#40).
-
-- Use styler from main branch (#39).
-
-- Need to install R on Ubuntu 24.04 (#38).
-
-- Use Ubuntu 24.04 and styler PR (#36).
-
-- Correctly detect branch protection (#35).
-
-- Use stable pak (#34).
-
-- Trigger run (#33).
-
-  - ci: Trigger run
-
-  - ci: Latest changes
-
-- Trigger run (#32).
-
-- Use pkgdown branch (#31).
-
-  - ci: Use pkgdown branch
-
-  - ci: Updates from duckdb
-
-- Install via R CMD INSTALL ., not pak (#30).
-
-  - ci: Install via R CMD INSTALL ., not pak
-
-  - ci: Bump version of upload-artifact action
-
-- Install local package for pkgdown builds.
-
-- Improve support for protected branches with fledge.
-
-- Improve support for protected branches, without fledge.
-
-- Sync with latest developments.
-
-- Use v2 instead of master.
-
-- Inline action.
-
-- Use dev roxygen2 and decor.
-
-- Fix on Windows, tweak lock workflow.
-
-- Avoid checking bashisms on Windows.
-
-- Better commit message.
-
-- Bump versions, better default, consume custom matrix.
-
-- Recent updates.
-
-## Testing
-
-- Expand on `NULL` subassignment tests related to vctrs changes (@DavisVaughan, #65).
-
-## Uncategorized
-
-- Internal changes only.
-
-- Merged cran-1.2.4 into main.
+- Upkeep (@MikeJohnPage, #55).
 
 
 # blob 1.2.4 (2023-03-17)
