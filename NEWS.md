@@ -1,43 +1,36 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
-# blob 1.2.4.9020 (2026-01-12)
+# blob 1.2.99.9900 (2026-01-12)
+
+## Bug fixes
+
+- Fix argument consistency between S3 generics and methods.
 
 ## Chore
 
 - Upkeep.
 
-## Testing
+- Auto-update from GitHub Actions.
 
-- Expand on `NULL` subassignment tests related to vctrs changes (@DavisVaughan, #65).
+  Run: https://github.com/tidyverse/blob/actions/runs/17451417258
 
+  Run: https://github.com/tidyverse/blob/actions/runs/14636194825
 
-# blob 1.2.4.9019 (2025-11-17)
+  Run: https://github.com/tidyverse/blob/actions/runs/10425482785
+
+  Run: https://github.com/tidyverse/blob/actions/runs/10200111385
+
+  Run: https://github.com/tidyverse/blob/actions/runs/9728444615
+
+  Run: https://github.com/tidyverse/blob/actions/runs/9691616480
+
+- Change maintainer e-mail.
 
 ## Continuous integration
 
 - Install binaries from r-universe for dev workflow (#64).
 
-
-# blob 1.2.4.9018 (2025-11-12)
-
-## Continuous integration
-
 - Fix reviewdog and add commenting workflow (#63).
-
-
-# blob 1.2.4.9017 (2025-11-10)
-
-## Chore
-
-- Auto-update from GitHub Actions.
-
-  Run: https://github.com/tidyverse/blob/actions/runs/17451417258
-
-- Auto-update from GitHub Actions.
-
-  Run: https://github.com/tidyverse/blob/actions/runs/14636194825
-
-## Continuous integration
 
 - Use workflows for fledge (#62).
 
@@ -67,178 +60,79 @@
 
 - Sync (#45).
 
-
-# blob 1.2.4.9016 (2024-12-09)
-
-## Continuous integration
-
 - Avoid failure in fledge workflow if no changes (#44).
-
-
-# blob 1.2.4.9015 (2024-12-08)
-
-## Continuous integration
 
 - Fetch tags for fledge workflow to avoid unnecessary NEWS entries (#43).
 
-
-# blob 1.2.4.9014 (2024-12-07)
-
-## Continuous integration
-
 - Use larger retry count for lock-threads workflow (#42).
-
-
-# blob 1.2.4.9013 (2024-11-28)
-
-## Continuous integration
 
 - Ignore errors when removing pkg-config on macOS (#41).
 
-
-# blob 1.2.4.9012 (2024-11-27)
-
-## Continuous integration
-
 - Explicit permissions (#40).
 
-
-# blob 1.2.4.9011 (2024-11-26)
-
-## Continuous integration
-
 - Use styler from main branch (#39).
-
-
-# blob 1.2.4.9010 (2024-11-25)
-
-## Continuous integration
 
 - Need to install R on Ubuntu 24.04 (#38).
 
 - Use Ubuntu 24.04 and styler PR (#36).
 
+- Correctly detect branch protection (#35).
 
-# blob 1.2.4.9009 (2024-11-22)
+- Use stable pak (#34).
 
-## Continuous integration
+- Trigger run (#33).
 
-  - Correctly detect branch protection (#35).
+  - ci: Trigger run
 
+  - ci: Latest changes
 
-# blob 1.2.4.9008 (2024-11-18)
+- Trigger run (#32).
 
-## Continuous integration
+- Use pkgdown branch (#31).
 
-  - Use stable pak (#34).
+  - ci: Use pkgdown branch
 
+  - ci: Updates from duckdb
 
-# blob 1.2.4.9007 (2024-11-11)
+- Install via R CMD INSTALL ., not pak (#30).
 
-## Continuous integration
+  - ci: Install via R CMD INSTALL ., not pak
 
-  - Trigger run (#33).
-    
-      - ci: Trigger run
-    
-      - ci: Latest changes
+  - ci: Bump version of upload-artifact action
 
+- Install local package for pkgdown builds.
 
-# blob 1.2.4.9006 (2024-10-28)
+- Improve support for protected branches with fledge.
 
-## Continuous integration
+- Improve support for protected branches, without fledge.
 
-  - Trigger run (#32).
+- Sync with latest developments.
 
-  - Use pkgdown branch (#31).
-    
-      - ci: Use pkgdown branch
-    
-      - ci: Updates from duckdb
+- Use v2 instead of master.
 
+- Inline action.
 
-# blob 1.2.4.9005 (2024-09-15)
+- Use dev roxygen2 and decor.
 
-## Continuous integration
+- Fix on Windows, tweak lock workflow.
 
-  - Install via R CMD INSTALL ., not pak (#30).
-    
-      - ci: Install via R CMD INSTALL ., not pak
-    
-      - ci: Bump version of upload-artifact action
+- Avoid checking bashisms on Windows.
 
+- Better commit message.
 
-# blob 1.2.4.9004 (2024-08-31)
+- Bump versions, better default, consume custom matrix.
 
-## Chore
+- Recent updates.
 
-  - Auto-update from GitHub Actions.
-    
-    Run: https://github.com/tidyverse/blob/actions/runs/10425482785
+## Testing
 
-  - Auto-update from GitHub Actions.
-    
-    Run: https://github.com/tidyverse/blob/actions/runs/10200111385
+- Expand on `NULL` subassignment tests related to vctrs changes (@DavisVaughan, #65).
 
-  - Auto-update from GitHub Actions.
-    
-    Run: https://github.com/tidyverse/blob/actions/runs/9728444615
-
-  - Auto-update from GitHub Actions.
-    
-    Run: https://github.com/tidyverse/blob/actions/runs/9691616480
-
-## Continuous integration
-
-  - Install local package for pkgdown builds.
-
-  - Improve support for protected branches with fledge.
-
-  - Improve support for protected branches, without fledge.
-
-  - Sync with latest developments.
-
-  - Use v2 instead of master.
-
-  - Inline action.
-
-  - Use dev roxygen2 and decor.
-
-  - Fix on Windows, tweak lock workflow.
-
-  - Avoid checking bashisms on Windows.
-
-  - Better commit message.
-
-  - Bump versions, better default, consume custom matrix.
-
-  - Recent updates.
-
-
-# blob 1.2.4.9003 (2023-10-09)
+## Uncategorized
 
 - Internal changes only.
-
-
-# blob 1.2.4.9002 (2023-03-24)
 
 - Merged cran-1.2.4 into main.
-
-
-# blob 1.2.4.9001 (2023-03-23)
-
-- Internal changes only.
-
-
-# blob 1.2.4.9000 (2023-03-17)
-
-## Bug fixes
-
-- Fix argument consistency between S3 generics and methods.
-
-## Chore
-
-- Change maintainer e-mail.
 
 
 # blob 1.2.4 (2023-03-17)
