@@ -1,32 +1,38 @@
 # Changelog
 
-## blob 1.2.4.9019 (2025-11-17)
+## blob 1.2.99.9900 (2026-01-12)
+
+### Bug fixes
+
+- Fix argument consistency between S3 generics and methods.
+
+### Chore
+
+- Upkeep.
+
+- Auto-update from GitHub Actions.
+
+  Run: <https://github.com/tidyverse/blob/actions/runs/17451417258>
+
+  Run: <https://github.com/tidyverse/blob/actions/runs/14636194825>
+
+  Run: <https://github.com/tidyverse/blob/actions/runs/10425482785>
+
+  Run: <https://github.com/tidyverse/blob/actions/runs/10200111385>
+
+  Run: <https://github.com/tidyverse/blob/actions/runs/9728444615>
+
+  Run: <https://github.com/tidyverse/blob/actions/runs/9691616480>
+
+- Change maintainer e-mail.
 
 ### Continuous integration
 
 - Install binaries from r-universe for dev workflow
   ([\#64](https://github.com/tidyverse/blob/issues/64)).
 
-## blob 1.2.4.9018 (2025-11-12)
-
-### Continuous integration
-
 - Fix reviewdog and add commenting workflow
   ([\#63](https://github.com/tidyverse/blob/issues/63)).
-
-## blob 1.2.4.9017 (2025-11-10)
-
-### Chore
-
-- Auto-update from GitHub Actions.
-
-  Run: <https://github.com/tidyverse/blob/actions/runs/17451417258>
-
-- Auto-update from GitHub Actions.
-
-  Run: <https://github.com/tidyverse/blob/actions/runs/14636194825>
-
-### Continuous integration
 
 - Use workflows for fledge
   ([\#62](https://github.com/tidyverse/blob/issues/62)).
@@ -66,51 +72,23 @@
 
 - Sync ([\#45](https://github.com/tidyverse/blob/issues/45)).
 
-## blob 1.2.4.9016 (2024-12-09)
-
-### Continuous integration
-
 - Avoid failure in fledge workflow if no changes
   ([\#44](https://github.com/tidyverse/blob/issues/44)).
-
-## blob 1.2.4.9015 (2024-12-08)
-
-### Continuous integration
 
 - Fetch tags for fledge workflow to avoid unnecessary NEWS entries
   ([\#43](https://github.com/tidyverse/blob/issues/43)).
 
-## blob 1.2.4.9014 (2024-12-07)
-
-### Continuous integration
-
 - Use larger retry count for lock-threads workflow
   ([\#42](https://github.com/tidyverse/blob/issues/42)).
-
-## blob 1.2.4.9013 (2024-11-28)
-
-### Continuous integration
 
 - Ignore errors when removing pkg-config on macOS
   ([\#41](https://github.com/tidyverse/blob/issues/41)).
 
-## blob 1.2.4.9012 (2024-11-27)
-
-### Continuous integration
-
 - Explicit permissions
   ([\#40](https://github.com/tidyverse/blob/issues/40)).
 
-## blob 1.2.4.9011 (2024-11-26)
-
-### Continuous integration
-
 - Use styler from main branch
   ([\#39](https://github.com/tidyverse/blob/issues/39)).
-
-## blob 1.2.4.9010 (2024-11-25)
-
-### Continuous integration
 
 - Need to install R on Ubuntu 24.04
   ([\#38](https://github.com/tidyverse/blob/issues/38)).
@@ -118,32 +96,16 @@
 - Use Ubuntu 24.04 and styler PR
   ([\#36](https://github.com/tidyverse/blob/issues/36)).
 
-## blob 1.2.4.9009 (2024-11-22)
-
-### Continuous integration
-
 - Correctly detect branch protection
   ([\#35](https://github.com/tidyverse/blob/issues/35)).
 
-## blob 1.2.4.9008 (2024-11-18)
-
-### Continuous integration
-
 - Use stable pak ([\#34](https://github.com/tidyverse/blob/issues/34)).
-
-## blob 1.2.4.9007 (2024-11-11)
-
-### Continuous integration
 
 - Trigger run ([\#33](https://github.com/tidyverse/blob/issues/33)).
 
   - ci: Trigger run
 
   - ci: Latest changes
-
-## blob 1.2.4.9006 (2024-10-28)
-
-### Continuous integration
 
 - Trigger run ([\#32](https://github.com/tidyverse/blob/issues/32)).
 
@@ -154,38 +116,12 @@
 
   - ci: Updates from duckdb
 
-## blob 1.2.4.9005 (2024-09-15)
-
-### Continuous integration
-
 - Install via R CMD INSTALL ., not pak
   ([\#30](https://github.com/tidyverse/blob/issues/30)).
 
   - ci: Install via R CMD INSTALL ., not pak
 
   - ci: Bump version of upload-artifact action
-
-## blob 1.2.4.9004 (2024-08-31)
-
-### Chore
-
-- Auto-update from GitHub Actions.
-
-  Run: <https://github.com/tidyverse/blob/actions/runs/10425482785>
-
-- Auto-update from GitHub Actions.
-
-  Run: <https://github.com/tidyverse/blob/actions/runs/10200111385>
-
-- Auto-update from GitHub Actions.
-
-  Run: <https://github.com/tidyverse/blob/actions/runs/9728444615>
-
-- Auto-update from GitHub Actions.
-
-  Run: <https://github.com/tidyverse/blob/actions/runs/9691616480>
-
-### Continuous integration
 
 - Install local package for pkgdown builds.
 
@@ -211,27 +147,17 @@
 
 - Recent updates.
 
-## blob 1.2.4.9003 (2023-10-09)
+### Testing
+
+- Expand on `NULL` subassignment tests related to vctrs changes
+  ([@DavisVaughan](https://github.com/DavisVaughan),
+  [\#65](https://github.com/tidyverse/blob/issues/65)).
+
+### Uncategorized
 
 - Internal changes only.
-
-## blob 1.2.4.9002 (2023-03-24)
 
 - Merged cran-1.2.4 into main.
-
-## blob 1.2.4.9001 (2023-03-23)
-
-- Internal changes only.
-
-## blob 1.2.4.9000 (2023-03-17)
-
-### Bug fixes
-
-- Fix argument consistency between S3 generics and methods.
-
-### Chore
-
-- Change maintainer e-mail.
 
 ## blob 1.2.4 (2023-03-17)
 
