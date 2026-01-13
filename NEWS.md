@@ -1,5 +1,16 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# blob 1.2.99.9901 (2026-01-13)
+
+## Chore
+
+- NEWS.
+
+## fledge
+
+- CRAN pre-release v1.2.99.9900 (#66).
+
+
 # blob 1.2.99.9900 (2026-01-12)
 
 ## Testing
