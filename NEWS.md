@@ -1,6 +1,20 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
-# blob 1.2.99.9902 (2026-01-13)
+# blob 1.3.0 (2026-01-13)
+
+## fledge
+
+- CRAN pre-release v1.2.99.9900 (#66).
+
+## Bug fixes
+
+- Fix argument consistency between S3 generics and methods.
+
+## Chore
+
+- NEWS.
+
+- Upkeep (@MikeJohnPage, #55).
 
 ## Continuous integration
 
@@ -10,31 +24,9 @@
 
 - Test all R versions on branches that start with cran- (#67).
 
-
-# blob 1.2.99.9901 (2026-01-13)
-
-## Chore
-
-- NEWS.
-
-## fledge
-
-- CRAN pre-release v1.2.99.9900 (#66).
-
-
-# blob 1.2.99.9900 (2026-01-12)
-
 ## Testing
 
 - The upcoming vctrs update changes details on how subset assignment with `NULL` works. This motivated the minor version bump (@DavisVaughan, #65).
-
-## Bug fixes
-
-- Fix argument consistency between S3 generics and methods.
-
-## Chore
-
-- Upkeep (@MikeJohnPage, #55).
 
 
 # blob 1.2.4 (2023-03-17)
