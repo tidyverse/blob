@@ -1,0 +1,50 @@
+# blob
+
+## Overview
+
+The goal of blob is to provide a simple S3 class to represent a vector
+of binary objects, aka blobs. The `blob` class is a lightweight wrapper
+around a list of raw vectors, suitable for inclusion in a data frame.
+
+In most cases you will not need to use this package explicitly: it will
+be used transparently by packages that need to load BLOB columns from
+databases or binary file formats.
+
+## Installation
+
+``` r
+# The easiest way to get blob is to install the whole tidyverse:
+install.packages("tidyverse")
+
+# Alternatively, install just blob:
+install.packages("blob")
+
+# Or the development version from GitHub:
+# install.packages("pak")
+pak::pak("tidyverse/blob")
+```
+
+## Example
+
+To create a blob, use
+[`blob()`](https://blob.tidyverse.org/reference/blob.md),
+[`new_blob()`](https://blob.tidyverse.org/reference/blob.md) or
+[`as_blob()`](https://blob.tidyverse.org/reference/blob.md):
+
+``` r
+library(blob)
+
+x1 <- charToRaw("Good morning")
+x2 <- as.raw(c(0x48, 0x65, 0x6c, 0x6c, 0x6f))
+
+new_blob(list(x1, x2))
+#> <blob[2]>
+#> [1] blob[12 B] blob[5 B]
+blob(x1, x2)
+#> <blob[2]>
+#> [1] blob[12 B] blob[5 B]
+
+as_blob(c("Good morning", "Good evening"))
+#> <blob[2]>
+#> [1] blob[12 B] blob[12 B]
+```
