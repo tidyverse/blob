@@ -1,5 +1,16 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# blob 1.2.99.9902 (2026-01-13)
+
+## Continuous integration
+
+- Fix comment (#69).
+
+- Tweaks (#68).
+
+- Test all R versions on branches that start with cran- (#67).
+
+
 # blob 1.2.99.9901 (2026-01-13)
 
 ## Chore
