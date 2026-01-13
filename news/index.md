@@ -2,10 +2,12 @@
 
 ## blob 1.3.0 (2026-01-13)
 
-### fledge
+### Testing
 
-- CRAN pre-release v1.2.99.9900
-  ([\#66](https://github.com/tidyverse/blob/issues/66)).
+- The upcoming vctrs update changes details on how subset assignment
+  with `NULL` works. This motivated the minor version bump
+  ([@DavisVaughan](https://github.com/DavisVaughan),
+  [\#65](https://github.com/tidyverse/blob/issues/65)).
 
 ### Bug fixes
 
@@ -13,26 +15,8 @@
 
 ### Chore
 
-- NEWS.
-
 - Upkeep ([@MikeJohnPage](https://github.com/MikeJohnPage),
   [\#55](https://github.com/tidyverse/blob/issues/55)).
-
-### Continuous integration
-
-- Fix comment ([\#69](https://github.com/tidyverse/blob/issues/69)).
-
-- Tweaks ([\#68](https://github.com/tidyverse/blob/issues/68)).
-
-- Test all R versions on branches that start with cran-
-  ([\#67](https://github.com/tidyverse/blob/issues/67)).
-
-### Testing
-
-- The upcoming vctrs update changes details on how subset assignment
-  with `NULL` works. This motivated the minor version bump
-  ([@DavisVaughan](https://github.com/DavisVaughan),
-  [\#65](https://github.com/tidyverse/blob/issues/65)).
 
 ## blob 1.2.4 (2023-03-17)
 
