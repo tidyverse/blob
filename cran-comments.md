@@ -1,4 +1,4 @@
-blob 1.2.99.9900
+blob 1.3.0
 
 ## Cran Repository Policy
 
