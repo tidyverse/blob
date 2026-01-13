@@ -2,9 +2,9 @@
 
 # blob 1.3.0 (2026-01-13)
 
-## fledge
+## Testing
 
-- CRAN pre-release v1.2.99.9900 (#66).
+- The upcoming vctrs update changes details on how subset assignment with `NULL` works. This motivated the minor version bump (@DavisVaughan, #65).
 
 ## Bug fixes
 
@@ -12,21 +12,7 @@
 
 ## Chore
 
-- NEWS.
-
 - Upkeep (@MikeJohnPage, #55).
-
-## Continuous integration
-
-- Fix comment (#69).
-
-- Tweaks (#68).
-
-- Test all R versions on branches that start with cran- (#67).
-
-## Testing
-
-- The upcoming vctrs update changes details on how subset assignment with `NULL` works. This motivated the minor version bump (@DavisVaughan, #65).
 
 
 # blob 1.2.4 (2023-03-17)
