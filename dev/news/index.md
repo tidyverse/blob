@@ -1,5 +1,16 @@
 # Changelog
 
+## blob 1.2.99.9902 (2026-01-13)
+
+### Continuous integration
+
+- Fix comment ([\#69](https://github.com/tidyverse/blob/issues/69)).
+
+- Tweaks ([\#68](https://github.com/tidyverse/blob/issues/68)).
+
+- Test all R versions on branches that start with cran-
+  ([\#67](https://github.com/tidyverse/blob/issues/67)).
+
 ## blob 1.2.99.9901 (2026-01-13)
 
 ### Chore
