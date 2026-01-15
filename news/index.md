@@ -2,6 +2,8 @@
 
 ## blob 1.3.0 (2026-01-13)
 
+CRAN release: 2026-01-14
+
 ### Testing
 
 - The upcoming vctrs update changes details on how subset assignment
