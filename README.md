@@ -11,7 +11,7 @@ Status](https://codecov.io/gh/tidyverse/blob/branch/main/graph/badge.svg)](https
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# blob
+# blob <a href="https://blob.tidyverse.org"><img src="man/figures/logo.png" align="right" height="122" alt="blob website" /></a>
 
 ## Overview
 
