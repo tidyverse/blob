@@ -12,7 +12,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/tidyverse/blob/blob/main/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/tidyverse/blob/blob/docs/DESCRIPTION)
 
 Wickham H (2026). *blob: A Simple S3 Class for Representing Vectors of
 Binary Data ('BLOBS')*. R package version 1.3.0,
