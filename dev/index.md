@@ -13,6 +13,7 @@ databases or binary file formats.
 ## Installation
 
 ``` r
+
 # The easiest way to get blob is to install the whole tidyverse:
 install.packages("tidyverse")
 
@@ -32,6 +33,7 @@ To create a blob, use
 [`as_blob()`](https://blob.tidyverse.org/dev/reference/blob.md):
 
 ``` r
+
 library(blob)
 
 x1 <- charToRaw("Good morning")

@@ -1,28 +1,15 @@
 # Changelog
 
-## blob 1.2.99.9902 (2026-01-13)
-
-### Continuous integration
-
-- Fix comment ([\#69](https://github.com/tidyverse/blob/issues/69)).
-
-- Tweaks ([\#68](https://github.com/tidyverse/blob/issues/68)).
-
-- Test all R versions on branches that start with cran-
-  ([\#67](https://github.com/tidyverse/blob/issues/67)).
-
-## blob 1.2.99.9901 (2026-01-13)
-
-### Chore
-
-- NEWS.
+## blob 1.3.0.9000 (2026-01-16)
 
 ### fledge
 
-- CRAN pre-release v1.2.99.9900
-  ([\#66](https://github.com/tidyverse/blob/issues/66)).
+- CRAN release v1.3.0
+  ([\#70](https://github.com/tidyverse/blob/issues/70)).
 
-## blob 1.2.99.9900 (2026-01-12)
+## blob 1.3.0 (2026-01-13)
+
+CRAN release: 2026-01-14
 
 ### Testing
 
