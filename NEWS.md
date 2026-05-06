@@ -1,5 +1,30 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# blob 1.3.0.9001 (2026-05-06)
+
+## Chore
+
+- Auto-update from GitHub Actions.
+
+  Run: https://github.com/tidyverse/blob/actions/runs/25394358417
+
+## Continuous integration
+
+- Cosmetics.
+
+- Bump action versions.
+
+- Install clang-format-21.
+
+- Align fledge workflow.
+
+- Harmonize.
+
+## Documentation
+
+- Update Plausible analytics snippet (@jeroenjanssens, #71).
+
+
 # blob 1.3.0.9000 (2026-01-16)
 
 ## fledge
