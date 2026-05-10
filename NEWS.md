@@ -1,5 +1,12 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# blob 1.3.0.9002 (2026-05-10)
+
+## Continuous integration
+
+- Tweak fledge workflow and ccache action.
+
+
 # blob 1.3.0.9001 (2026-05-06)
 
 ## Chore
