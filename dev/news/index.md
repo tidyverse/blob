@@ -1,5 +1,43 @@
 # Changelog
 
+## blob 1.3.0.9003 (2026-05-10)
+
+### Continuous integration
+
+- Only run fledge on pushes to main.
+
+## blob 1.3.0.9002 (2026-05-10)
+
+### Continuous integration
+
+- Tweak fledge workflow and ccache action.
+
+## blob 1.3.0.9001 (2026-05-06)
+
+### Chore
+
+- Auto-update from GitHub Actions.
+
+  Run: <https://github.com/tidyverse/blob/actions/runs/25394358417>
+
+### Continuous integration
+
+- Cosmetics.
+
+- Bump action versions.
+
+- Install clang-format-21.
+
+- Align fledge workflow.
+
+- Harmonize.
+
+### Documentation
+
+- Update Plausible analytics snippet
+  ([@jeroenjanssens](https://github.com/jeroenjanssens),
+  [\#71](https://github.com/tidyverse/blob/issues/71)).
+
 ## blob 1.3.0.9000 (2026-01-16)
 
 ### fledge
