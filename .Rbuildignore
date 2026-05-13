@@ -19,3 +19,4 @@
 ^[\.]?air\.toml$
 ^\.vscode$
 ^index\.md$
+^\.ccache$

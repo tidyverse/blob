@@ -4,3 +4,4 @@ docs
 .RData
 /.drake
 CRAN-RELEASE
+.ccache/
