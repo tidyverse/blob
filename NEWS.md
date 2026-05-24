@@ -1,5 +1,14 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# blob 1.3.0.9006 (2026-05-24)
+
+## Continuous integration
+
+- Update ccache-action reference.
+
+- Bump action version.
+
+
 # blob 1.3.0.9005 (2026-05-16)
 
 - Ci: Unify fledge.yaml across cynkratemplate and fledge (#86).
