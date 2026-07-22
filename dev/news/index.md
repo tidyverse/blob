@@ -1,5 +1,18 @@
 # Changelog
 
+## blob 1.3.0.9006 (2026-05-24)
+
+### Continuous integration
+
+- Update ccache-action reference.
+
+- Bump action version.
+
+## blob 1.3.0.9005 (2026-05-16)
+
+- Ci: Unify fledge.yaml across cynkratemplate and fledge
+  ([\#86](https://github.com/tidyverse/blob/issues/86)).
+
 ## blob 1.3.0.9004 (2026-05-13)
 
 ### Chore
