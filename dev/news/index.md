@@ -1,5 +1,18 @@
 # Changelog
 
+## blob 1.3.0.9008 (2026-07-24)
+
+### Bug fixes
+
+#### ci
+
+- Emit empty package matrix when there are no (rev)deps.
+
+### Uncategorized
+
+- Ci: Harden `format-suggest` against `pull_request_target` pwn requests
+  ([\#93](https://github.com/tidyverse/blob/issues/93)).
+
 ## blob 1.3.0.9007 (2026-07-22)
 
 ### Continuous integration
