@@ -1,5 +1,11 @@
 # Changelog
 
+## blob 1.3.0.9009 (2026-07-25)
+
+### Continuous integration
+
+- Lock down `format-suggest` egress (audit → block).
+
 ## blob 1.3.0.9008 (2026-07-24)
 
 ### Bug fixes
