@@ -1,5 +1,16 @@
 # Changelog
 
+## blob 1.3.0.9010 (2026-07-28)
+
+- Ci: Run all smoke-test checks even when one fails
+  ([\#97](https://github.com/tidyverse/blob/issues/97)).
+
+- Ci: Apply matrix `env` vars in the workflow, not in custom actions
+  ([\#95](https://github.com/tidyverse/blob/issues/95)).
+
+- Ci: Link the responsible workflow run in snapshot update PRs
+  ([\#96](https://github.com/tidyverse/blob/issues/96)).
+
 ## blob 1.3.0.9009 (2026-07-25)
 
 ### Continuous integration
