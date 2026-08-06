@@ -1,5 +1,18 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# blob 1.3.0.9012 (2026-08-06)
+
+## Continuous integration
+
+- Add sharded `revdep2` workflow.
+
+## Uncategorized
+
+- Ci: Harden `workflow_run` workflows against untrusted pull requests (#106).
+
+- Ci: Pin third-party actions to commits and let Renovate keep them pinned (#105).
+
+
 # blob 1.3.0.9011 (2026-08-05)
 
 ## Chore
