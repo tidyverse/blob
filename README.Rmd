@@ -1,7 +1,5 @@
 ---
-output:
-  github_document:
-    html_preview: false
+output: cynkratemplate::readme_document
 ---
 
 <!-- badges: start -->
@@ -11,7 +9,10 @@ output:
 [![Coverage Status](https://codecov.io/gh/tidyverse/blob/branch/main/graph/badge.svg)](https://app.codecov.io/gh/tidyverse/blob)
 <!-- badges: end -->
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- README.md and index.md are generated from README.Rmd.
+     Edit that file and render it the usual way: rmarkdown::render(),
+     devtools::build_readme(), or the Knit button. The cynkratemplate
+     package must be installed; it supplies the output format. -->
 
 ```{r, include = FALSE}
 pkgload::load_all()
@@ -27,17 +28,6 @@ clean_output <- function(x, options) {
   x <- gsub("dataframe_[0-9]*_[0-9]*", "      dataframe_42_42      ", x)
   x <- gsub("[0-9]*\\.___row_number ASC", "42.___row_number ASC", x)
 
-  index <- x
-  index <- gsub("─", "-", index)
-  index <- strsplit(paste(index, collapse = "\n"), "\n---\n")[[1]][[2]]
-  writeLines(index, "index.md")
-
-  x <- gsub(
-    '(`vignette[(]"([^"]+)"[)]`)',
-    "[\\1](https://blob.tidyverse.org/articles/\\2.html)",
-    x
-  )
-  x <- fansi::strip_sgr(x)
   x
 }
 
