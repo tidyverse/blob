@@ -21,7 +21,8 @@ Suggests:
     covr,
     crayon,
     pillar (>= 1.2.1),
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    tibble
 Config/autostyle/scope: line_breaks
 Config/autostyle/strict: false
 Config/Needs/website: tidyverse/tidytemplate

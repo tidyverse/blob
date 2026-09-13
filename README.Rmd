@@ -84,6 +84,9 @@ new_blob(list(x1, x2))
 blob(x1, x2)
 
 as_blob(c("Good morning", "Good evening"))
+
+# Inside a tibble, `pillar_shaft.blob()` decides how the column looks.
+tibble::tibble(x = blob(x1, x2))
 ```
 
 ---

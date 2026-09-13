@@ -54,6 +54,14 @@ blob(x1, x2)
 as_blob(c("Good morning", "Good evening"))
 #> <blob[2]>
 #> [1] blob[12 B] blob[12 B]
+
+# Inside a tibble, `pillar_shaft.blob()` decides how the column looks.
+tibble::tibble(x = blob(x1, x2))
+#> # A tibble: 2 × 1
+#>            x
+#>       <blob>
+#> 1 <raw 12 B>
+#> 2  <raw 5 B>
 ```
 
 ------------------------------------------------------------------------
