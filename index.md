@@ -22,6 +22,34 @@ The `blob` class is a lightweight wrapper around a list of raw vectors, suitable
 In most cases you will not need to use this package explicitly:
 it will be used transparently by packages that need to load BLOB columns from databases or binary file formats.
 
+## Goals and non-goals
+
+blob aims to:
+
+- Provide exactly one class, `blob`, built on `vctrs::list_of(raw())`,
+  so that a vector of binary objects can live in a data frame column.
+- Keep the constructors small and explicit:
+  `new_blob()` for a list of raw vectors, `blob()` for individual ones,
+  `as_blob()` for casting and `validate_blob()` for checking.
+- Behave like a well-mannered vctrs vector,
+  with `vec_ptype2()` and `vec_cast()` methods so that combining, subsetting and coercion follow the usual rules.
+- Print each element by its size rather than its bytes,
+  as `blob[12 B]` on its own and as `<raw 12 B>` in a tibble column.
+- Stay cheap to depend on:
+  only methods, rlang and vctrs are imported,
+  and the pillar method is registered on load only if pillar is available.
+
+It is explicitly not trying to:
+
+- Be a package you reach for directly:
+  in most cases it is used transparently by packages that load BLOB columns from databases or binary file formats.
+- Produce or store the binary data itself:
+  those packages hand over the raw vectors, and blob only holds them.
+- Show or interpret the contents:
+  formatting reports the size of each element, and nothing here decodes, parses or compresses a blob.
+- Accept every input that could plausibly become bytes:
+  casts exist for lists, lists of raw, raw vectors and character, and coercing an integer vector is deprecated.
+
 ## Installation
 
 ``` r
