@@ -2,11 +2,9 @@ setOldClass(c("blob", "vctrs_list_of", "vctrs_vctr"))
 
 #' Construct a blob object
 #'
-#' `new_blob()` is a low-level constructor that takes a list of
-#' raw vectors.
+#' `new_blob()` is a low-level constructor that takes a list of raw vectors.
 #' `blob()` constructs a blob from individual raw vectors.
-#' `as_blob()` and `is_blob()` are simple forwarders to [vctrs::vec_cast()]
-#' and [inherits()], respectively.
+#' `as_blob()` and `is_blob()` are simple forwarders to [vctrs::vec_cast()] and [inherits()], respectively.
 #'
 #' @seealso [as.blob()] for the legacy interface for specifying casts.
 #'
@@ -60,11 +58,9 @@ is_blob <- function(x) {
 
 #' Deprecated generic
 #'
-#' The `as.blob()` generic has been deprecated in favor of
-#' the [as_blob()] function (for users) and the [vec_cast.blob()] method
-#' (for implementers).
-#' Implement a `vec_cast.blob.myclass()` method to support
-#' coercing objects of your class to blobs.
+#' The `as.blob()` generic has been deprecated in favor of the [as_blob()] function (for users)
+#' and the [vec_cast.blob()] method (for implementers).
+#' Implement a `vec_cast.blob.myclass()` method to support coercing objects of your class to blobs.
 #' See [vctrs::vec_cast()] for more detail.
 #'
 #' @param x An object.
