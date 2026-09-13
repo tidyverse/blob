@@ -1,5 +1,22 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# blob 1.3.0.9015 (2026-09-13)
+
+## Features
+
+### ci
+
+- Align the `revdep2`, `revdep4` and `revdepx` subsystems with `rigraph`.
+
+## Continuous integration
+
+- Survive an archived CRAN package, cache revdep compiles (@krlmlr, #72).
+
+## Uncategorized
+
+- Ci: Fail the roxygenize step on roxygen2 warnings (#111).
+
+
 # blob 1.3.0.9014 (2026-09-05)
 
 ## Bug fixes
