@@ -5,7 +5,7 @@
 [![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![rcc](https://github.com/tidyverse/blob/workflows/rcc/badge.svg)](https://github.com/tidyverse/blob/actions)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/blob)](https://cran.r-project.org/package=blob)
-[![Coverage Status](https://codecov.io/gh/tidyverse/blob/branch/main/graph/badge.svg)](https://app.codecov.io/gh/tidyverse/blob)
+[![Coverage Status](https://codecov.io/gh/tidyverse/blob/graph/badge.svg)](https://app.codecov.io/gh/tidyverse/blob/tree/main)
 <!-- badges: end -->
 
 <!-- README.md and index.md are generated from README.Rmd.
