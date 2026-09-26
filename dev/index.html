@@ -28,7 +28,7 @@
 
     <a class="navbar-brand me-2" href="index.html">blob</a>
 
-    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.3.0.9015</small>
+    <small class="nav-text text-danger me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="In-development version">1.3.0.9016</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,7 +53,9 @@
 </nav><div class="container template-home" id="container">
 <div class="row">
   <main id="main" class="col-md-9">
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- README.md and index.md are generated from README.Rmd.
+     Edit that file and render it the usual way: rmarkdown::render(), devtools::build_readme(), or the Knit button.
+     The cynkratemplate package must be installed; it supplies the output format. -->
 <div class="section level1">
 <div class="page-header"><h1 id="blob">blob<a class="anchor" aria-label="anchor" href="#blob"></a>
 </h1></div>
@@ -62,6 +64,25 @@
 </h2>
 <p>The goal of blob is to provide a simple S3 class to represent a vector of binary objects, aka blobs. The <code>blob</code> class is a lightweight wrapper around a list of raw vectors, suitable for inclusion in a data frame.</p>
 <p>In most cases you will not need to use this package explicitly: it will be used transparently by packages that need to load BLOB columns from databases or binary file formats.</p>
+</div>
+<div class="section level2">
+<h2 id="goals-and-non-goals">Goals and non-goals<a class="anchor" aria-label="anchor" href="#goals-and-non-goals"></a>
+</h2>
+<p>blob aims to:</p>
+<ul>
+<li>Provide exactly one class, <code>blob</code>, built on <code>vctrs::list_of(raw())</code>, so that a vector of binary objects can live in a data frame column.</li>
+<li>Keep the constructors small and explicit: <code><a href="reference/blob.html">new_blob()</a></code> for a list of raw vectors, <code><a href="reference/blob.html">blob()</a></code> for individual ones, <code><a href="reference/blob.html">as_blob()</a></code> for casting and <code><a href="reference/blob.html">validate_blob()</a></code> for checking.</li>
+<li>Behave like a well-mannered vctrs vector, with <code>vec_ptype2()</code> and <code>vec_cast()</code> methods so that combining, subsetting and coercion follow the usual rules.</li>
+<li>Print each element by its size rather than its bytes, as <code>blob[12 B]</code> on its own and as <code>&lt;raw 12 B&gt;</code> in a tibble column.</li>
+<li>Stay cheap to depend on: only methods, rlang and vctrs are imported, and the pillar method is registered on load only if pillar is available.</li>
+</ul>
+<p>It is explicitly not trying to:</p>
+<ul>
+<li>Be a package you reach for directly: in most cases it is used transparently by packages that load BLOB columns from databases or binary file formats.</li>
+<li>Produce or store the binary data itself: those packages hand over the raw vectors, and blob only holds them.</li>
+<li>Show or interpret the contents: formatting reports the size of each element, and nothing here decodes, parses or compresses a blob.</li>
+<li>Accept every input that could plausibly become bytes: casts exist for lists, lists of raw, raw vectors and character, and coercing an integer vector is deprecated.</li>
+</ul>
 </div>
 <div class="section level2">
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
@@ -96,7 +117,15 @@
 <span></span>
 <span><span class="fu"><a href="reference/blob.html">as_blob</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Good morning"</span>, <span class="st">"Good evening"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="co">#&gt; &lt;blob[2]&gt;</span></span>
-<span><span class="co">#&gt; [1] blob[12 B] blob[12 B]</span></span></code></pre></div>
+<span><span class="co">#&gt; [1] blob[12 B] blob[12 B]</span></span>
+<span></span>
+<span><span class="co"># Inside a tibble, `pillar_shaft.blob()` decides how the column looks.</span></span>
+<span><span class="fu">tibble</span><span class="fu">::</span><span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html" class="external-link">tibble</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fu"><a href="reference/blob.html">blob</a></span><span class="op">(</span><span class="va">x1</span>, <span class="va">x2</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 2 × 1</span></span></span>
+<span><span class="co">#&gt;            <span style="font-weight: bold;">x</span></span></span>
+<span><span class="co">#&gt;       <span style="color: #949494; font-style: italic;">&lt;blob&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> <span style="color: #949494;">&lt;raw </span>12 B<span style="color: #949494;">&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span>  <span style="color: #949494;">&lt;raw </span>5 B<span style="color: #949494;">&gt;</span></span></span></code></pre></div>
 </div>
 </div>
 
@@ -151,7 +180,7 @@
 <li><a href="https://lifecycle.r-lib.org/articles/stages.html#stable" class="external-link"><img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="Lifecycle: stable"></a></li>
 <li><a href="https://github.com/tidyverse/blob/actions" class="external-link"><img src="https://github.com/tidyverse/blob/workflows/rcc/badge.svg" alt="rcc"></a></li>
 <li><a href="https://cran.r-project.org/package=blob" class="external-link"><img src="https://www.r-pkg.org/badges/version/blob" alt="CRAN_Status_Badge"></a></li>
-<li><a href="https://app.codecov.io/gh/tidyverse/blob" class="external-link"><img src="https://codecov.io/gh/tidyverse/blob/branch/main/graph/badge.svg" alt="Coverage Status"></a></li>
+<li><a href="https://app.codecov.io/gh/tidyverse/blob/tree/main" class="external-link"><img src="https://codecov.io/gh/tidyverse/blob/graph/badge.svg" alt="Coverage Status"></a></li>
 </ul>
 </div>
 
