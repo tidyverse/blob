@@ -1,27 +1,53 @@
 
 <!-- badges: start -->
 
-[![Lifecycle:
-stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+[![Lifecycle: stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 [![rcc](https://github.com/tidyverse/blob/workflows/rcc/badge.svg)](https://github.com/tidyverse/blob/actions)
 [![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/blob)](https://cran.r-project.org/package=blob)
-[![Coverage
-Status](https://codecov.io/gh/tidyverse/blob/branch/main/graph/badge.svg)](https://app.codecov.io/gh/tidyverse/blob)
+[![Coverage Status](https://codecov.io/gh/tidyverse/blob/graph/badge.svg)](https://app.codecov.io/gh/tidyverse/blob/tree/main)
 <!-- badges: end -->
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- README.md and index.md are generated from README.Rmd.
+     Edit that file and render it the usual way: rmarkdown::render(), devtools::build_readme(), or the Knit button.
+     The cynkratemplate package must be installed; it supplies the output format. -->
 
 # blob
 
 ## Overview
 
-The goal of blob is to provide a simple S3 class to represent a vector
-of binary objects, aka blobs. The `blob` class is a lightweight wrapper
-around a list of raw vectors, suitable for inclusion in a data frame.
+The goal of blob is to provide a simple S3 class to represent a vector of binary objects, aka blobs.
+The `blob` class is a lightweight wrapper around a list of raw vectors, suitable for inclusion in a data frame.
 
-In most cases you will not need to use this package explicitly: it will
-be used transparently by packages that need to load BLOB columns from
-databases or binary file formats.
+In most cases you will not need to use this package explicitly:
+it will be used transparently by packages that need to load BLOB columns from databases or binary file formats.
+
+## Goals and non-goals
+
+blob aims to:
+
+- Provide exactly one class, `blob`, built on `vctrs::list_of(raw())`,
+  so that a vector of binary objects can live in a data frame column.
+- Keep the constructors small and explicit:
+  `new_blob()` for a list of raw vectors, `blob()` for individual ones,
+  `as_blob()` for casting and `validate_blob()` for checking.
+- Behave like a well-mannered vctrs vector,
+  with `vec_ptype2()` and `vec_cast()` methods so that combining, subsetting and coercion follow the usual rules.
+- Print each element by its size rather than its bytes,
+  as `blob[12 B]` on its own and as `<raw 12 B>` in a tibble column.
+- Stay cheap to depend on:
+  only methods, rlang and vctrs are imported,
+  and the pillar method is registered on load only if pillar is available.
+
+It is explicitly not trying to:
+
+- Be a package you reach for directly:
+  in most cases it is used transparently by packages that load BLOB columns from databases or binary file formats.
+- Produce or store the binary data itself:
+  those packages hand over the raw vectors, and blob only holds them.
+- Show or interpret the contents:
+  formatting reports the size of each element, and nothing here decodes, parses or compresses a blob.
+- Accept every input that could plausibly become bytes:
+  casts exist for lists, lists of raw, raw vectors and character, and coercing an integer vector is deprecated.
 
 ## Installation
 
@@ -57,11 +83,17 @@ blob(x1, x2)
 as_blob(c("Good morning", "Good evening"))
 #> <blob[2]>
 #> [1] blob[12 B] blob[12 B]
+
+# Inside a tibble, `pillar_shaft.blob()` decides how the column looks.
+tibble::tibble(x = blob(x1, x2))
+#> # A tibble: 2 × 1
+#>            x
+#>       <blob>
+#> 1 <raw 12 B>
+#> 2  <raw 5 B>
 ```
 
 ------------------------------------------------------------------------
 
-Please note that the ‘blob’ project is released with a [Contributor Code
-of
-Conduct](https://github.com/tidyverse/blob/blob/main/CODE_OF_CONDUCT.md).
+Please note that the 'blob' project is released with a [Contributor Code of Conduct](https://github.com/tidyverse/blob/blob/main/CODE_OF_CONDUCT.md).
 By contributing to this project, you agree to abide by its terms.

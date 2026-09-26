@@ -24,11 +24,9 @@ is_blob(x)
 \item{x}{A list of raw vectors, or other object to coerce}
 }
 \description{
-\code{new_blob()} is a low-level constructor that takes a list of
-raw vectors.
+\code{new_blob()} is a low-level constructor that takes a list of raw vectors.
 \code{blob()} constructs a blob from individual raw vectors.
-\code{as_blob()} and \code{is_blob()} are simple forwarders to \code{\link[vctrs:vec_cast]{vctrs::vec_cast()}}
-and \code{\link[=inherits]{inherits()}}, respectively.
+\code{as_blob()} and \code{is_blob()} are simple forwarders to \code{\link[vctrs:vec_cast]{vctrs::vec_cast()}} and \code{\link[=inherits]{inherits()}}, respectively.
 }
 \examples{
 x1 <- charToRaw("Good morning")
