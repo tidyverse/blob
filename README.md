@@ -28,8 +28,8 @@ blob aims to:
 - Provide exactly one class, `blob`, built on `vctrs::list_of(raw())`,
   so that a vector of binary objects can live in a data frame column.
 - Keep the constructors small and explicit:
-  `new_blob()` for a list of raw vectors, `blob()` for individual ones,
-  `as_blob()` for casting and `validate_blob()` for checking.
+  [`new_blob()`](https://blob.tidyverse.org/reference/blob.html) for a list of raw vectors, [`blob()`](https://blob.tidyverse.org/reference/blob.html) for individual ones,
+  [`as_blob()`](https://blob.tidyverse.org/reference/blob.html) for casting and [`validate_blob()`](https://blob.tidyverse.org/reference/blob.html) for checking.
 - Behave like a well-mannered vctrs vector,
   with `vec_ptype2()` and `vec_cast()` methods so that combining, subsetting and coercion follow the usual rules.
 - Print each element by its size rather than its bytes,
@@ -65,7 +65,7 @@ pak::pak("tidyverse/blob")
 
 ## Example
 
-To create a blob, use `blob()`, `new_blob()` or `as_blob()`:
+To create a blob, use [`blob()`](https://blob.tidyverse.org/reference/blob.html), [`new_blob()`](https://blob.tidyverse.org/reference/blob.html) or [`as_blob()`](https://blob.tidyverse.org/reference/blob.html):
 
 ``` r
 library(blob)
