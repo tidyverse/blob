@@ -1,5 +1,36 @@
 # Changelog
 
+## blob 1.3.0.9017 (2026-09-26)
+
+### Documentation
+
+- Adopt the shared README rendering configuration
+  ([@krlmlr](https://github.com/krlmlr),
+  [\#74](https://github.com/tidyverse/blob/issues/74)).
+
+### Uncategorized
+
+- Refactor(ci): Serve the revdep scripts with the actions instead of
+  copying them (cynkra/cynkratemplate#149).
+
+- Feat(ci): Run R-hub checks on every `cran-*` push, through
+  `rhub-setup` and `rhub-check` actions (cynkra/cynkratemplate#145).
+
+- Feat(ci): Report coverage on pull requests from this repository
+  (cynkra/cynkratemplate#146).
+
+- Ci: Bound every job with `timeout-minutes`
+  (cynkra/cynkratemplate#144).
+
+- Fix(revdep2): Let a slice with no packages check nothing instead of
+  failing (cynkra/cynkratemplate#150).
+
+- Feat: Build a binary package in every check job and share it as an
+  artifact (cynkra/cynkratemplate#141).
+
+- Fix(ci): Collect the fleet’s workflow fixes after the move to central
+  actions (cynkra/cynkratemplate#139).
+
 ## blob 1.3.0.9016 (2026-09-13)
 
 ### Chore
