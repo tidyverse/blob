@@ -1,5 +1,16 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# blob 1.3.0.9018 (2026-09-28)
+
+## Continuous integration
+
+- Run coverage checks after pkgdown push.
+
+## Uncategorized
+
+- Feat(ci): Render `README.md` and `index.md` in CI (cynkra/cynkratemplate#118).
+
+
 # blob 1.3.0.9017 (2026-09-26)
 
 ## Documentation
