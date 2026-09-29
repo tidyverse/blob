@@ -1,5 +1,14 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# blob 1.3.0.9019 (2026-09-29)
+
+## Chore
+
+- Auto-update from GitHub Actions.
+
+  Run: https://github.com/tidyverse/blob/actions/runs/36388192031
+
+
 # blob 1.3.0.9018 (2026-09-28)
 
 ## Continuous integration
